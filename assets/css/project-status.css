@@ -1,0 +1,1929 @@
+/* =========================================================
+   DK VISUALS — PROJECT PORTAL
+   project-status.css
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.project-portal {
+    min-height: 100vh;
+    background: #050505;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   EXACTLY BASED ON MAIN DK VISUALS STYLES
+========================================================= */
+
+.project-portal,
+.project-portal button,
+.project-portal input {
+    font-family: inherit;
+}
+
+
+/* MAIN LARGE HEADINGS */
+
+.project-login-intro h1,
+.project-dashboard-heading h1,
+.project-progress-top h2,
+.project-section-heading h2,
+.project-contact-section h2 {
+    font-weight: 500;
+    line-height: .98;
+    letter-spacing: -5px;
+}
+
+
+/* GREY ACCENT WORDS */
+
+.project-login-intro h1 em,
+.project-dashboard-heading h1 em,
+.project-progress-top h2 em,
+.project-section-heading h2 em,
+.project-contact-section h2 em {
+    font-weight: 300;
+}
+
+
+/* MEDIUM HEADINGS */
+
+.project-information-heading h2,
+.project-next-step-content h2 {
+    font-weight: 500;
+    line-height: .98;
+    letter-spacing: -3px;
+}
+
+
+/* SMALL TITLES — LIKE SERVICES */
+
+.project-phase-title,
+.project-update-content h3 {
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+
+/* SMALL LABELS */
+
+.project-login-card-top p,
+.project-card-number,
+.project-field label,
+.project-meta-item span,
+.project-current-status span,
+.project-detail-card span,
+.project-update-date,
+.project-next-step-number span {
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.project-login {
+    position: relative;
+
+    min-height: 100svh;
+
+    padding:
+        90px
+        7vw
+        100px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+.project-login::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -180px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.05) 0%,
+            rgba(255,255,255,.015) 35%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+.project-login-inner {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(420px, .8fr);
+
+    gap:
+        clamp(
+            70px,
+            9vw,
+            160px
+        );
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   LOGIN INTRO
+========================================================= */
+
+.project-login-intro {
+    max-width: 850px;
+}
+
+
+.project-login-intro .section-label {
+    margin-bottom: 35px;
+}
+
+
+.project-login-intro h1 {
+    max-width: 850px;
+
+    font-size:
+        clamp(
+            48px,
+            6.5vw,
+            100px
+        );
+}
+
+
+.project-login-intro h1 em {
+    display: block;
+}
+
+
+.project-login-description {
+    max-width: 370px;
+
+    margin-top: 55px;
+
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.project-login-card {
+    position: relative;
+
+    padding:
+        clamp(
+            32px,
+            3.5vw,
+            55px
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    background:
+        rgba(255,255,255,.018);
+}
+
+
+.project-login-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -1px;
+    left: -1px;
+
+    width: 65px;
+    height: 1px;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   LOGIN CARD TOP
+========================================================= */
+
+.project-login-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+
+    padding-bottom: 22px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-login-card-top p {
+    color: #666;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.project-card-number {
+    color: #555;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.project-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+.project-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.project-field label {
+    color: #666;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.project-field input {
+    width: 100%;
+    height: 62px;
+
+    padding: 0;
+
+    border: none;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.15);
+
+    border-radius: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    transition:
+        border-color .3s ease;
+}
+
+
+.project-field input::placeholder {
+    color: #555;
+}
+
+
+.project-field input:focus {
+    border-color: #fff;
+}
+
+
+.project-field input:-webkit-autofill,
+.project-field input:-webkit-autofill:hover,
+.project-field input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+
+    -webkit-box-shadow:
+        0 0 0
+        1000px
+        #050505
+        inset;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.project-error {
+    display: none;
+
+    margin-top: -8px;
+
+    color: #777;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+.project-error.active {
+    display: block;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.project-login-button {
+    width: 100%;
+    min-height: 64px;
+
+    margin-top: 8px;
+
+    padding:
+        0
+        24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border:
+        1px solid
+        #fff;
+
+    background: #fff;
+    color: #000;
+
+    cursor: pointer;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition:
+        background .35s ease,
+        color .35s ease;
+}
+
+
+.project-login-button i {
+    font-style: normal;
+    font-size: 17px;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.project-login-button:hover {
+    background: transparent;
+    color: #fff;
+}
+
+
+.project-login-button:hover i {
+    transform:
+        translateX(5px);
+}
+
+
+.project-login-button.loading {
+    pointer-events: none;
+    opacity: .55;
+}
+
+
+/* =========================================================
+   LOGIN HELP
+========================================================= */
+
+.project-login-help {
+    margin-top: 45px;
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-login-help span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+.project-login-help p {
+    max-width: 370px;
+
+    color: #777;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.project-dashboard {
+    padding-top: 100px;
+
+    scroll-margin-top: 78px;
+}
+
+
+.project-dashboard[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   DASHBOARD HERO
+========================================================= */
+
+.project-dashboard-hero {
+    padding:
+        120px
+        7vw
+        90px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-dashboard-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.project-dashboard-heading .section-label {
+    margin-bottom: 30px;
+}
+
+
+.project-dashboard-heading h1 {
+    max-width: 1000px;
+
+    font-size:
+        clamp(
+            48px,
+            6.5vw,
+            100px
+        );
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.project-logout {
+    flex-shrink: 0;
+
+    padding:
+        15px
+        0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    border: none;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background: none;
+    color: #777;
+
+    cursor: pointer;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition:
+        color .3s ease,
+        border-color .3s ease;
+}
+
+
+.project-logout span {
+    font-size: 16px;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.project-logout:hover {
+    color: #fff;
+
+    border-color: #fff;
+}
+
+
+.project-logout:hover span {
+    transform:
+        translate(
+            3px,
+            -3px
+        );
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.project-meta-grid {
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-meta-item {
+    min-height: 125px;
+
+    padding:
+        30px
+        30px
+        30px
+        0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-meta-item:not(:first-child) {
+    padding-left: 30px;
+}
+
+
+.project-meta-item:last-child {
+    border-right: none;
+}
+
+
+.project-meta-item span {
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+.project-meta-item strong {
+    color: #ddd;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.project-progress-section {
+    padding:
+        150px
+        7vw;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-progress-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 70px;
+}
+
+
+.project-progress-top .section-label {
+    margin-bottom: 30px;
+}
+
+
+.project-progress-top h2 {
+    font-size:
+        clamp(
+            50px,
+            6vw,
+            90px
+        );
+}
+
+
+.project-progress-percentage {
+    display: flex;
+    align-items: flex-start;
+
+    line-height: .8;
+}
+
+
+.project-progress-percentage span {
+    font-size:
+        clamp(
+            90px,
+            12vw,
+            180px
+        );
+
+    font-weight: 500;
+
+    letter-spacing: -8px;
+}
+
+
+.project-progress-percentage small {
+    margin-top: 15px;
+    margin-left: 9px;
+
+    color: #555;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.project-progress-track {
+    width: 100%;
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    overflow: hidden;
+}
+
+
+.project-progress-bar {
+    width: 0%;
+    height: 1px;
+
+    background: #fff;
+
+    transition:
+        width
+        1.4s
+        cubic-bezier(.16,1,.3,1);
+}
+
+
+/* =========================================================
+   CURRENT STATUS
+========================================================= */
+
+.project-current-status {
+    margin-top: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.project-current-status span {
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+.project-current-status strong {
+    color: #aaa;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROJECT PHASES SECTION
+========================================================= */
+
+.project-phases-section {
+    padding:
+        150px
+        7vw;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-section-heading {
+    margin-bottom: 80px;
+}
+
+
+.project-section-heading .section-label {
+    margin-bottom: 30px;
+}
+
+
+.project-section-heading h2 {
+    max-width: 900px;
+
+    font-size:
+        clamp(
+            50px,
+            6vw,
+            90px
+        );
+}
+
+
+/* =========================================================
+   PHASES
+========================================================= */
+
+.project-phases {
+    border-top:
+        1px solid
+        rgba(255,255,255,.1);
+}
+
+
+.project-phase {
+    position: relative;
+
+    min-height: 135px;
+
+    display: grid;
+
+    grid-template-columns:
+        100px
+        minmax(220px,.8fr)
+        minmax(300px,1.4fr)
+        130px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.1);
+
+    transition:
+        background .3s ease,
+        padding .3s ease;
+}
+
+
+.project-phase::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 1px;
+    height: 0;
+
+    background: #fff;
+
+    transition:
+        height .3s ease;
+}
+
+
+.project-phase:hover {
+    padding-left: 20px;
+
+    background:
+        rgba(255,255,255,.015);
+}
+
+
+.project-phase:hover::before {
+    height: 100%;
+}
+
+
+.project-phase-number {
+    color: #555;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+.project-phase-title {
+    color: #fff;
+
+    font-size: 27px;
+
+    margin: 0;
+}
+
+
+.project-phase-description {
+    max-width: 450px;
+
+    color: #707070;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+.project-phase-status {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.project-phase-status::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border:
+        1px solid
+        #555;
+
+    border-radius: 50%;
+}
+
+
+/* COMPLETED */
+
+.project-phase.completed
+.project-phase-number {
+    color: #999;
+}
+
+
+.project-phase.completed
+.project-phase-status {
+    color: #999;
+}
+
+
+.project-phase.completed
+.project-phase-status::before {
+    background: #999;
+    border-color: #999;
+}
+
+
+/* ACTIVE */
+
+.project-phase.active
+.project-phase-number {
+    color: #fff;
+}
+
+
+.project-phase.active
+.project-phase-title {
+    color: #fff;
+}
+
+
+.project-phase.active
+.project-phase-status {
+    color: #fff;
+}
+
+
+.project-phase.active
+.project-phase-status::before {
+    background: #fff;
+    border-color: #fff;
+
+    box-shadow:
+        0
+        0
+        0
+        5px
+        rgba(255,255,255,.07);
+}
+
+
+/* =========================================================
+   INFORMATION GRID
+========================================================= */
+
+.project-information-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1.4fr)
+        minmax(370px,.6fr);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+/* =========================================================
+   UPDATES
+========================================================= */
+
+.project-updates {
+    padding:
+        150px
+        7vw;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-information-heading {
+    margin-bottom: 65px;
+}
+
+
+.project-information-heading .section-label {
+    margin-bottom: 30px;
+}
+
+
+.project-information-heading h2 {
+    font-size:
+        clamp(
+            45px,
+            5vw,
+            75px
+        );
+}
+
+
+/* =========================================================
+   UPDATES LIST
+========================================================= */
+
+.project-updates-list {
+    border-top:
+        1px solid
+        rgba(255,255,255,.1);
+}
+
+
+.project-update {
+    padding:
+        30px
+        0;
+
+    display: grid;
+
+    grid-template-columns:
+        130px
+        1fr;
+
+    gap: 30px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-update-date {
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.project-update-content h3 {
+    margin-bottom: 13px;
+
+    color: #fff;
+
+    font-size: 27px;
+}
+
+
+.project-update-content p {
+    max-width: 450px;
+
+    color: #707070;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   NEXT STEP
+========================================================= */
+
+.project-next-step {
+    min-height: 100%;
+
+    padding:
+        150px
+        clamp(
+            45px,
+            5vw,
+            90px
+        );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #080808;
+}
+
+
+.project-next-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #555;
+}
+
+
+.project-next-step-number span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+.project-next-step-number strong {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.project-next-step-content {
+    margin-top: 140px;
+}
+
+
+.project-next-step-content .section-label {
+    margin-bottom: 30px;
+}
+
+
+.project-next-step-content h2 {
+    max-width: 450px;
+
+    margin-bottom: 28px;
+
+    font-size:
+        clamp(
+            42px,
+            4vw,
+            65px
+        );
+}
+
+
+.project-next-step-content p {
+    max-width: 420px;
+
+    color: #777;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.project-details-section {
+    padding:
+        150px
+        7vw;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.project-details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.1);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.1);
+}
+
+
+.project-detail-card {
+    min-height: 180px;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.1);
+}
+
+
+.project-detail-card:first-child {
+    padding-left: 0;
+}
+
+
+.project-detail-card:last-child {
+    border-right: none;
+}
+
+
+.project-detail-card span {
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+.project-detail-card strong {
+    color: #ddd;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.project-contact-section {
+    min-height: 650px;
+
+    padding:
+        150px
+        7vw;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+
+.project-contact-section .section-label {
+    margin-bottom: 30px;
+}
+
+
+.project-contact-section h2 {
+    max-width: 850px;
+
+    font-size:
+        clamp(
+            50px,
+            6vw,
+            90px
+        );
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.project-contact-button {
+    flex-shrink: 0;
+
+    width: 185px;
+    height: 185px;
+
+    padding: 27px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition:
+        background .35s ease,
+        color .35s ease;
+}
+
+
+.project-contact-button i {
+    align-self: flex-end;
+
+    font-style: normal;
+    font-size: 25px;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.project-contact-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+.project-contact-button:hover i {
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   TRANSITIONS
+========================================================= */
+
+.project-login.portal-leaving {
+    animation:
+        portalLoginOut
+        .5s
+        cubic-bezier(.16,1,.3,1)
+        forwards;
+}
+
+
+.project-dashboard.portal-entering {
+    animation:
+        portalDashboardIn
+        .7s
+        cubic-bezier(.16,1,.3,1)
+        forwards;
+}
+
+
+@keyframes portalLoginOut {
+
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+}
+
+
+@keyframes portalDashboardIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200PX
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .project-login-inner {
+        grid-template-columns:
+            minmax(0,1fr)
+            minmax(380px,.8fr);
+
+        gap: 60px;
+    }
+
+
+    .project-meta-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .project-meta-item:nth-child(2) {
+        border-right: none;
+    }
+
+
+    .project-meta-item:nth-child(3),
+    .project-meta-item:nth-child(4) {
+        border-top:
+            1px solid
+            rgba(255,255,255,.08);
+    }
+
+
+    .project-phase {
+        grid-template-columns:
+            70px
+            minmax(180px,.8fr)
+            minmax(240px,1.2fr)
+            110px;
+    }
+
+
+    .project-details-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .project-detail-card:nth-child(2) {
+        border-right: none;
+    }
+
+
+    .project-detail-card:nth-child(3),
+    .project-detail-card:nth-child(4) {
+        border-top:
+            1px solid
+            rgba(255,255,255,.1);
+    }
+
+
+    .project-detail-card:nth-child(3) {
+        padding-left: 0;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 950PX
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .project-login {
+        min-height: auto;
+
+        padding:
+            155px
+            7vw
+            100px;
+    }
+
+
+    .project-login-inner {
+        grid-template-columns: 1fr;
+
+        gap: 80px;
+    }
+
+
+    .project-login-card {
+        max-width: 650px;
+    }
+
+
+    .project-dashboard {
+        padding-top: 78px;
+    }
+
+
+    .project-dashboard-hero {
+        padding-top: 90px;
+    }
+
+
+    .project-dashboard-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .project-progress-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .project-progress-percentage {
+        align-self: flex-end;
+    }
+
+
+    .project-phase {
+        min-height: 150px;
+
+        grid-template-columns:
+            60px
+            1fr
+            110px;
+    }
+
+
+    .project-phase-description {
+        grid-column:
+            2 / 4;
+    }
+
+
+    .project-information-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-updates {
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.08);
+    }
+
+
+    .project-next-step {
+        min-height: 600px;
+    }
+
+
+    .project-contact-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .project-contact-button {
+        align-self: flex-end;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700PX
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .project-login {
+        padding:
+            135px
+            24px
+            80px;
+    }
+
+
+    .project-login-inner {
+        gap: 60px;
+    }
+
+
+    .project-login-intro h1 {
+        font-size:
+            clamp(
+                43px,
+                12vw,
+                65px
+            );
+
+        letter-spacing: -3px;
+    }
+
+
+    .project-login-description {
+        margin-top: 40px;
+
+        font-size: 13px;
+    }
+
+
+    .project-login-card {
+        padding:
+            28px
+            22px;
+    }
+
+
+    .project-dashboard-hero,
+    .project-progress-section,
+    .project-phases-section,
+    .project-updates,
+    .project-details-section,
+    .project-contact-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+
+    .project-dashboard-heading h1,
+    .project-progress-top h2,
+    .project-section-heading h2,
+    .project-contact-section h2 {
+        font-size:
+            clamp(
+                43px,
+                12vw,
+                65px
+            );
+
+        letter-spacing: -3px;
+    }
+
+
+    .project-meta-grid {
+        margin-top: 60px;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-meta-item,
+    .project-meta-item:not(:first-child) {
+        min-height: 95px;
+
+        padding:
+            22px
+            0;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.08);
+    }
+
+
+    .project-meta-item:nth-child(3),
+    .project-meta-item:nth-child(4) {
+        border-top: none;
+    }
+
+
+    .project-progress-section,
+    .project-phases-section,
+    .project-updates,
+    .project-details-section {
+        padding-top: 105px;
+        padding-bottom: 105px;
+    }
+
+
+    .project-progress-percentage span {
+        font-size: 95px;
+
+        letter-spacing: -5px;
+    }
+
+
+    .project-current-status {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .project-phase {
+        min-height: auto;
+
+        padding:
+            28px
+            0;
+
+        grid-template-columns:
+            45px
+            1fr;
+
+        gap:
+            12px
+            15px;
+    }
+
+
+    .project-phase:hover {
+        padding-left: 0;
+    }
+
+
+    .project-phase-title {
+        font-size: 23px;
+    }
+
+
+    .project-phase-description {
+        grid-column: 2;
+
+        font-size: 12px;
+    }
+
+
+    .project-phase-status {
+        grid-column: 2;
+
+        justify-self: start;
+    }
+
+
+    .project-information-heading h2 {
+        font-size:
+            clamp(
+                43px,
+                12vw,
+                65px
+            );
+
+        letter-spacing: -3px;
+    }
+
+
+    .project-update {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .project-update-content h3 {
+        font-size: 23px;
+    }
+
+
+    .project-next-step {
+        min-height: 500px;
+
+        padding:
+            80px
+            24px;
+    }
+
+
+    .project-next-step-content {
+        margin-top: 100px;
+    }
+
+
+    .project-next-step-content h2 {
+        font-size: 43px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .project-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-detail-card,
+    .project-detail-card:first-child,
+    .project-detail-card:nth-child(3) {
+        min-height: 120px;
+
+        padding:
+            25px
+            0;
+
+        border-right: none;
+
+        border-top:
+            1px solid
+            rgba(255,255,255,.08);
+    }
+
+
+    .project-detail-card:first-child {
+        border-top: none;
+    }
+
+
+    .project-contact-section {
+        min-height: 600px;
+
+        padding-top: 105px;
+        padding-bottom: 80px;
+    }
+
+
+    .project-contact-button {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 430PX
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .project-login {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .project-dashboard-hero,
+    .project-progress-section,
+    .project-phases-section,
+    .project-updates,
+    .project-details-section,
+    .project-contact-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .project-next-step {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH
+========================================================= */
+
+@media (hover: none) {
+
+    .project-phase:hover {
+        padding-left: 0;
+
+        background: transparent;
+    }
+
+
+    .project-phase:hover::before {
+        height: 0;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-progress-bar,
+    .project-phase,
+    .project-phase::before,
+    .project-login-button,
+    .project-contact-button,
+    .project-logout {
+        transition: none;
+    }
+
+
+    .project-login.portal-leaving,
+    .project-dashboard.portal-entering {
+        animation: none;
+    }
+
+}

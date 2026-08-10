@@ -1,0 +1,81 @@
+{
+  "projects": [
+    {
+      "projectNumber": "DK-2026-001",
+      "accessCode": "FC2026",
+      "client": "Finance & Control",
+      "title": "Website redesign & development",
+      "status": "In ontwikkeling",
+      "progress": 62,
+
+      "startDate": "2026-08-10",
+      "deadline": "2026-08-28",
+      "lastUpdated": "2026-08-10",
+
+      "type": "Multi-page website",
+
+      "pages": [
+        "Home",
+        "Diensten",
+        "Tarieven",
+        "Over ons",
+        "Contact"
+      ],
+
+      "language": [
+        "Nederlands"
+      ],
+
+      "phases": [
+        {
+          "title": "Discovery",
+          "description": "Analyse van de huidige website, doelstellingen, doelgroep en gewenste uitstraling.",
+          "status": "completed"
+        },
+        {
+          "title": "Design",
+          "description": "Ontwikkeling van de visuele richting, pagina-indeling en algemene gebruikerservaring.",
+          "status": "completed"
+        },
+        {
+          "title": "Development",
+          "description": "Technische ontwikkeling van de website, responsive uitwerking en implementatie van functionaliteiten.",
+          "status": "active"
+        },
+        {
+          "title": "Review",
+          "description": "Controle van de complete website en verwerking van eventuele laatste aanpassingen.",
+          "status": "upcoming"
+        },
+        {
+          "title": "Launch",
+          "description": "Definitieve controle, domeinkoppeling en livegang van de website.",
+          "status": "upcoming"
+        }
+      ],
+
+      "updates": [
+        {
+          "date": "2026-08-10",
+          "title": "Development gestart",
+          "description": "Het ontwerp wordt momenteel technisch uitgewerkt en geschikt gemaakt voor desktop, tablet en mobiel."
+        },
+        {
+          "date": "2026-08-09",
+          "title": "Websiteontwerp afgerond",
+          "description": "De visuele richting en pagina-opbouw zijn afgerond. De website bestaat uit vijf afzonderlijke pagina's."
+        },
+        {
+          "date": "2026-08-08",
+          "title": "Project aangemaakt",
+          "description": "Het project is toegevoegd aan het DK VISUALS-projectportaal en de eerste projectfase is gestart."
+        }
+      ],
+
+      "nextStep": {
+        "title": "Development afronden",
+        "description": "De afzonderlijke pagina's worden verder technisch uitgewerkt. Daarna volgt een complete controle op responsive werking, inhoud en functionaliteit."
+      }
+    }
+  ]
+}
