@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Track Your Project — DK VISUALS</title>
+
+    <meta
+        name="description"
+        content="Track the progress of your project with DK VISUALS."
+    >
+
+    <link
+        rel="icon"
+        href="assets/images/logo-and-text.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="assets/images/logo-and-text.png"
+    >
+
+    <!-- EXISTING DK VISUALS CSS -->
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+
+    <!-- PROJECT PORTAL CSS -->
+    <link
+        rel="stylesheet"
+        href="assets/css/project-status.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     CUSTOM CURSOR
+========================================================= -->
+
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <a
+        href="index.html"
+        class="logo"
+    >
+
+        <img
+            src="assets/images/logo.png"
+            alt="DK VISUALS"
+        >
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="index.html#services">
+
+            <span>
+                01
+            </span>
+
+            Services
+
+        </a>
+
+
+        <a href="portfolio.html">
+
+            <span>
+                02
+            </span>
+
+            Work
+
+        </a>
+
+
+        <a href="index.html#about">
+
+            <span>
+                03
+            </span>
+
+            About
+
+        </a>
+
+
+        <a href="index.html#contact">
+
+            <span>
+                04
+            </span>
+
+            Contact
+
+        </a>
+
+        <a href="project.html">
+            <span>05</span>
+            Client Portal
+        </a>
+
+    </nav>
+
+
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-button">
+
+        <button type="button">
+
+            EN
+
+            <span>
+                ⌄
+            </span>
+
+        </button>
+
+
+        <div class="language-menu">
+
+            <a
+                href="project.html"
+                class="active"
+            >
+                🇬🇧 English
+            </a>
+
+            <a href="project-nl.html">
+                🇳🇱 Nederlands
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MOBILE MENU BUTTON -->
+
+    <button
+        class="menu-button"
+        aria-label="Open menu"
+    >
+
+        <span></span>
+        <span></span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div class="mobile-menu">
+
+    <div class="mobile-menu-inner">
+
+
+        <p class="menu-label">
+            NAVIGATION
+        </p>
+
+
+        <a href="index.html#services">
+
+            <span>
+                01
+            </span>
+
+            Services
+
+        </a>
+
+
+        <a href="portfolio.html">
+
+            <span>
+                02
+            </span>
+
+            Work
+
+        </a>
+
+
+        <a href="index.html#about">
+
+            <span>
+                03
+            </span>
+
+            About
+
+        </a>
+
+
+        <a href="index.html#contact">
+
+            <span>
+                04
+            </span>
+
+            Contact
+
+        </a>
+
+        <a href="project.html">
+            <span>05</span>
+            Client Portal
+        </a>
+
+
+        <div class="mobile-menu-bottom">
+
+            <p>
+                DIGITAL. CREATIVE. IMPACTFUL.
+            </p>
+
+
+            <div class="mobile-language-switcher">
+
+                <button type="button">
+
+                    EN
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div class="mobile-language-menu">
+
+                    <a
+                        href="project.html"
+                        class="active"
+                    >
+                        🇬🇧 English
+                    </a>
+
+                    <a href="project-nl.html">
+                        🇳🇱 Nederlands
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="project-portal">
+
+
+
+<!-- =========================================================
+     LOGIN SCREEN
+========================================================= -->
+
+<section
+    class="project-login"
+    id="project-login"
+>
+
+
+    <div class="project-login-inner">
+
+
+        <!-- LEFT -->
+
+        <div class="project-login-intro">
+
+
+            <p class="section-label">
+                CLIENT PORTAL
+            </p>
+
+
+            <h1>
+
+                Track your
+                <em>project.</em>
+
+            </h1>
+
+
+            <p class="project-login-description">
+
+                View the current progress of your project,
+                recent updates and what happens next.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="project-login-card">
+
+
+            <div class="project-login-card-top">
+
+
+                <span class="project-card-number">
+                    01
+                </span>
+
+
+                <p>
+                    PROJECT ACCESS
+                </p>
+
+
+            </div>
+
+
+
+            <form
+                id="project-login-form"
+                class="project-form"
+            >
+
+
+                <!-- PROJECT NUMBER -->
+
+                <div class="project-field">
+
+
+                    <label for="project-number">
+
+                        Project number
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="project-number"
+                        name="project-number"
+                        placeholder="DK-2026-001"
+                        autocomplete="off"
+                        required
+                    >
+
+
+                </div>
+
+
+
+                <!-- ACCESS CODE -->
+
+                <div class="project-field">
+
+
+                    <label for="project-code">
+
+                        Access code
+
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="project-code"
+                        name="project-code"
+                        placeholder="Enter your access code"
+                        autocomplete="off"
+                        required
+                    >
+
+
+                </div>
+
+
+
+                <!-- ERROR -->
+
+                <div
+                    class="project-error"
+                    id="project-error"
+                >
+
+                    Project number or access code is incorrect.
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="project-login-button magnetic"
+                >
+
+
+                    <span>
+                        View project
+                    </span>
+
+
+                    <i>
+                        →
+                    </i>
+
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="project-login-help">
+
+
+                <span>
+                    NEED HELP?
+                </span>
+
+
+                <p>
+
+                    Can't find your project number or access
+                    code? Please contact DK VISUALS.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECT DASHBOARD
+========================================================= -->
+
+<section
+    class="project-dashboard"
+    id="project-dashboard"
+    hidden
+>
+
+
+    <!-- =====================================================
+         DASHBOARD HERO
+    ====================================================== -->
+
+    <div class="project-dashboard-hero">
+
+
+        <div class="project-dashboard-heading">
+
+
+            <div>
+
+
+                <p class="section-label">
+                    PROJECT OVERVIEW
+                </p>
+
+
+                <h1 id="dashboard-project-title">
+
+                    Project name
+
+                </h1>
+
+
+            </div>
+
+
+
+            <!--
+            <button
+                type="button"
+                id="project-logout"
+                class="project-logout"
+            >
+
+                Another project
+
+                <span>
+                    ↗
+                </span>
+
+            </button>
+            -->
+
+
+        </div>
+
+
+
+        <div class="project-meta-grid">
+
+
+            <!-- CLIENT -->
+
+            <div class="project-meta-item">
+
+                <span>
+                    CLIENT
+                </span>
+
+                <strong id="dashboard-client">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- PROJECT NUMBER -->
+
+            <div class="project-meta-item">
+
+                <span>
+                    PROJECT NUMBER
+                </span>
+
+                <strong id="dashboard-number">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- START DATE -->
+
+            <div class="project-meta-item">
+
+                <span>
+                    START DATE
+                </span>
+
+                <strong id="dashboard-start-date">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- DEADLINE -->
+
+            <div class="project-meta-item">
+
+                <span>
+                    PLANNED DELIVERY
+                </span>
+
+                <strong id="dashboard-deadline">
+                    —
+                </strong>
+
+            </div>
+
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="project-section-heading">
+
+
+            <p class="section-label">
+                PROJECT DETAILS
+            </p>
+
+
+            <!--
+            <h2>
+
+                Everything in one
+                <em>place.</em>
+
+            </h2>
+            -->
+
+
+        </div>
+
+
+
+        <div class="project-details-grid">
+
+
+            <!-- TYPE -->
+
+            <div class="project-detail-card">
+
+                <span>
+                    PROJECT TYPE
+                </span>
+
+                <strong id="dashboard-type">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- PAGES -->
+
+            <div class="project-detail-card">
+
+                <span>
+                    PAGES
+                </span>
+
+                <strong id="dashboard-pages">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- LANGUAGE -->
+
+            <div class="project-detail-card">
+
+                <span>
+                    LANGUAGE
+                </span>
+
+                <strong id="dashboard-language">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- LAST UPDATED -->
+
+            <div class="project-detail-card">
+
+                <span>
+                    LAST UPDATED
+                </span>
+
+                <strong id="dashboard-last-updated">
+                    —
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- =====================================================
+         PROJECT DETAILS
+    ====================================================== -->
+    <!--
+    <div class="project-details-section">
+
+        <div class="project-section-heading">
+
+            <p class="section-label">
+                PROJECT DETAILS
+            </p>
+
+            <h2>
+
+                Everything in one
+                <em>place.</em>
+
+            </h2>
+
+        </div>
+
+        <div class="project-details-grid">
+
+            <div class="project-detail-card">
+
+                <span>
+                    PROJECT TYPE
+                </span>
+
+                <strong id="dashboard-type">
+                    —
+                </strong>
+
+            </div>
+
+            <div class="project-detail-card">
+
+                <span>
+                    PAGES
+                </span>
+
+                <strong id="dashboard-pages">
+                    —
+                </strong>
+
+            </div>
+
+            <div class="project-detail-card">
+
+                <span>
+                    LANGUAGE
+                </span>
+
+                <strong id="dashboard-language">
+                    —
+                </strong>
+
+            </div>
+
+            <div class="project-detail-card">
+
+                <span>
+                    LAST UPDATED
+                </span>
+
+                <strong id="dashboard-last-updated">
+                    —
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    -->
+
+
+
+    <!-- =====================================================
+         PROGRESS
+    ====================================================== -->
+
+    <div class="project-progress-section">
+
+
+        <div class="project-progress-top">
+
+
+            <div>
+
+
+                <p class="section-label">
+                    PROGRESS
+                </p>
+
+
+                <h2>
+
+                    Project
+                    <em>status.</em>
+
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="project-progress-percentage">
+
+                <span id="dashboard-progress">
+                    0
+                </span>
+
+                <small>
+                    %
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="project-progress-track">
+
+            <div
+                class="project-progress-bar"
+                id="dashboard-progress-bar"
+            ></div>
+
+        </div>
+
+
+
+        <div class="project-current-status">
+
+
+            <span>
+                CURRENT STATUS
+            </span>
+
+
+            <strong id="dashboard-status">
+                —
+            </strong>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PROJECT PHASES
+    ====================================================== -->
+
+    <div class="project-phases-section">
+
+
+        <div class="project-section-heading">
+
+
+            <p class="section-label">
+                PROJECT PHASES
+            </p>
+
+
+            <h2>
+
+                From idea to
+                <em>launch.</em>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div
+            class="project-phases"
+            id="project-phases"
+        >
+
+            <!-- GENERATED BY JAVASCRIPT -->
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TWO COLUMN CONTENT
+    ====================================================== -->
+
+    <div class="project-information-grid">
+
+
+
+        <!-- =================================================
+             RECENT UPDATES
+        ================================================== -->
+
+        <div class="project-updates">
+
+
+            <div class="project-information-heading">
+
+
+                <p class="section-label">
+                    UPDATES
+                </p>
+
+
+                <h2>
+                    Recent activity
+                </h2>
+
+
+            </div>
+
+
+
+            <div
+                class="project-updates-list"
+                id="project-updates-list"
+            >
+
+                <!-- GENERATED BY JAVASCRIPT -->
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             NEXT STEP
+        ================================================== -->
+
+        <aside class="project-next-step">
+
+
+            <!--
+            <div class="project-next-step-number">
+
+                <span>
+                    NEXT
+                </span>
+
+                <strong>
+                    →
+                </strong>
+
+            </div>
+            -->
+
+
+
+            <div class="project-next-step-content">
+
+
+                <p class="section-label">
+                    NEXT STEP
+                </p>
+
+
+                <h2 id="dashboard-next-step-title">
+
+                    Next step
+
+                </h2>
+
+
+                <p id="dashboard-next-step-description">
+
+                    —
+
+                </p>
+
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
+
+
+
+<!-- =====================================================
+     PROJECT DEMO
+====================================================== -->
+
+    <div
+        class="project-demo-section"
+        id="project-demo-section"
+        hidden
+    >
+
+        <div class="project-section-heading">
+
+            <p class="section-label">
+                LIVE DEMO
+            </p>
+
+            <h2>
+                Explore the current
+                <em>version.</em>
+            </h2>
+
+        </div>
+
+
+        <!-- DEMO BROWSER -->
+
+        <div class="project-demo-browser">
+
+
+            <!-- BROWSER TOP BAR -->
+
+            <div class="project-demo-browser-top">
+
+
+                <!-- DOTS -->
+
+                <div class="project-demo-dots">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <!-- URL -->
+
+                <div
+                    class="project-demo-url"
+                    id="project-demo-url"
+                >
+                    —
+                </div>
+
+
+                <!-- OPEN FULL WEBSITE -->
+
+                <a
+                    href="#"
+                    id="project-demo-open"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    OPEN ↗
+                </a>
+
+
+            </div>
+
+
+            <!-- WEBSITE PREVIEW -->
+
+            <div class="project-demo-frame">
+
+                <iframe
+                    id="project-demo-iframe"
+                    src=""
+                    title="Project demo"
+                    loading="lazy"
+                ></iframe>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =====================================================
+         CONTACT CTA
+    ====================================================== -->
+
+    <!--
+    <div class="project-contact-section">
+
+
+        <div>
+
+
+            <p class="section-label">
+                HAVE A QUESTION?
+            </p>
+
+
+            <h2>
+
+                We're here to
+                <em>help.</em>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <a
+            href="index.html#contact"
+            class="project-contact-button magnetic"
+        >
+
+            <span>
+                Contact us
+            </span>
+
+            <i>
+                →
+            </i>
+
+        </a>
+
+
+    </div>
+    -->
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+    FOOTER
+========================================================= -->
+
+<footer>
+
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="assets/images/logo.png"
+                alt="DK VISUALS"
+            >
+
+            <p>
+                Digital experiences
+                built to be remembered.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <span>
+                NAVIGATION
+            </span>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#work">
+                Work
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a href="project.html">
+                Client Portal
+            </a>
+            
+        </div>
+
+
+        <div class="footer-column">
+
+            <span>
+                SOCIAL
+            </span>
+
+            <a
+                href="https://www.instagram.com/dkvisuals.nl/"
+                target="_blank"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>
+                &nbsp;
+                Instagram
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/devrankurt/"
+                target="_blank"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg>
+                &nbsp;
+                LinkedIn
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <span>
+                CONTACT
+            </span>
+
+            <a href="mailto:devranhasankurt@hotmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                    <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+                    <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                </svg>
+                &nbsp;
+                Email
+            </a>
+
+            <a href="tel:+31615171296">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg>
+                &nbsp;
+                Phone
+            </a>
+
+            <p>
+                Amsterdam, Netherlands
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 DK VISUALS. ALL RIGHTS RESERVED.
+        </span>
+
+        <span>
+            DIGITAL · CREATIVE · IMPACTFUL
+        </span>
+
+        <span>
+            DESIGNED & DEVELOPED BY DK VISUALS
+        </span>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="assets/js/script.js"></script>
+
+<script src="assets/js/project-status.js"></script>
+
+
+</body>
+
+</html>

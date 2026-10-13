@@ -1,0 +1,302 @@
+{
+  "projects": [
+    {
+      "projectNumber": "DK-2026-001",
+      "accessCode": "147359",
+      "client": "Devran Hasan Kurt",
+      "demo": {
+        "enabled": true,
+        "url": "https://www.dkvisuals.nl"
+      },
+      "title": {
+        "nl": "DK VISUALS",
+        "en": "DK VISUALS"
+      },
+      "status": {
+        "nl": "Afgerond",
+        "en": "Completed"
+      },
+      "progress": 100,
+      "startDate": "2026-08-01",
+      "deadline": "2026-08-14",
+      "lastUpdated": "2026-08-12",
+      "type": {
+        "nl": "Multi-page website",
+        "en": "Multi-page website"
+      },
+      "pages": {
+        "nl": [
+          "index-nl.html",
+          "portfolio-nl.html",
+          "project-nl.html"
+        ],
+        "en": [
+          "index.html",
+          "portfolio.html",
+          "project.html"
+        ]
+      },
+      "language": {
+        "nl": [
+          "Nederlands / Engels"
+        ],
+        "en": [
+          "Dutch / English"
+        ]
+      },
+      "phases": [
+        {
+          "title": {
+            "nl": "Discovery",
+            "en": "Discovery"
+          },
+          "description": {
+            "nl": "Analyse van de huidige website, doelstellingen, doelgroep en gewenste uitstraling.",
+            "en": "Analysis of the current website, project goals, target audience and desired visual direction."
+          },
+          "status": "completed"
+        },
+        {
+          "title": {
+            "nl": "Design",
+            "en": "Design"
+          },
+          "description": {
+            "nl": "Ontwikkeling van de visuele richting, pagina-indeling en algemene gebruikerservaring.",
+            "en": "Development of the visual direction, page structure and overall user experience."
+          },
+          "status": "completed"
+        },
+        {
+          "title": {
+            "nl": "Development",
+            "en": "Development"
+          },
+          "description": {
+            "nl": "Technische ontwikkeling van de website, responsive uitwerking en implementatie van functionaliteiten.",
+            "en": "Technical development of the website, responsive implementation and integration of functionality."
+          },
+          "status": "completed"
+        },
+        {
+          "title": {
+            "nl": "Review",
+            "en": "Review"
+          },
+          "description": {
+            "nl": "Controle van de complete website en verwerking van eventuele laatste aanpassingen.",
+            "en": "Review of the complete website and implementation of any final adjustments."
+          },
+          "status": "completed"
+        },
+        {
+          "title": {
+            "nl": "Launch",
+            "en": "Launch"
+          },
+          "description": {
+            "nl": "Definitieve controle, domeinkoppeling en livegang van de website.",
+            "en": "Final checks, domain connection and launch of the website."
+          },
+          "status": "completed"
+        }
+      ],
+      "updates": [
+        {
+          "date": "2026-08-10",
+          "title": {
+            "nl": "Development gestart",
+            "en": "Development started"
+          },
+          "description": {
+            "nl": "Het ontwerp is technisch uitgewerkt en geschikt gemaakt voor desktop, tablet en mobiel.",
+            "en": "The design was developed and optimized for desktop, tablet and mobile devices."
+          }
+        },
+        {
+          "date": "2026-08-11",
+          "title": {
+            "nl": "Review afgerond",
+            "en": "Review completed"
+          },
+          "description": {
+            "nl": "De website is volledig gecontroleerd op responsive werking, inhoud, navigatie en functionaliteit.",
+            "en": "The website was fully reviewed for responsiveness, content, navigation and functionality."
+          }
+        },
+        {
+          "date": "2026-08-12",
+          "title": {
+            "nl": "Project afgerond",
+            "en": "Project completed"
+          },
+          "description": {
+            "nl": "De definitieve controles zijn uitgevoerd en de website is succesvol opgeleverd en live.",
+            "en": "Final checks were completed and the website was successfully delivered and launched."
+          }
+        }
+      ],
+      "nextStep": {
+        "title": {
+          "nl": "Project opgeleverd",
+          "en": "Project delivered"
+        },
+        "description": {
+          "nl": "Het project is volledig afgerond en opgeleverd. Eventuele toekomstige wijzigingen of uitbreidingen kunnen als nieuw onderhouds- of vervolgwerk worden uitgevoerd.",
+          "en": "The project has been fully completed and delivered. Any future changes or extensions can be handled as maintenance or follow-up work."
+        }
+      }
+    },
+    {
+      "projectNumber": "DK-2026-002",
+      "accessCode": "310104",
+      "client": "Erol Kurt",
+      "demo": {
+        "enabled": true,
+        "url": "https://dkvisuals.github.io/DK-2026-002"
+      },
+      "title": {
+        "nl": "HDB Taxi",
+        "en": "HDB Taxi"
+      },
+      "status": {
+        "nl": "Afgerond",
+        "en": "Completed"
+      },
+      "progress": 100,
+      "startDate": "2026-08-10",
+      "deadline": "2026-08-12",
+      "lastUpdated": "2026-08-12",
+      "type": {
+        "nl": "One-page website",
+        "en": "One-page website"
+      },
+      "pages": {
+        "nl": [
+          "Home",
+          "Vervoer",
+          "V-Klasse",
+          "Luchthavenvervoer",
+          "Contact"
+        ],
+        "en": [
+          "Home",
+          "Transport",
+          "V-Class",
+          "Airport Transfer",
+          "Contact"
+        ]
+      },
+      "language": {
+        "nl": [
+          "Nederlands / Engels"
+        ],
+        "en": [
+          "Dutch / English"
+        ]
+      },
+      "phases": [
+        {
+          "title": {
+            "nl": "Discovery",
+            "en": "Discovery"
+          },
+          "description": {
+            "nl": "Inventarisatie van de gewenste uitstraling, doelgroep en belangrijkste vervoersdiensten van HDB Taxi.",
+            "en": "Assessment of the desired visual identity, target audience and key transport services of HDB Taxi."
+          },
+          "status": "completed"
+        },
+        {
+          "title": {
+            "nl": "Design",
+            "en": "Design"
+          },
+          "description": {
+            "nl": "Ontwikkeling van een rustige, luxe en representatieve visuele stijl passend bij premium personenvervoer.",
+            "en": "Development of a calm, premium and professional visual style suited to premium passenger transport."
+          },
+          "status": "completed"
+        },
+        {
+          "title": {
+            "nl": "Development",
+            "en": "Development"
+          },
+          "description": {
+            "nl": "Technische ontwikkeling van de responsive website voor desktop, tablet en mobiel.",
+            "en": "Technical development of the responsive website for desktop, tablet and mobile."
+          },
+          "status": "completed"
+        },
+        {
+          "title": {
+            "nl": "Review",
+            "en": "Review"
+          },
+          "description": {
+            "nl": "Controle van teksten, responsive werking, navigatie, contactmogelijkheden en algemene presentatie.",
+            "en": "Review of content, responsiveness, navigation, contact options and overall presentation."
+          },
+          "status": "completed"
+        },
+        {
+          "title": {
+            "nl": "Launch",
+            "en": "Launch"
+          },
+          "description": {
+            "nl": "Definitieve controle en oplevering van de HDB Taxi website.",
+            "en": "Final checks and delivery of the HDB Taxi website."
+          },
+          "status": "completed"
+        }
+      ],
+      "updates": [
+        {
+          "date": "2026-08-10",
+          "title": {
+            "nl": "Project gestart",
+            "en": "Project started"
+          },
+          "description": {
+            "nl": "De structuur, inhoud en visuele richting voor de HDB Taxi website zijn vastgesteld.",
+            "en": "The structure, content and visual direction for the HDB Taxi website were established."
+          }
+        },
+        {
+          "date": "2026-08-11",
+          "title": {
+            "nl": "Website ontwikkeld",
+            "en": "Website developed"
+          },
+          "description": {
+            "nl": "De website is technisch uitgewerkt en geoptimaliseerd voor verschillende schermformaten.",
+            "en": "The website was developed and optimized for different screen sizes."
+          }
+        },
+        {
+          "date": "2026-08-12",
+          "title": {
+            "nl": "Project afgerond",
+            "en": "Project completed"
+          },
+          "description": {
+            "nl": "De eindcontrole is uitgevoerd en de website is volledig afgerond en opgeleverd.",
+            "en": "The final review was completed and the website was fully finished and delivered."
+          }
+        }
+      ],
+      "nextStep": {
+        "title": {
+          "nl": "Project opgeleverd",
+          "en": "Project delivered"
+        },
+        "description": {
+          "nl": "De website van HDB Taxi is afgerond en opgeleverd. Toekomstige wijzigingen kunnen via onderhoud of een vervolgopdracht worden verwerkt.",
+          "en": "The HDB Taxi website has been completed and delivered. Future changes can be handled through maintenance or follow-up work."
+        }
+      }
+    }
+  ]
+}
