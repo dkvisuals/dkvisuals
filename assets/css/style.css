@@ -1147,7 +1147,14 @@ button {
 
 }
 
+/* Remove borders from both live previews — all devices */
 
+.project-dua,
+.project-taxi,
+.project-dua:hover,
+.project-taxi:hover {
+    border: none !important;
+}
 
 
 
