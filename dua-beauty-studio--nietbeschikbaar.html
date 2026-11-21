@@ -525,5 +525,256 @@
     </footer>
 
 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const language = navigator.language.toLowerCase().startsWith("nl")
+        ? "nl"
+        : "en";
+
+    document.documentElement.lang = language;
+
+    const translations = {
+        nl: {
+            "nav-about": "Over ons",
+            "nav-services": "Diensten",
+            "nav-portfolio": "Portfolio",
+            "nav-contact": "Laten we praten",
+
+            "project-number": "PROJECT 01 / 02",
+            "industry": "BEAUTY & WELLNESS",
+            "eyebrow": "WEBSITEONTWERP & ONTWIKKELING",
+            "hero-title": "DUA Beauty<br><em>Studio.</em>",
+            "hero-description": "Een digitale ervaring die schoonheid, zelfvertrouwen en de kunst van zelfzorg weerspiegelt.",
+            "explore": "ONTDEK HET PROJECT",
+            "preview": "WEBSITEVOORBEELD",
+            "image-caption-1": "DUA BEAUTY STUDIO",
+            "image-caption-2": "ALMERE, NEDERLAND",
+
+            "overview-number": "01 — OVERZICHT",
+            "overview-title": "Een digitale plek voor<br><em>schoonheid en zelfzorg.</em>",
+            "overview-large": "DUA Beauty Studio is een beautyconcept uit Almere, gespecialiseerd in wimper- en wenkbrauwbehandelingen.",
+            "overview-p1": "Het doel was om een verfijnde online uitstraling te creëren die de identiteit van de studio weerspiegelt en bezoekers tegelijkertijd eenvoudig kennis laat maken met de behandelingen en diensten.",
+            "overview-p2": "Het resultaat is een elegante website met een editorial uitstraling, opgebouwd rondom eenvoud, visuele balans en een warme beauty-esthetiek.",
+
+            "client": "KLANT",
+            "industry-label": "BRANCHE",
+            "location": "LOCATIE",
+            "services": "DIENSTEN",
+            "industry-value": "Beauty & Wellness",
+            "location-value": "Almere, Nederland",
+            "services-value": "Webdesign & ontwikkeling",
+
+            "approach-number": "02 — DE AANPAK",
+            "approach-title": "Ontworpen met<br><em>een duidelijke visie.</em>",
+            "approach-large": "Een visuele identiteit geïnspireerd op de balans tussen elegantie en eenvoud binnen de beautybranche.",
+            "approach-description": "Het ontwerp combineert een warm, neutraal kleurenpalet, expressieve typografie en voldoende witruimte. Elk element is zorgvuldig gekozen om een rustige, verfijnde en consistente ervaring te creëren.",
+            "point-1": "Minimalistische en elegante lay-outs",
+            "point-2": "Warm, neutraal kleurenpalet",
+            "point-3": "Typografie met een editorial uitstraling",
+            "point-4": "Duidelijke en intuïtieve navigatie",
+            "visual-direction": "VISUELE RICHTING — DUA BEAUTY STUDIO",
+
+            "palette-number": "03 — VISUELE IDENTITEIT",
+            "palette-title": "De details <em>maken het verschil.</em>",
+            "palette-description": "Een zorgvuldig samengesteld kleurenpalet zorgt voor een warme, subtiele en herkenbare visuele uitstraling.",
+            "warm-cream": "WARME CRÈME",
+            "soft-beige": "ZACHT BEIGE",
+            "warm-taupe": "WARME TAUPE",
+            "deep-brown": "DIEPBRUIN",
+
+            "responsive-number": "04 — RESPONSIEF ONTWERP",
+            "responsive-title": "Mooi op<br><em>elk scherm.</em>",
+            "responsive-description": "De website is ontworpen met verschillende apparaten in gedachten. Zo blijft de visuele ervaring consistent op desktop, tablet en mobiel.",
+            "desktop": "DESKTOP",
+            "mobile": "MOBIEL",
+
+            "result-number": "05 — HET RESULTAAT",
+            "result-title": "Een digitale identiteit<br><em>die bij DUA past.</em>",
+            "result-description": "De uiteindelijke website brengt de visuele identiteit van de studio, informatie over behandelingen en de contactmogelijkheden samen in één samenhangende digitale omgeving.",
+            "result-service-1": "Webdesign",
+            "result-service-2": "Front-end ontwikkeling",
+            "result-service-3": "Responsief ontwerp",
+            "result-service-4": "Gebruikerservaring",
+
+            "continue": "ONTDEK MEER",
+            "next": "VOLGEND PROJECT",
+
+            "footer-description": "Het ontwerpen en ontwikkelen van digitale ervaringen.",
+            "footer-rights": "© 2026 DK VISUALS. ALLE RECHTEN VOORBEHOUDEN.",
+            "footer-portfolio": "PORTFOLIO",
+            "footer-contact": "CONTACT"
+        },
+
+        en: {
+            "nav-about": "About",
+            "nav-services": "Services",
+            "nav-portfolio": "Portfolio",
+            "nav-contact": "Let's talk",
+
+            "project-number": "PROJECT 01 / 02",
+            "industry": "BEAUTY & WELLNESS",
+            "eyebrow": "WEBSITE DESIGN & DEVELOPMENT",
+            "hero-title": "DUA Beauty<br><em>Studio.</em>",
+            "hero-description": "A digital experience designed to reflect beauty, confidence and the art of self-care.",
+            "explore": "EXPLORE PROJECT",
+            "preview": "WEBSITE PREVIEW",
+            "image-caption-1": "DUA BEAUTY STUDIO",
+            "image-caption-2": "ALMERE, THE NETHERLANDS",
+
+            "overview-number": "01 — OVERVIEW",
+            "overview-title": "A digital space for<br><em>beauty and self-care.</em>",
+            "overview-large": "DUA Beauty Studio is a beauty concept based in Almere, specialising in lash and brow treatments.",
+            "overview-p1": "The goal was to create a refined online presence that reflects the studio's identity while making its treatments and services easy to explore.",
+            "overview-p2": "The result is an elegant, editorial-inspired website built around simplicity, visual balance and a warm beauty aesthetic.",
+
+            "client": "CLIENT",
+            "industry-label": "INDUSTRY",
+            "location": "LOCATION",
+            "services": "SERVICES",
+            "industry-value": "Beauty & Wellness",
+            "location-value": "Almere, Netherlands",
+            "services-value": "Web Design & Development",
+
+            "approach-number": "02 — THE APPROACH",
+            "approach-title": "Designed with<br><em>intention.</em>",
+            "approach-large": "A visual identity inspired by the beauty industry's balance between elegance and simplicity.",
+            "approach-description": "The design combines a warm neutral colour palette, expressive typography and generous whitespace. Every element was chosen to create a calm, sophisticated and consistent experience.",
+            "point-1": "Minimal and elegant layouts",
+            "point-2": "Warm, neutral colour palette",
+            "point-3": "Editorial-inspired typography",
+            "point-4": "Clear and intuitive navigation",
+            "visual-direction": "VISUAL DIRECTION — DUA BEAUTY STUDIO",
+
+            "palette-number": "03 — VISUAL IDENTITY",
+            "palette-title": "The details <em>matter.</em>",
+            "palette-description": "A carefully selected palette creates a warm, understated and recognisable visual language.",
+            "warm-cream": "WARM CREAM",
+            "soft-beige": "SOFT BEIGE",
+            "warm-taupe": "WARM TAUPE",
+            "deep-brown": "DEEP BROWN",
+
+            "responsive-number": "04 — RESPONSIVE DESIGN",
+            "responsive-title": "Beautiful on<br><em>every screen.</em>",
+            "responsive-description": "The website was designed with different devices in mind, maintaining a consistent visual experience across desktop, tablet and mobile.",
+            "desktop": "DESKTOP",
+            "mobile": "MOBILE",
+
+            "result-number": "05 — THE RESULT",
+            "result-title": "A digital identity<br><em>that feels like DUA.</em>",
+            "result-description": "The completed website brings together the studio's visual identity, treatment information and contact experience in one cohesive digital environment.",
+            "result-service-1": "Website Design",
+            "result-service-2": "Front-end Development",
+            "result-service-3": "Responsive Design",
+            "result-service-4": "User Experience",
+
+            "continue": "CONTINUE EXPLORING",
+            "next": "NEXT PROJECT",
+
+            "footer-description": "Designing and developing digital experiences.",
+            "footer-rights": "© 2026 DK VISUALS. ALL RIGHTS RESERVED.",
+            "footer-portfolio": "PORTFOLIO",
+            "footer-contact": "CONTACT"
+        }
+    };
+
+    const elements = {
+        "nav-about": ".navigation a[href='#about'], .navigation a[href='index.html#about']",
+        "nav-services": ".navigation a[href='#services'], .navigation a[href='index.html#services']",
+        "nav-portfolio": ".navigation a.active",
+        "nav-contact": ".header-contact",
+
+        "project-number": ".hero-top span:first-child",
+        "industry": ".hero-top span:last-child",
+        "eyebrow": ".hero-content .eyebrow",
+        "hero-title": ".hero-content h1",
+        "hero-description": ".hero-description",
+        "explore": ".hero-link",
+        "preview": ".browser-status",
+        "image-caption-1": ".image-caption span:first-child",
+        "image-caption-2": ".image-caption span:last-child",
+
+        "overview-number": ".overview .section-number",
+        "overview-title": ".overview .section-intro h2",
+        "overview-large": ".overview-description .large-text",
+        "overview-p1": ".overview-description p:nth-child(2)",
+        "overview-p2": ".overview-description p:nth-child(3)",
+
+        "client": ".detail-item:nth-child(1) span",
+        "industry-label": ".detail-item:nth-child(2) span",
+        "location": ".detail-item:nth-child(3) span",
+        "services": ".detail-item:nth-child(4) span",
+        "industry-value": ".detail-item:nth-child(2) strong",
+        "location-value": ".detail-item:nth-child(3) strong",
+        "services-value": ".detail-item:nth-child(4) strong",
+
+        "approach-number": ".approach .section-number",
+        "approach-title": ".approach .section-intro h2",
+        "approach-large": ".approach-text .large-text",
+        "approach-description": ".approach-text > p:nth-of-type(2)",
+        "point-1": ".design-points > div:nth-child(1) p",
+        "point-2": ".design-points > div:nth-child(2) p",
+        "point-3": ".design-points > div:nth-child(3) p",
+        "point-4": ".design-points > div:nth-child(4) p",
+        "visual-direction": ".design-image > span",
+
+        "palette-number": ".palette-heading .section-number",
+        "palette-title": ".palette-heading h2",
+        "palette-description": ".palette-heading > p",
+        "warm-cream": ".colour-one p",
+        "soft-beige": ".colour-two p",
+        "warm-taupe": ".colour-three p",
+        "deep-brown": ".colour-four p",
+
+        "responsive-number": ".responsive-content .section-number",
+        "responsive-title": ".responsive-content h2",
+        "responsive-description": ".responsive-content > p",
+        "desktop": ".desktop-device > span",
+        "mobile": ".mobile-device > span",
+
+        "result-number": ".result .section-number",
+        "result-title": ".result h2",
+        "result-description": ".result > p",
+        "result-service-1": ".result-services span:nth-child(1)",
+        "result-service-2": ".result-services span:nth-child(2)",
+        "result-service-3": ".result-services span:nth-child(3)",
+        "result-service-4": ".result-services span:nth-child(4)",
+
+        "continue": ".next-project-top span:first-child",
+        "next": ".next-label",
+
+        "footer-description": ".footer-top > p",
+        "footer-rights": ".footer-bottom > span",
+        "footer-portfolio": ".footer-bottom a:first-child",
+        "footer-contact": ".footer-bottom a:last-child"
+    };
+
+    Object.entries(elements).forEach(([key, selector]) => {
+        const element = document.querySelector(selector);
+
+        if (element && translations[language][key]) {
+            if (["hero-title", "overview-title", "approach-title",
+                 "palette-title", "responsive-title", "result-title"].includes(key)) {
+                element.innerHTML = translations[language][key];
+            } else if (key === "hero-link" || key === "explore") {
+                element.innerHTML = translations[language][key] + " <span>↓</span>";
+            } else {
+                element.textContent = translations[language][key];
+            }
+        }
+    });
+
+    // Browser preview labels
+    document.querySelectorAll(".website-frame iframe, .device-screen iframe, .mobile-frame iframe")
+        .forEach(iframe => {
+            iframe.title = language === "nl"
+                ? "Voorbeeld van de website van DUA Beauty Studio"
+                : "DUA Beauty Studio website preview";
+        });
+
+});
+</script>
+
 </body>
 </html>
