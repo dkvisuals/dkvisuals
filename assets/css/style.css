@@ -982,9 +982,18 @@ button {
 /* Mobile */
 @media (max-width: 700px) {
     .project-dua iframe {
-        width: 1440px;
-        height: 1208px;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 416.6667%;
+        height: 349.77%;
+
         transform: scale(0.24);
+        transform-origin: top left;
+
+        border: none;
+        pointer-events: none;
     }
 }
 
