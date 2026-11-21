@@ -866,38 +866,63 @@ window.addEventListener('scroll', () => {
 </script>
 
 <script>
-/* =========================
-   RESPONSIVE PORTFOLIO PREVIEWS
-========================= */
+/* ========================================
+   DK VISUALS — RESPONSIVE PORTFOLIO PREVIEWS
+======================================== */
+
+// Alleen High Quality Taxi automatisch schalen.
+// DUA Beauty behoudt zijn eerdere vaste instellingen.
 
 function updatePortfolioPreviews() {
-    document.querySelectorAll(
-        '.project-dua iframe, .project-taxi iframe'
-    ).forEach(iframe => {
+
+    const taxiPreviews = document.querySelectorAll(
+        '.project-taxi iframe'
+    );
+
+    taxiPreviews.forEach(iframe => {
+
         const container = iframe.parentElement;
 
-        const width = container.clientWidth;
-        const height = container.clientHeight;
+        const containerWidth = container.clientWidth;
+        const containerHeight = container.clientHeight;
 
+        const iframeWidth = 1440;
+        const iframeHeight = iframe.offsetHeight;
+
+        if (!containerWidth || !containerHeight || !iframeHeight) {
+            return;
+        }
+
+        // Bereken de schaal op basis van de beschikbare ruimte.
         const scale = Math.min(
-            width / 1440,
-            height / iframe.offsetHeight
+            containerWidth / iframeWidth,
+            containerHeight / iframeHeight
         );
 
-        iframe.style.setProperty('--preview-scale', scale);
+        iframe.style.transform = `scale(${scale})`;
+
     });
 }
 
+
+// Automatisch aanpassen wanneer de projectkaart verandert.
 const previewObserver = new ResizeObserver(() => {
     updatePortfolioPreviews();
 });
 
-document.querySelectorAll('.project-dua, .project-taxi').forEach(container => {
+document.querySelectorAll('.project-taxi').forEach(container => {
     previewObserver.observe(container);
 });
 
+
+// Aanpassen wanneer de pagina geladen is.
 window.addEventListener('load', updatePortfolioPreviews);
+
+// Aanpassen wanneer het schermformaat verandert.
 window.addEventListener('resize', updatePortfolioPreviews);
+
+// Eerste controle.
+updatePortfolioPreviews();
 </script>
 
 </body>
