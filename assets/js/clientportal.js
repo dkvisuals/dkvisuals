@@ -26,7 +26,7 @@ const dynamicTranslations = {
 
         connectionError: "Unable to connect to the client portal. Please try again later.",
         loadError: "Client information could not be loaded. Please refresh the page.",
-        invalidLogin: "Incorrect email or password.",
+        invalidLogin: "Incorrect username or password.",
 
         noProject: "No project",
         notStarted: "Not started",
@@ -108,7 +108,7 @@ const dynamicTranslations = {
 
         connectionError: "Kan geen verbinding maken met het klantenportaal. Probeer het later opnieuw.",
         loadError: "Klantgegevens konden niet worden geladen. Vernieuw de pagina.",
-        invalidLogin: "Onjuist e-mailadres of wachtwoord.",
+        invalidLogin: "Onjuiste gebruikersnaam of wachtwoord.",
 
         noProject: "Geen project",
         notStarted: "Nog niet gestart",
@@ -190,7 +190,7 @@ const dynamicTranslations = {
 
         connectionError: "Müşteri portalına bağlanılamıyor. Lütfen daha sonra tekrar deneyin.",
         loadError: "Müşteri bilgileri yüklenemedi. Lütfen sayfayı yenileyin.",
-        invalidLogin: "E-posta adresi veya şifre hatalı.",
+        invalidLogin: "Kullanıcı adı veya şifre hatalı.",
 
         noProject: "Proje yok",
         notStarted: "Henüz başlamadı",
@@ -317,7 +317,7 @@ const loginScreen = document.getElementById("loginScreen");
 const portalContent = document.getElementById("portalContent");
 
 const loginForm = document.getElementById("loginForm");
-const loginEmail = document.getElementById("loginEmail");
+const loginUsername = document.getElementById("loginUsername");
 const loginPassword = document.getElementById("loginPassword");
 const loginError = document.getElementById("loginError");
 const loginButton = document.getElementById("loginButton");
@@ -333,6 +333,13 @@ const navigationLinks = document.querySelectorAll("[data-section]");
 document.addEventListener("DOMContentLoaded", initializePortal);
 
 async function initializePortal() {
+    if (!loginScreen || !portalContent || !loginForm ||
+        !loginUsername || !loginPassword || !loginError ||
+        !loginButton || !logoutButton) {
+        console.error("Client portal HTML elements are missing.");
+        return;
+    }
+
     loginScreen.hidden = false;
     portalContent.hidden = true;
 
@@ -397,13 +404,13 @@ function handleLogin(event) {
         return;
     }
 
-    const email = loginEmail.value.trim().toLowerCase();
+    const username = loginUsername.value.trim().toLowerCase();
     const password = loginPassword.value;
 
     const client = clients.find(item => {
         return (
-            typeof item.email === "string" &&
-            item.email.toLowerCase() === email &&
+            typeof item.username === "string" &&
+            item.username.trim().toLowerCase() === username &&
             item.password === password &&
             item.active === true
         );
@@ -467,7 +474,6 @@ function renderPortal() {
 
 function renderClientInfo() {
     setText("clientName", currentClient.name);
-    setText("clientEmail", currentClient.email);
 
     const avatar = document.getElementById("clientAvatar");
 
