@@ -983,8 +983,8 @@ button {
 @media (max-width: 700px) {
     .project-dua iframe {
         width: 1440px;
-        height: 1115px;
-        transform: scale(0.26);
+        height: 1208px;
+        transform: scale(0.24);
     }
 }
 
