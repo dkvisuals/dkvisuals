@@ -93,6 +93,13 @@ button {
     letter-spacing: -2px;
 }
 
+.logo img {
+    display: block;
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
 .logo span {
     color: #aaa49a;
 }
