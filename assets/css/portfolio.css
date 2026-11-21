@@ -127,12 +127,38 @@ a {
    HERO
 ========================================== */
 
+/*
 .hero {
     padding: 55px 8% 35px;
     min-height: 610px;
     display: flex;
     flex-direction: column;
 }
+*/
+
+.hero {
+    padding: 55px 8% 35px;
+    min-height: 610px;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(9, 9, 11, 0.25) 0%,
+            rgba(9, 9, 11, 0.15) 45%,
+            rgba(9, 9, 11, 0.75) 100%
+        ),
+        url("../images/hero.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 
 .hero-top {
     display: flex;
