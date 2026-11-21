@@ -257,11 +257,11 @@ a {
    WORK SECTION
 ========================================== */
 
-/*
 .work-section {
     padding: 130px 8%;
 }
-*/
+
+/*
 .work-section {
     padding: 130px 8%;
     background-image:
@@ -275,6 +275,7 @@ a {
     background-position: center;
     background-attachment: fixed;
 }
+*/
 
 .section-heading {
     display: flex;
