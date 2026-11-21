@@ -1006,10 +1006,10 @@ button {
     left: 0;
 
     width: 1440px;
-    height: 1129px;
+    height: 973px;
 
     border: none;
-    transform: scale(0.31);
+    transform: scale(0.374);
     transform-origin: top left;
 
     pointer-events: none;
@@ -1025,7 +1025,6 @@ button {
         transform-origin: top left;
     }
 }
-
 
 /* ========================================
    PROCESS
