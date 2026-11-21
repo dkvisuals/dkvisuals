@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+
+    <title>Under Maintenance | DK VISUALS</title>
+
+    <style>
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #050505;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .background::before {
+            content: "";
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(
+                circle,
+                rgba(255,255,255,0.055) 0%,
+                rgba(255,255,255,0.015) 40%,
+                transparent 70%
+            );
+        }
+
+        .grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: linear-gradient(
+                to bottom,
+                transparent,
+                black 30%,
+                black 70%,
+                transparent
+            );
+        }
+
+        /* =========================
+           LAYOUT
+        ========================= */
+
+        .page {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 7%;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            font-weight: 300;
+        }
+
+        .header-label {
+            color: #777;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .content {
+            max-width: 750px;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        /* STATUS */
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            margin-bottom: 35px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.035);
+            color: #aaa;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 12px rgba(255,255,255,0.6);
+            animation: pulse 2s infinite;
+        }
+
+        /* HEADING */
+
+        h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: 1.05;
+            letter-spacing: -4px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #777;
+        }
+
+        .description {
+            max-width: 490px;
+            margin: 0 auto;
+            color: #888;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* DECORATIVE LINE */
+
+        .divider {
+            width: 55px;
+            height: 1px;
+            background: rgba(255,255,255,0.35);
+            margin: 35px auto;
+        }
+
+        .small-text {
+            color: #666;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            color: #555;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        footer span:last-child {
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 0 12px rgba(255,255,255,0.6);
+            }
+
+            50% {
+                opacity: 0.35;
+                box-shadow: 0 0 3px rgba(255,255,255,0.2);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .page {
+                padding: 28px 6%;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .header-label {
+                font-size: 9px;
+                letter-spacing: 1px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="grid"></div>
+    </div>
+
+    <div class="page">
+
+        <header>
+            <div class="logo">DK <span>VISUALS</span></div>
+            <div class="header-label">Digital Experiences</div>
+        </header>
+
+        <main>
+            <div class="content">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Website under maintenance
+                </div>
+
+                <h1>
+                    We're working<br>
+                    <span>on something.</span>
+                </h1>
+
+                <p class="description">
+                    We're currently making improvements to our website
+                    to bring you a better experience.
+                    We'll be back online shortly.
+                </p>
+
+                <div class="divider"></div>
+
+                <p class="small-text">
+                    Thank you for your patience
+                </p>
+
+            </div>
+        </main>
+
+        <footer>
+            <span>© 2026 DK VISUALS</span>
+            <span>Design. Develop. Deliver.</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>

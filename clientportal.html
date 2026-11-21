@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Portal | DK VISUALS</title>
+
+    <link rel="stylesheet" href="assets/css/clientportal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="assets/js/clientportal.js" defer></script>
+</head>
+
+<body>
+
+    <!-- LOGIN SCREEN -->
+    <section class="login-screen" id="loginScreen">
+        <div class="login-container">
+
+            <a href="index.html" class="login-brand">
+                <span class="brand-name">DK VISUALS</span>
+                <span class="brand-subtitle">CLIENT PORTAL</span>
+            </a>
+
+            <div class="login-heading">
+                <span class="eyebrow">CLIENT ACCESS</span>
+                <h1>Welcome back.</h1>
+                <p>Sign in to access your project dashboard.</p>
+            </div>
+
+            <form id="loginForm" novalidate>
+
+                <div class="form-group">
+                    <label for="loginEmail">Email address</label>
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <p id="loginError" class="login-error" role="alert" aria-live="polite"></p>
+
+                <button type="submit" id="loginButton" class="login-button">
+                    <span>Sign in</span>
+                    <span class="button-arrow">→</span>
+                </button>
+
+            </form>
+
+            <div class="login-bottom">
+                <span>© 2026 DK VISUALS. ALL RIGHTS RESERVED.</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CLIENT PORTAL -->
+    <div class="portal-wrapper" id="portalContent" hidden>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <a href="index.html" class="sidebar-brand">
+                <span class="brand-name">DK VISUALS</span>
+                <span class="brand-subtitle">CLIENT PORTAL</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <nav class="sidebar-nav" aria-label="Main navigation">
+
+                <span class="nav-heading">WORKSPACE</span>
+
+                <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#project" class="nav-link" data-section="project">
+                    <span class="nav-icon">◫</span>
+                    <span>My Project</span>
+                </a>
+
+                <a href="#files" class="nav-link" data-section="files">
+                    <span class="nav-icon">▤</span>
+                    <span>Files</span>
+                </a>
+
+                <a href="#invoices" class="nav-link" data-section="invoices">
+                    <span class="nav-icon">▧</span>
+                    <span>Invoices</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-client">
+                    <div class="client-avatar" id="clientAvatar">D</div>
+
+                    <div class="client-details">
+                        <strong id="clientName">Client name</strong>
+                        <span id="clientEmail">client@email.com</span>
+                    </div>
+                </div>
+
+                <button type="button" class="logout-button" id="logoutButton">
+                    <span class="logout-icon">↪</span>
+                    <span>Log out</span>
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+                    <span class="topbar-label">DK VISUALS</span>
+                    <span class="topbar-separator">/</span>
+                    <span class="topbar-current">Client Portal</span>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="online-indicator"></span>
+                    <span>Client access</span>
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD -->
+            <section class="portal-section active" id="dashboardSection">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">OVERVIEW</span>
+                        <h1>Dashboard</h1>
+                        <p>Welcome back, <span id="dashboardClientName">Client</span>.</p>
+                    </div>
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <!-- PROJECT CARD -->
+                    <article class="dashboard-card project-card">
+
+                        <div class="card-top">
+                            <span class="card-label">CURRENT PROJECT</span>
+                            <span class="card-symbol">◫</span>
+                        </div>
+
+                        <h2 id="dashboardProjectName">Project name</h2>
+
+                        <div class="project-status">
+                            <span class="online-indicator"></span>
+                            <span id="dashboardProjectStatus">In progress</span>
+                        </div>
+
+                        <div class="progress-header">
+                            <span>Project progress</span>
+                            <strong id="dashboardProgress">0%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" id="dashboardProgressBar"></div>
+                        </div>
+
+                    </article>
+
+
+                    <!-- DELIVERY CARD -->
+                    <article class="dashboard-card delivery-card">
+
+                        <div class="card-top">
+                            <span class="card-label">EXPECTED DELIVERY</span>
+                            <span class="card-symbol">◷</span>
+                        </div>
+
+                        <h2 id="dashboardDeliveryDate">Not specified</h2>
+
+                        <p class="card-description">
+                            Estimated project completion date.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- RECENT UPDATES -->
+                <div class="content-card">
+
+                    <div class="content-card-header">
+                        <div>
+                            <span class="eyebrow">LATEST ACTIVITY</span>
+                            <h2>Recent updates</h2>
+                        </div>
+
+                        <a href="#project" class="text-link" data-section="project">
+                            View project →
+                        </a>
+                    </div>
+
+                    <div class="updates-list" id="recentUpdates">
+                        <p class="empty-message">No updates available yet.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROJECT -->
+            <section class="portal-section" id="projectSection">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">YOUR WORK</span>
+                        <h1>My Project</h1>
+                        <p>Follow the progress and development of your project.</p>
+                    </div>
+                </div>
+
+
+                <!-- PROJECT DETAILS -->
+                <div class="content-card">
+
+                    <div class="content-card-header">
+                        <div>
+                            <span class="eyebrow">PROJECT DETAILS</span>
+                            <h2 id="projectName">Project name</h2>
+                        </div>
+
+                        <span class="project-badge" id="projectStatus">In progress</span>
+                    </div>
+
+                    <p class="project-description" id="projectDescription"></p>
+
+                    <div class="project-details-grid">
+
+                        <div class="detail-item">
+                            <span>Project ID</span>
+                            <strong id="projectId">—</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Project type</span>
+                            <strong id="projectType">—</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Start date</span>
+                            <strong id="projectStartDate">—</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Expected delivery</span>
+                            <strong id="projectDeliveryDate">—</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="project-progress">
+
+                        <div class="progress-header">
+                            <span>Overall progress</span>
+                            <strong id="projectProgress">0%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" id="projectProgressBar"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIMELINE -->
+                <div class="content-card">
+
+                    <div class="content-card-header">
+                        <div>
+                            <span class="eyebrow">DEVELOPMENT</span>
+                            <h2>Project timeline</h2>
+                        </div>
+                    </div>
+
+                    <div class="project-timeline" id="projectTimeline">
+                        <p class="empty-message">No milestones available yet.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FILES -->
+            <section class="portal-section" id="filesSection">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">DOCUMENTS</span>
+                        <h1>Files</h1>
+                        <p>Access your project files and documents.</p>
+                    </div>
+                </div>
+
+                <div class="content-card">
+
+                    <div class="content-card-header">
+                        <div>
+                            <span class="eyebrow">YOUR DOCUMENTS</span>
+                            <h2>Available files</h2>
+                        </div>
+                    </div>
+
+                    <div class="files-list" id="filesList">
+                        <p class="empty-message">No files available yet.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INVOICES -->
+            <section class="portal-section" id="invoicesSection">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">PAYMENTS</span>
+                        <h1>Invoices</h1>
+                        <p>View your invoices and payment information.</p>
+                    </div>
+                </div>
+
+                <div class="content-card">
+
+                    <div class="content-card-header">
+                        <div>
+                            <span class="eyebrow">BILLING</span>
+                            <h2>Your invoices</h2>
+                        </div>
+                    </div>
+
+                    <div class="invoices-list" id="invoicesList">
+                        <p class="empty-message">No invoices available yet.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="portal-footer">
+
+                <span>© 2026 DK VISUALS. ALL RIGHTS RESERVED.</span>
+
+                <span>DESIGNED & DEVELOPED BY DK VISUALS</span>
+
+                <a href="#dashboard" data-section="dashboard">
+                    BACK TO TOP ↑
+                </a>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
