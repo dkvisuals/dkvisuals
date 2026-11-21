@@ -1,5 +1,11 @@
 
 /* ==========================================
+   DK VISUALS — PORTFOLIO STYLESHEET
+   Dark Premium Digital Studio
+========================================== */
+
+
+/* ==========================================
    RESET
 ========================================== */
 
@@ -37,33 +43,40 @@ a {
 ========================================== */
 
 .header {
+    position: relative;
     width: 100%;
     height: 90px;
     padding: 0 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 
 .logo,
 .footer-logo {
-    font-family: "Inter", sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -2px;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.logo span,
-.footer-logo span,
-.preview-logo span {
-    color: #888;
+.logo img,
+.footer-logo img {
+    display: block;
+    width: 140px;
+    height: auto;
+    max-height: 45px;
+    object-fit: contain;
 }
 
 .navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     gap: 42px;
+    white-space: nowrap;
 }
 
 .navigation a {
@@ -94,13 +107,16 @@ a {
 }
 
 .header-contact {
+    display: inline-flex;
+    align-items: center;
     font-size: 12px;
-    border: 1px solid rgba(255,255,255,.25);
+    border: 1px solid rgba(255, 255, 255, .25);
     padding: 11px 18px;
+    white-space: nowrap;
     transition: background .3s, color .3s;
 }
 
-.header-contact span {
+.header-contact span + span {
     margin-left: 10px;
 }
 
@@ -145,6 +161,7 @@ a {
 .status-dot {
     width: 7px;
     height: 7px;
+    flex-shrink: 0;
     background: #fff;
     border-radius: 50%;
 }
@@ -173,6 +190,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 30px;
     margin-top: 45px;
 }
 
@@ -189,6 +207,7 @@ a {
     gap: 20px;
     font-size: 10px;
     letter-spacing: 1.5px;
+    white-space: nowrap;
     transition: color .3s;
 }
 
@@ -196,19 +215,20 @@ a {
     color: #888;
 }
 
-.scroll-link span {
+.scroll-link span:last-child {
     font-size: 20px;
 }
 
 .hero-line {
     width: 100%;
     height: 1px;
-    background: rgba(255,255,255,.13);
+    background: rgba(255, 255, 255, .13);
 }
 
 .hero-meta {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
     padding-top: 20px;
     font-size: 9px;
 }
@@ -226,6 +246,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 30px;
     margin-bottom: 65px;
 }
 
@@ -266,7 +287,7 @@ a {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     background: #101010;
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, .08);
 }
 
 .project-number {
@@ -310,7 +331,7 @@ a {
     height: 100%;
     background: #080808;
     border: 1px solid #303030;
-    box-shadow: 0 20px 80px rgba(0,0,0,.5);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, .5);
 }
 
 .window-bar {
@@ -352,6 +373,10 @@ a {
     letter-spacing: -1px;
 }
 
+.preview-logo span {
+    color: #888;
+}
+
 .preview-main > span {
     color: #777;
     font-size: 8px;
@@ -387,7 +412,7 @@ a {
 
 .luqa-project {
     background:
-        linear-gradient(90deg, rgba(0,0,0,.7), rgba(0,0,0,.2)),
+        linear-gradient(90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .2)),
         radial-gradient(ellipse at center, #555 0%, #1b1b1b 65%, #080808 100%);
     display: flex;
     align-items: center;
@@ -397,14 +422,14 @@ a {
 .luqa-preview {
     width: 85%;
     height: 82%;
-    border: 1px solid rgba(255,255,255,.3);
+    border: 1px solid rgba(255, 255, 255, .3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: rgba(0,0,0,.15);
+    background: rgba(0, 0, 0, .15);
 }
 
 .luqa-small,
@@ -518,7 +543,7 @@ a {
 }
 
 .project-tags span {
-    border: 1px solid rgba(255,255,255,.15);
+    border: 1px solid rgba(255, 255, 255, .15);
     padding: 5px 9px;
     font-size: 9px;
     color: #999;
@@ -531,7 +556,7 @@ a {
 
 .cta-section {
     padding: 120px 8%;
-    border-top: 1px solid rgba(255,255,255,.1);
+    border-top: 1px solid rgba(255, 255, 255, .1);
     text-align: center;
 }
 
@@ -550,7 +575,7 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 30px;
-    border: 1px solid rgba(255,255,255,.4);
+    border: 1px solid rgba(255, 255, 255, .4);
     padding: 15px 22px;
     font-size: 10px;
     letter-spacing: 1.5px;
@@ -569,11 +594,15 @@ a {
 
 .footer {
     padding: 55px 8% 25px;
-    border-top: 1px solid rgba(255,255,255,.1);
+    border-top: 1px solid rgba(255, 255, 255, .1);
 }
 
 .footer-logo {
-    display: inline-block;
+    display: inline-flex;
+}
+
+.footer-logo img {
+    width: 140px;
 }
 
 .footer > p {
@@ -586,7 +615,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255,255,255,.1);
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
     margin-top: 45px;
     padding-top: 20px;
     color: #666;
@@ -609,13 +639,21 @@ a {
 
 
 /* ==========================================
-   RESPONSIVE
+   TABLET
 ========================================== */
 
 @media (max-width: 900px) {
 
     .header {
         padding: 0 5%;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .navigation {
+        gap: 25px;
     }
 
     .hero,
@@ -633,12 +671,18 @@ a {
         padding-top: 90px;
         padding-bottom: 90px;
     }
+
 }
 
+
+/* ==========================================
+   MOBILE
+========================================== */
 
 @media (max-width: 650px) {
 
     .header {
+        position: relative;
         height: auto;
         min-height: 75px;
         flex-wrap: wrap;
@@ -646,11 +690,14 @@ a {
         padding: 18px 5%;
     }
 
-    .logo {
-        font-size: 25px;
+    .logo img {
+        width: 120px;
+        max-height: 38px;
     }
 
     .navigation {
+        position: static;
+        transform: none;
         order: 3;
         width: 100%;
         justify-content: center;
@@ -675,6 +722,10 @@ a {
     .hero h1 {
         font-size: clamp(58px, 13vw, 85px);
         letter-spacing: -4px;
+    }
+
+    .hero-content {
+        padding: 50px 0;
     }
 
     .hero-bottom {
@@ -730,6 +781,18 @@ a {
         padding: 6%;
     }
 
+    .dk-preview {
+        padding: 18px 6%;
+    }
+
+    .preview-main h3 {
+        font-size: clamp(30px, 8vw, 48px);
+    }
+
+    .luqa-content h3 {
+        font-size: clamp(35px, 10vw, 55px);
+    }
+
     .cta-section {
         padding-top: 90px;
         padding-bottom: 90px;
@@ -750,8 +813,13 @@ a {
         flex-wrap: wrap;
         gap: 18px;
     }
+
 }
 
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
 
 @media (max-width: 380px) {
 
@@ -769,6 +837,10 @@ a {
 
     .project-tags span {
         font-size: 8px;
+    }
+
+    .header-contact {
+        padding: 8px 10px;
     }
 
 }
