@@ -7,7 +7,6 @@
       "name": "Devran Hasan Kurt",
       "password": "test123",
       "active": true,
-
       "project": {
         "id": "PRJ-001",
         "name": "Website Development",
@@ -18,7 +17,6 @@
         "deliveryDate": "2026-12-15",
         "progress": 65
       },
-
       "updates": [
         {
           "title": "Project started",
@@ -36,7 +34,6 @@
           "date": "2026-11-20"
         }
       ],
-
       "timeline": [
         {
           "title": "Website structure",
@@ -63,7 +60,6 @@
           "completed": false
         }
       ],
-
       "files": [
         {
           "name": "Project brief.pdf",
@@ -72,7 +68,6 @@
           "url": ""
         }
       ],
-
       "invoices": [
         {
           "number": "FA-2026-001",
@@ -82,6 +77,27 @@
           "url": ""
         }
       ]
+    },
+    {
+      "id": "258641",
+      "username": "launora",
+      "name": "Launora Kurt-Mekaj",
+      "password": "dua2026",
+      "active": true,
+      "project": {
+        "id": "PRJ-002",
+        "name": "DUA Beauty Studio",
+        "description": "Design and development of the official DUA Beauty Studio website.",
+        "type": "Website Development",
+        "status": "In progress",
+        "startDate": "2026-11-21",
+        "deliveryDate": "",
+        "progress": 0
+      },
+      "updates": [],
+      "timeline": [],
+      "files": [],
+      "invoices": []
     }
   ]
 }
