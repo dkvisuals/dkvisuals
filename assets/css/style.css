@@ -797,6 +797,7 @@ button {
     min-width: 0;
 }
 
+/*
 .project-image {
     display: flex;
     align-items: center;
@@ -951,7 +952,7 @@ button {
     font-size: 9px;
     letter-spacing: 1px;
 }
-
+*/
 
 
 /* =========================
@@ -1089,6 +1090,19 @@ button {
         width: 1440px;
         height: 1075px;
     }
+}
+
+/* Remove white border around DUA preview */
+
+.project-dua {
+    border: none;
+    outline: none;
+}
+
+.project-dua iframe {
+    border: none;
+    outline: none;
+    display: block;
 }
 /* ========================================
    PROCESS
