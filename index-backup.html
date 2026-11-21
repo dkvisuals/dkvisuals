@@ -865,5 +865,40 @@ window.addEventListener('scroll', () => {
 
 </script>
 
+<script>
+/* =========================
+   RESPONSIVE PORTFOLIO PREVIEWS
+========================= */
+
+function updatePortfolioPreviews() {
+    document.querySelectorAll(
+        '.project-dua iframe, .project-taxi iframe'
+    ).forEach(iframe => {
+        const container = iframe.parentElement;
+
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
+        const scale = Math.min(
+            width / 1440,
+            height / iframe.offsetHeight
+        );
+
+        iframe.style.setProperty('--preview-scale', scale);
+    });
+}
+
+const previewObserver = new ResizeObserver(() => {
+    updatePortfolioPreviews();
+});
+
+document.querySelectorAll('.project-dua, .project-taxi').forEach(container => {
+    previewObserver.observe(container);
+});
+
+window.addEventListener('load', updatePortfolioPreviews);
+window.addEventListener('resize', updatePortfolioPreviews);
+</script>
+
 </body>
 </html>
