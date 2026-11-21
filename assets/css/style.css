@@ -1102,6 +1102,64 @@ button {
     outline: none;
     display: block;
 }
+
+
+
+/* ========================================
+   LIVE PREVIEW — EDGE FIX
+======================================== */
+
+.project-dua,
+.project-taxi {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* DUA BEAUTY */
+
+.project-dua iframe {
+    transform: scale(0.51);
+    transform-origin: top left;
+    border: none;
+    border-radius: 6px;
+}
+
+/* HIGH QUALITY TAXI */
+
+.project-taxi iframe {
+    transform: scale(0.378);
+    transform-origin: top left;
+    border: none;
+    border-radius: 6px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .project-dua iframe {
+        transform: scale(0.28);
+    }
+
+    .project-taxi iframe {
+        transform: scale(0.28);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ========================================
    PROCESS
 ======================================== */
