@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#09090b">
 
     <title>DK VISUALS — Digital Experiences</title>
-    <meta name="description" content="DK VISUALS creates modern websites and digital experiences for ambitious businesses.">
+    <meta name="description" content="DK VISUALS creates modern websites and digital experiences for ambitious businesses." id="meta-description">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,21 +25,23 @@
     </a>
 
     <nav class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" class="active" data-i18n="navHome">Home</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
     </nav>
 
     <div class="nav-actions">
         <a href="clientportal.html" class="portal-link">
             <span class="status-dot"></span>
-            Client Portal
+            <span data-i18n="clientPortal">Client Portal</span>
             <span class="arrow">↗</span>
         </a>
 
-        <a href="#contact" class="nav-cta">Let's talk <span>↗</span></a>
+        <a href="#contact" class="nav-cta">
+            <span data-i18n="letsTalk">Let's talk</span> <span>↗</span>
+        </a>
     </div>
 
     <button class="menu-toggle" aria-label="Open menu">
@@ -57,7 +59,7 @@
     <div class="hero-top">
         <div class="availability">
             <span class="status-dot"></span>
-            Independent digital studio
+            <span data-i18n="availability">Independent digital studio</span>
         </div>
 
         <span class="hero-location">AMSTERDAM · NL</span>
@@ -65,34 +67,34 @@
 
     <div class="hero-content">
 
-        <p class="eyebrow">DESIGNING DIGITAL EXPERIENCES</p>
+        <p class="eyebrow" data-i18n="heroEyebrow">DESIGNING DIGITAL EXPERIENCES</p>
 
         <h1>
-            We build digital<br>
-            experiences that<br>
-            <span class="gradient-text">make an impact.</span>
+            <span data-i18n="heroHeading1">We build digital</span><br>
+            <span data-i18n="heroHeading2">experiences that</span><br>
+            <span class="gradient-text" data-i18n="heroHeading3">make an impact.</span>
         </h1>
 
-        <p class="hero-description">
+        <p class="hero-description" data-i18n="heroDescription">
             We help ambitious businesses stand out through thoughtful
             design, modern websites and carefully crafted digital experiences.
         </p>
 
         <div class="hero-buttons">
             <a href="#portfolio" class="button-primary">
-                Explore our work <span>↗</span>
+                <span data-i18n="exploreWork">Explore our work</span> <span>↗</span>
             </a>
 
             <a href="#contact" class="button-secondary">
-                Start a conversation <span>→</span>
+                <span data-i18n="startConversation">Start a conversation</span> <span>→</span>
             </a>
         </div>
 
     </div>
 
     <div class="hero-bottom">
-        <span>WEB DEVELOPMENT · DIGITAL DESIGN</span>
-        <span>SCROLL TO EXPLORE ↓</span>
+        <span data-i18n="heroBottomLeft">WEB DEVELOPMENT · DIGITAL DESIGN</span>
+        <span data-i18n="heroBottomRight">SCROLL TO EXPLORE ↓</span>
     </div>
 
     <div class="hero-decoration"></div>
@@ -104,32 +106,32 @@
 <section class="intro section-padding" id="about">
 
     <div class="section-label">
-        <span>01 / ABOUT</span>
-        <span>WHO WE ARE</span>
+        <span data-i18n="aboutLabel">01 / ABOUT</span>
+        <span data-i18n="whoWeAre">WHO WE ARE</span>
     </div>
 
     <div class="intro-grid">
 
         <h2>
-            Digital presence<br>
-            <span class="muted">with purpose.</span>
+            <span data-i18n="aboutHeading1">Digital presence</span><br>
+            <span class="muted" data-i18n="aboutHeading2">with purpose.</span>
         </h2>
 
         <div class="intro-content">
-            <p>
+            <p data-i18n="aboutParagraph1">
                 DK VISUALS is an independent digital studio focused on
                 creating modern, high-performance websites for businesses
                 that care about how they are seen online.
             </p>
 
-            <p>
+            <p data-i18n="aboutParagraph2">
                 From the first concept to the final detail, we combine
                 creativity and technology to build digital experiences
                 that feel distinctive and work seamlessly.
             </p>
 
             <a href="#contact" class="text-link">
-                Get to know us <span>↗</span>
+                <span data-i18n="getToKnowUs">Get to know us</span> <span>↗</span>
             </a>
         </div>
 
@@ -142,16 +144,19 @@
 <section class="services section-padding" id="services">
 
     <div class="section-label">
-        <span>02 / SERVICES</span>
-        <span>WHAT WE DO</span>
+        <span data-i18n="servicesLabel">02 / SERVICES</span>
+        <span data-i18n="whatWeDo">WHAT WE DO</span>
     </div>
 
     <div class="section-heading">
         <div>
-            <h2>What we bring<br><span class="muted">to the table.</span></h2>
+            <h2>
+                <span data-i18n="servicesHeading1">What we bring</span><br>
+                <span class="muted" data-i18n="servicesHeading2">to the table.</span>
+            </h2>
         </div>
 
-        <p>
+        <p data-i18n="servicesDescription">
             Thoughtful solutions for businesses looking
             to build and improve their digital presence.
         </p>
@@ -178,14 +183,14 @@
                 </div>
             </div>
 
-            <h3>Web Development</h3>
-            <p>
+            <h3 data-i18n="webDevelopment">Web Development</h3>
+            <p data-i18n="webDevelopmentDescription">
                 Modern, responsive and high-performance websites
                 designed to turn visitors into customers.
             </p>
 
             <div class="card-footer">
-                <span>WEBSITES · DEVELOPMENT</span>
+                <span data-i18n="webDevelopmentFooter">WEBSITES · DEVELOPMENT</span>
                 <span>01 — 03</span>
             </div>
         </article>
@@ -203,14 +208,14 @@
                 <div class="design-line"></div>
             </div>
 
-            <h3>Digital Design</h3>
-            <p>
+            <h3 data-i18n="digitalDesign">Digital Design</h3>
+            <p data-i18n="digitalDesignDescription">
                 Distinctive visual identities and digital materials
                 that communicate your brand with clarity.
             </p>
 
             <div class="card-footer">
-                <span>VISUALS · BRANDING</span>
+                <span data-i18n="digitalDesignFooter">VISUALS · BRANDING</span>
                 <span>02 — 03</span>
             </div>
         </article>
@@ -236,14 +241,14 @@
                 </div>
             </div>
 
-            <h3>Website Redesign</h3>
-            <p>
+            <h3 data-i18n="websiteRedesign">Website Redesign</h3>
+            <p data-i18n="websiteRedesignDescription">
                 Transforming outdated websites into modern,
                 polished and effective digital experiences.
             </p>
 
             <div class="card-footer">
-                <span>OPTIMIZATION · REDESIGN</span>
+                <span data-i18n="websiteRedesignFooter">OPTIMIZATION · REDESIGN</span>
                 <span>03 — 03</span>
             </div>
         </article>
@@ -257,14 +262,16 @@
 <section class="portfolio section-padding" id="portfolio">
 
     <div class="section-label">
-        <span>03 / SELECTED WORK</span>
-        <span>OUR PROJECTS</span>
+        <span data-i18n="portfolioLabel">03 / SELECTED WORK</span>
+        <span data-i18n="ourProjects">OUR PROJECTS</span>
     </div>
 
     <div class="section-heading">
-        <h2>Selected work<span class="muted">.</span></h2>
+        <h2>
+            <span data-i18n="portfolioHeading">Selected work</span><span class="muted">.</span>
+        </h2>
 
-        <p>
+        <p data-i18n="portfolioDescription">
             A selection of digital concepts and projects
             showcasing our approach to design and development.
         </p>
@@ -278,13 +285,13 @@
                 <div class="project-browser">
                     <div class="project-browser-top">
                         <span>DUA BEAUTY STUDIO</span>
-                        <span>MENU · ABOUT · CONTACT</span>
+                        <span data-i18n="projectMenu">MENU · ABOUT · CONTACT</span>
                     </div>
 
                     <div class="dua-preview">
-                        <span>BEAUTY · CONFIDENCE · YOU</span>
-                        <h3>Beauty begins<br>with you.</h3>
-                        <span class="preview-button">DISCOVER MORE ↗</span>
+                        <span data-i18n="beautyTagline">BEAUTY · CONFIDENCE · YOU</span>
+                        <h3 data-i18n="beautyHeading">Beauty begins<br>with you.</h3>
+                        <span class="preview-button" data-i18n="discoverMore">DISCOVER MORE ↗</span>
                     </div>
                 </div>
                 <span class="project-open">↗</span>
@@ -293,7 +300,7 @@
             <div class="project-info">
                 <div>
                     <h3>DUA Beauty Studio</h3>
-                    <p>Beauty · Website Design & Development</p>
+                    <p data-i18n="beautyProjectDescription">Beauty · Website Design & Development</p>
                 </div>
                 <span class="project-year">2026</span>
             </div>
@@ -305,10 +312,10 @@
 
             <a href="#" class="project-image project-taxi">
                 <div class="taxi-preview">
-                    <span>PREMIUM TRANSPORTATION</span>
-                    <h3>Travel in<br>comfort.</h3>
+                    <span data-i18n="taxiTagline">PREMIUM TRANSPORTATION</span>
+                    <h3 data-i18n="taxiHeading">Travel in<br>comfort.</h3>
                     <div class="taxi-line"></div>
-                    <span>HIGH QUALITY TAXI</span>
+                    <span data-i18n="taxiFooter">HIGH QUALITY TAXI</span>
                 </div>
                 <span class="project-open">↗</span>
             </a>
@@ -316,7 +323,7 @@
             <div class="project-info">
                 <div>
                     <h3>High Quality Taxi</h3>
-                    <p>Transportation · Web Development</p>
+                    <p data-i18n="taxiProjectDescription">Transportation · Web Development</p>
                 </div>
                 <span class="project-year">2026</span>
             </div>
@@ -326,8 +333,8 @@
     </div>
 
     <div class="portfolio-bottom">
-        <span>MORE PROJECTS COMING SOON</span>
-        <span>QUALITY OVER QUANTITY.</span>
+        <span data-i18n="moreProjects">MORE PROJECTS COMING SOON</span>
+        <span data-i18n="qualityOverQuantity">QUALITY OVER QUANTITY.</span>
     </div>
 
 </section>
@@ -337,33 +344,33 @@
 <section class="contact section-padding" id="contact">
 
     <div class="section-label">
-        <span>05 / CONTACT</span>
-        <span>LET'S CONNECT</span>
+        <span data-i18n="contactLabel">05 / CONTACT</span>
+        <span data-i18n="letsConnect">LET'S CONNECT</span>
     </div>
 
     <div class="contact-content">
 
-        <p class="eyebrow">HAVE SOMETHING IN MIND?</p>
+        <p class="eyebrow" data-i18n="contactEyebrow">HAVE SOMETHING IN MIND?</p>
 
         <h2>
-            Let's create<br>
-            something <span class="gradient-text">meaningful.</span>
+            <span data-i18n="contactHeading1">Let's create</span><br>
+            <span data-i18n="contactHeading2">something</span> <span class="gradient-text" data-i18n="contactHeading3">meaningful.</span>
         </h2>
 
-        <p>
+        <p data-i18n="contactDescription">
             Whether you have a question, an idea or simply want
             to explore the possibilities, we'd love to hear from you.
         </p>
 
         <a href="mailto:devranhasankurt@gmail.com" class="button-primary">
-            Get in touch <span>↗</span>
+            <span data-i18n="getInTouch">Get in touch</span> <span>↗</span>
         </a>
 
     </div>
 
     <div class="contact-bottom">
-        <span>OPEN FOR NEW OPPORTUNITIES</span>
-        <span>AMSTERDAM · THE NETHERLANDS</span>
+        <span data-i18n="openOpportunities">OPEN FOR NEW OPPORTUNITIES</span>
+        <span data-i18n="contactLocation">AMSTERDAM · THE NETHERLANDS</span>
     </div>
 
 </section>
@@ -379,42 +386,359 @@
         <div class="footer-brand">
             <a href="#home" class="logo">DK<span>.</span></a>
 
-            <p>
+            <p data-i18n="footerDescription">
                 Building digital experiences<br>
                 with purpose and precision.
             </p>
         </div>
 
         <div class="footer-column">
-            <span class="footer-heading">NAVIGATION</span>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <span class="footer-heading" data-i18n="footerNavigation">NAVIGATION</span>
+            <a href="#home" data-i18n="navHome">Home</a>
+            <a href="#about" data-i18n="navAbout">About</a>
+            <a href="#services" data-i18n="navServices">Services</a>
+            <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
         </div>
 
         <div class="footer-column">
-            <span class="footer-heading">CONNECT</span>
+            <span class="footer-heading" data-i18n="footerConnect">CONNECT</span>
             <a href="mailto:devranhasankurt@gmail.com">Email ↗</a>
-            <a href="https://instagram.com/dkvisuals.nl" target="_blank">Instagram ↗</a>
-            <a href="https://linkedin.com/in/devrankurt" target="_blank">LinkedIn ↗</a>
-            <a href="clientportal.html">Client Portal ↗</a>
+            <a href="https://instagram.com/dkvisuals.nl" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+            <a href="https://linkedin.com/in/devrankurt" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="clientportal.html" data-i18n="clientPortalFooter">Client Portal ↗</a>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <span>© 2026 DK VISUALS. ALL RIGHTS RESERVED.</span>
-        <span>DESIGNED & DEVELOPED BY DK VISUALS</span>
-        <a href="#home">BACK TO TOP ↑</a>
+        <span data-i18n="copyright">© 2026 DK VISUALS. ALL RIGHTS RESERVED.</span>
+        <span data-i18n="footerCredit">DESIGNED & DEVELOPED BY DK VISUALS</span>
+        <a href="#home" data-i18n="backToTop">BACK TO TOP ↑</a>
     </div>
 
 </footer>
 
 
 <script>
-    // Mobile navigation
+    /* =========================
+       LANGUAGE DETECTION
+    ========================= */
+
+    const translations = {
+
+        en: {
+            metaDescription: "DK VISUALS creates modern websites and digital experiences for ambitious businesses.",
+
+            navHome: "Home",
+            navAbout: "About",
+            navServices: "Services",
+            navPortfolio: "Portfolio",
+            navContact: "Contact",
+            clientPortal: "Client Portal",
+            letsTalk: "Let's talk",
+
+            availability: "Independent digital studio",
+            heroEyebrow: "DESIGNING DIGITAL EXPERIENCES",
+            heroHeading1: "We build digital",
+            heroHeading2: "experiences that",
+            heroHeading3: "make an impact.",
+            heroDescription: "We help ambitious businesses stand out through thoughtful design, modern websites and carefully crafted digital experiences.",
+            exploreWork: "Explore our work",
+            startConversation: "Start a conversation",
+            heroBottomLeft: "WEB DEVELOPMENT · DIGITAL DESIGN",
+            heroBottomRight: "SCROLL TO EXPLORE ↓",
+
+            aboutLabel: "01 / ABOUT",
+            whoWeAre: "WHO WE ARE",
+            aboutHeading1: "Digital presence",
+            aboutHeading2: "with purpose.",
+            aboutParagraph1: "DK VISUALS is an independent digital studio focused on creating modern, high-performance websites for businesses that care about how they are seen online.",
+            aboutParagraph2: "From the first concept to the final detail, we combine creativity and technology to build digital experiences that feel distinctive and work seamlessly.",
+            getToKnowUs: "Get to know us",
+
+            servicesLabel: "02 / SERVICES",
+            whatWeDo: "WHAT WE DO",
+            servicesHeading1: "What we bring",
+            servicesHeading2: "to the table.",
+            servicesDescription: "Thoughtful solutions for businesses looking to build and improve their digital presence.",
+
+            webDevelopment: "Web Development",
+            webDevelopmentDescription: "Modern, responsive and high-performance websites designed to turn visitors into customers.",
+            webDevelopmentFooter: "WEBSITES · DEVELOPMENT",
+
+            digitalDesign: "Digital Design",
+            digitalDesignDescription: "Distinctive visual identities and digital materials that communicate your brand with clarity.",
+            digitalDesignFooter: "VISUALS · BRANDING",
+
+            websiteRedesign: "Website Redesign",
+            websiteRedesignDescription: "Transforming outdated websites into modern, polished and effective digital experiences.",
+            websiteRedesignFooter: "OPTIMIZATION · REDESIGN",
+
+            portfolioLabel: "03 / SELECTED WORK",
+            ourProjects: "OUR PROJECTS",
+            portfolioHeading: "Selected work",
+            portfolioDescription: "A selection of digital concepts and projects showcasing our approach to design and development.",
+            projectMenu: "MENU · ABOUT · CONTACT",
+            beautyTagline: "BEAUTY · CONFIDENCE · YOU",
+            beautyHeading: "Beauty begins<br>with you.",
+            discoverMore: "DISCOVER MORE ↗",
+            beautyProjectDescription: "Beauty · Website Design & Development",
+            taxiTagline: "PREMIUM TRANSPORTATION",
+            taxiHeading: "Travel in<br>comfort.",
+            taxiFooter: "HIGH QUALITY TAXI",
+            taxiProjectDescription: "Transportation · Web Development",
+            moreProjects: "MORE PROJECTS COMING SOON",
+            qualityOverQuantity: "QUALITY OVER QUANTITY.",
+
+            contactLabel: "05 / CONTACT",
+            letsConnect: "LET'S CONNECT",
+            contactEyebrow: "HAVE SOMETHING IN MIND?",
+            contactHeading1: "Let's create",
+            contactHeading2: "something",
+            contactHeading3: "meaningful.",
+            contactDescription: "Whether you have a question, an idea or simply want to explore the possibilities, we'd love to hear from you.",
+            getInTouch: "Get in touch",
+            openOpportunities: "OPEN FOR NEW OPPORTUNITIES",
+            contactLocation: "AMSTERDAM · THE NETHERLANDS",
+
+            footerDescription: "Building digital experiences<br>with purpose and precision.",
+            footerNavigation: "NAVIGATION",
+            footerConnect: "CONNECT",
+            clientPortalFooter: "Client Portal ↗",
+            copyright: "© 2026 DK VISUALS. ALL RIGHTS RESERVED.",
+            footerCredit: "DESIGNED & DEVELOPED BY DK VISUALS",
+            backToTop: "BACK TO TOP ↑"
+        },
+
+        nl: {
+            metaDescription: "DK VISUALS ontwikkelt moderne websites en digitale ervaringen voor ambitieuze bedrijven.",
+
+            navHome: "Home",
+            navAbout: "Over ons",
+            navServices: "Diensten",
+            navPortfolio: "Portfolio",
+            navContact: "Contact",
+            clientPortal: "Klantenportaal",
+            letsTalk: "Laten we praten",
+
+            availability: "Onafhankelijke digitale studio",
+            heroEyebrow: "HET ONTWERPEN VAN DIGITALE ERVARINGEN",
+            heroHeading1: "Wij bouwen digitale",
+            heroHeading2: "ervaringen die",
+            heroHeading3: "impact maken.",
+            heroDescription: "Wij helpen ambitieuze bedrijven zich te onderscheiden met doordacht design, moderne websites en zorgvuldig ontwikkelde digitale ervaringen.",
+            exploreWork: "Bekijk ons werk",
+            startConversation: "Plan een kennismaking",
+            heroBottomLeft: "WEBONTWIKKELING · DIGITAAL DESIGN",
+            heroBottomRight: "SCROLL OM TE ONTDEKKEN ↓",
+
+            aboutLabel: "01 / OVER ONS",
+            whoWeAre: "WIE WIJ ZIJN",
+            aboutHeading1: "Een digitale aanwezigheid",
+            aboutHeading2: "met een doel.",
+            aboutParagraph1: "DK VISUALS is een onafhankelijke digitale studio die zich richt op het ontwikkelen van moderne, hoogwaardige websites voor bedrijven die waarde hechten aan hun online uitstraling.",
+            aboutParagraph2: "Van het eerste concept tot het laatste detail combineren we creativiteit en technologie om onderscheidende digitale ervaringen te creëren die naadloos werken.",
+            getToKnowUs: "Leer ons kennen",
+
+            servicesLabel: "02 / DIENSTEN",
+            whatWeDo: "WAT WIJ DOEN",
+            servicesHeading1: "Wat wij",
+            servicesHeading2: "te bieden hebben.",
+            servicesDescription: "Doordachte oplossingen voor bedrijven die hun digitale aanwezigheid willen opbouwen en verbeteren.",
+
+            webDevelopment: "Webontwikkeling",
+            webDevelopmentDescription: "Moderne, responsieve en snelle websites die bezoekers omzetten in klanten.",
+            webDevelopmentFooter: "WEBSITES · ONTWIKKELING",
+
+            digitalDesign: "Digitaal design",
+            digitalDesignDescription: "Onderscheidende visuele identiteiten en digitale middelen die jouw merk helder communiceren.",
+            digitalDesignFooter: "VISUEEL · BRANDING",
+
+            websiteRedesign: "Website redesign",
+            websiteRedesignDescription: "Verouderde websites transformeren naar moderne, verzorgde en effectieve digitale ervaringen.",
+            websiteRedesignFooter: "OPTIMALISATIE · REDESIGN",
+
+            portfolioLabel: "03 / ONS WERK",
+            ourProjects: "ONZE PROJECTEN",
+            portfolioHeading: "Geselecteerd werk",
+            portfolioDescription: "Een selectie van digitale concepten en projecten die onze aanpak van design en ontwikkeling laten zien.",
+            projectMenu: "MENU · OVER ONS · CONTACT",
+            beautyTagline: "SCHOONHEID · ZELFVERTROUWEN · JIJ",
+            beautyHeading: "Schoonheid begint<br>bij jou.",
+            discoverMore: "ONTDEK MEER ↗",
+            beautyProjectDescription: "Beauty · Websiteontwerp & ontwikkeling",
+            taxiTagline: "PREMIUM VERVOER",
+            taxiHeading: "Reis in<br>comfort.",
+            taxiFooter: "HOOGWAARDIG TAXIVERVOER",
+            taxiProjectDescription: "Vervoer · Webontwikkeling",
+            moreProjects: "BINNENKORT MEER PROJECTEN",
+            qualityOverQuantity: "KWALITEIT BOVEN KWANTITEIT.",
+
+            contactLabel: "05 / CONTACT",
+            letsConnect: "NEEM CONTACT OP",
+            contactEyebrow: "HEB JE IETS IN GEDACHTEN?",
+            contactHeading1: "Laten we",
+            contactHeading2: "iets",
+            contactHeading3: "betekenisvols creëren.",
+            contactDescription: "Of je nu een vraag hebt, een idee wilt bespreken of gewoon de mogelijkheden wilt verkennen, we horen graag van je.",
+            getInTouch: "Neem contact op",
+            openOpportunities: "BESCHIKBAAR VOOR NIEUWE OPDRACHTEN",
+            contactLocation: "AMSTERDAM · NEDERLAND",
+
+            footerDescription: "Digitale ervaringen bouwen<br>met visie en precisie.",
+            footerNavigation: "NAVIGATIE",
+            footerConnect: "CONTACT",
+            clientPortalFooter: "Klantenportaal ↗",
+            copyright: "© 2026 DK VISUALS. ALLE RECHTEN VOORBEHOUDEN.",
+            footerCredit: "ONTWORPEN & ONTWIKKELD DOOR DK VISUALS",
+            backToTop: "TERUG NAAR BOVEN ↑"
+        },
+
+        tr: {
+            metaDescription: "DK VISUALS, iddialı işletmeler için modern web siteleri ve dijital deneyimler tasarlar.",
+
+            navHome: "Ana Sayfa",
+            navAbout: "Hakkımızda",
+            navServices: "Hizmetler",
+            navPortfolio: "Portfolyo",
+            navContact: "İletişim",
+            clientPortal: "Müşteri Portalı",
+            letsTalk: "Görüşelim",
+
+            availability: "Bağımsız dijital stüdyo",
+            heroEyebrow: "DİJİTAL DENEYİMLER TASARLIYORUZ",
+            heroHeading1: "Dijital deneyimler",
+            heroHeading2: "oluşturuyoruz ve",
+            heroHeading3: "fark yaratıyoruz.",
+            heroDescription: "İşletmelerin, özenli tasarım, modern web siteleri ve titizlikle hazırlanan dijital deneyimlerle öne çıkmasına yardımcı oluyoruz.",
+            exploreWork: "Çalışmalarımızı keşfet",
+            startConversation: "Bir görüşme başlat",
+            heroBottomLeft: "WEB GELİŞTİRME · DİJİTAL TASARIM",
+            heroBottomRight: "KEŞFETMEK İÇİN KAYDIR ↓",
+
+            aboutLabel: "01 / HAKKIMIZDA",
+            whoWeAre: "BİZ KİMİZ",
+            aboutHeading1: "Dijital varlık",
+            aboutHeading2: "bir amaçla.",
+            aboutParagraph1: "DK VISUALS, çevrimiçi görünümüne önem veren işletmeler için modern ve yüksek performanslı web siteleri oluşturmaya odaklanan bağımsız bir dijital stüdyodur.",
+            aboutParagraph2: "İlk konseptten son ayrıntıya kadar yaratıcılığı ve teknolojiyi bir araya getirerek özgün ve sorunsuz çalışan dijital deneyimler oluşturuyoruz.",
+            getToKnowUs: "Bizi tanıyın",
+
+            servicesLabel: "02 / HİZMETLER",
+            whatWeDo: "NE YAPIYORUZ",
+            servicesHeading1: "Sunduğumuz",
+            servicesHeading2: "çözümler.",
+            servicesDescription: "Dijital varlığını oluşturmak ve geliştirmek isteyen işletmeler için özenle hazırlanmış çözümler.",
+
+            webDevelopment: "Web Geliştirme",
+            webDevelopmentDescription: "Ziyaretçileri müşterilere dönüştürmek için tasarlanmış modern, duyarlı ve yüksek performanslı web siteleri.",
+            webDevelopmentFooter: "WEB SİTELERİ · GELİŞTİRME",
+
+            digitalDesign: "Dijital Tasarım",
+            digitalDesignDescription: "Markanızı net bir şekilde ifade eden özgün görsel kimlikler ve dijital materyaller.",
+            digitalDesignFooter: "GÖRSEL TASARIM · MARKA",
+
+            websiteRedesign: "Web Sitesi Yenileme",
+            websiteRedesignDescription: "Eski web sitelerini modern, şık ve etkili dijital deneyimlere dönüştürüyoruz.",
+            websiteRedesignFooter: "OPTİMİZASYON · YENİLEME",
+
+            portfolioLabel: "03 / SEÇİLMİŞ ÇALIŞMALAR",
+            ourProjects: "PROJELERİMİZ",
+            portfolioHeading: "Seçilmiş çalışmalar",
+            portfolioDescription: "Tasarım ve geliştirme yaklaşımımızı yansıtan dijital konsept ve projelerden bir seçki.",
+            projectMenu: "MENÜ · HAKKIMIZDA · İLETİŞİM",
+            beautyTagline: "GÜZELLİK · ÖZGÜVEN · SEN",
+            beautyHeading: "Güzellik<br>seninle başlar.",
+            discoverMore: "DAHA FAZLASINI KEŞFET ↗",
+            beautyProjectDescription: "Güzellik · Web Tasarımı ve Geliştirme",
+            taxiTagline: "PREMIUM ULAŞIM",
+            taxiHeading: "Konforlu<br>yolculuk.",
+            taxiFooter: "YÜKSEK KALİTELİ TAKSİ",
+            taxiProjectDescription: "Ulaşım · Web Geliştirme",
+            moreProjects: "YAKINDA DAHA FAZLA PROJE",
+            qualityOverQuantity: "NİTELİK, NİCELİKTEN ÖNCE GELİR.",
+
+            contactLabel: "05 / İLETİŞİM",
+            letsConnect: "BİZİMLE İLETİŞİME GEÇİN",
+            contactEyebrow: "AKLINIZDA BİR FİKİR VAR MI?",
+            contactHeading1: "Birlikte",
+            contactHeading2: "anlamlı",
+            contactHeading3: "bir şey yaratalım.",
+            contactDescription: "Bir sorunuz, bir fikriniz varsa veya sadece olasılıkları keşfetmek istiyorsanız, sizden haber almayı isteriz.",
+            getInTouch: "İletişime geçin",
+            openOpportunities: "YENİ PROJELERE AÇIĞIZ",
+            contactLocation: "AMSTERDAM · HOLLANDA",
+
+            footerDescription: "Amaç ve hassasiyetle<br>dijital deneyimler oluşturuyoruz.",
+            footerNavigation: "GEZİNME",
+            footerConnect: "İLETİŞİM",
+            clientPortalFooter: "Müşteri Portalı ↗",
+            copyright: "© 2026 DK VISUALS. TÜM HAKLARI SAKLIDIR.",
+            footerCredit: "DK VISUALS TARAFINDAN TASARLANDI VE GELİŞTİRİLDİ",
+            backToTop: "YUKARI ÇIK ↑"
+        }
+
+    };
+
+
+    /* =========================
+       APPLY LANGUAGE
+    ========================= */
+
+    function detectLanguage() {
+
+        const browserLanguages = navigator.languages || [
+            navigator.language || navigator.userLanguage || "en"
+        ];
+
+        for (const language of browserLanguages) {
+
+            const code = language.toLowerCase().split("-")[0];
+
+            if (translations[code]) {
+                return code;
+            }
+
+        }
+
+        return "en";
+    }
+
+
+    function setLanguage(language) {
+
+        const selectedTranslations = translations[language];
+
+        if (!selectedTranslations) return;
+
+        document.documentElement.lang = language;
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+
+            const key = element.dataset.i18n;
+
+            if (selectedTranslations[key] !== undefined) {
+                element.textContent = selectedTranslations[key];
+            }
+
+        });
+
+        document.getElementById("meta-description").content =
+            selectedTranslations.metaDescription;
+
+    }
+
+
+    const detectedLanguage = detectLanguage();
+
+    setLanguage(detectedLanguage);
+
+
+    /* =========================
+       MOBILE NAVIGATION
+    ========================= */
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -430,11 +754,16 @@
         });
     });
 
-    // Active navigation
+
+    /* =========================
+       ACTIVE NAVIGATION
+    ========================= */
+
     const sections = document.querySelectorAll('main section[id]');
     const navigationLinks = document.querySelectorAll('.nav-links a');
 
     window.addEventListener('scroll', () => {
+
         let current = '';
 
         sections.forEach(section => {
@@ -449,7 +778,9 @@
                 link.getAttribute('href') === '#' + current
             );
         });
+
     });
+
 </script>
 
 </body>
