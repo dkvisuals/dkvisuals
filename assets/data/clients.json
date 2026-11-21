@@ -3,20 +3,20 @@
   "clients": [
     {
       "id": "147359",
+      "username": "devrankurt",
       "name": "Devran Hasan Kurt",
-      "email": "devranhasankurt@gmail.com",
       "password": "test123",
       "active": true,
 
       "project": {
-        "id": "DKV-001",
-        "name": "DK VISUALS Website",
+        "id": "PRJ-001",
+        "name": "Website Development",
         "description": "Design and development of the official DK VISUALS website.",
         "type": "Website Development",
         "status": "In progress",
-        "progress": 65,
         "startDate": "2026-11-01",
-        "deliveryDate": "2026-12-01"
+        "deliveryDate": "2026-12-15",
+        "progress": 65
       },
 
       "updates": [
@@ -39,12 +39,6 @@
 
       "timeline": [
         {
-          "title": "Project started",
-          "description": "Initial project setup and planning.",
-          "date": "2026-11-01",
-          "completed": true
-        },
-        {
           "title": "Website structure",
           "description": "Creating the website layout and main sections.",
           "date": "2026-11-10",
@@ -53,30 +47,37 @@
         {
           "title": "Design and development",
           "description": "Building and refining the website.",
-          "date": "2026-11-20",
-          "completed": true
+          "date": "2026-11-25",
+          "completed": false
         },
         {
           "title": "Final review",
           "description": "Testing, feedback and final adjustments.",
-          "date": "2026-11-27",
+          "date": "2026-12-05",
           "completed": false
         },
         {
           "title": "Project delivery",
           "description": "Final website delivery and handover.",
-          "date": "2026-12-01",
+          "date": "2026-12-15",
           "completed": false
         }
       ],
 
-      "files": [],
+      "files": [
+        {
+          "name": "Project brief.pdf",
+          "type": "PDF Document",
+          "date": "2026-11-01",
+          "url": ""
+        }
+      ],
 
       "invoices": [
         {
-          "number": "DKV-2026-001",
+          "number": "FA-2026-001",
           "date": "2026-11-01",
-          "amount": 310.00,
+          "amount": 250,
           "status": "unpaid",
           "url": ""
         }
