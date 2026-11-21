@@ -98,13 +98,15 @@
         }
 
         .logo {
-            font-size: 19px;
-            font-weight: 700;
-            letter-spacing: 3px;
+            display: flex;
+            align-items: center;
         }
 
-        .logo span {
-            font-weight: 300;
+        .logo img {
+            display: block;
+            width: 150px;
+            height: auto;
+            object-fit: contain;
         }
 
         .header-label {
@@ -252,8 +254,8 @@
                 padding: 28px 6%;
             }
 
-            .logo {
-                font-size: 16px;
+            .logo img {
+                width: 125px;
             }
 
             .header-label {
@@ -287,8 +289,13 @@
     <div class="page">
 
         <header>
-            <div class="logo">DK <span>VISUALS</span></div>
-            <div class="header-label" data-i18n="header">Digital Experiences</div>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-white.png" alt="DK VISUALS">
+            </a>
+
+            <div class="header-label" data-i18n="header">
+                Digital Experiences
+            </div>
         </header>
 
         <main>
@@ -296,7 +303,9 @@
 
                 <div class="status">
                     <span class="status-dot"></span>
-                    <span data-i18n="status">Website under maintenance</span>
+                    <span data-i18n="status">
+                        Website under maintenance
+                    </span>
                 </div>
 
                 <h1>
@@ -364,9 +373,13 @@
 
         function detectLanguage() {
 
-            const browserLanguages = navigator.languages || [
-                navigator.language || navigator.userLanguage || "en"
-            ];
+            const browserLanguages = navigator.languages?.length
+                ? navigator.languages
+                : [
+                    navigator.language ||
+                    navigator.userLanguage ||
+                    "en"
+                ];
 
             for (const language of browserLanguages) {
 
