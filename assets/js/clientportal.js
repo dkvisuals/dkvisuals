@@ -15,6 +15,301 @@ let clients = [];
 let currentClient = null;
 
 // ==========================================
+// TRANSLATIONS
+// ==========================================
+
+const dynamicTranslations = {
+    en: {
+        loading: "Loading...",
+        signIn: "Sign in",
+        unavailable: "Unavailable",
+
+        connectionError: "Unable to connect to the client portal. Please try again later.",
+        loadError: "Client information could not be loaded. Please refresh the page.",
+        invalidLogin: "Incorrect email or password.",
+
+        noProject: "No project",
+        notStarted: "Not started",
+        notSpecified: "Not specified",
+        amountNotSpecified: "Amount not specified",
+
+        noUpdates: "No updates available yet.",
+        noMilestones: "No milestones available yet.",
+        noFiles: "No files available yet.",
+        noInvoices: "No invoices available yet.",
+
+        projectUpdate: "Project update",
+        projectMilestone: "Project milestone",
+        unnamedFile: "Unnamed file",
+        file: "File",
+        invoice: "Invoice",
+
+        completed: "Completed",
+        upcoming: "Upcoming",
+        paid: "Paid",
+        unpaid: "Unpaid",
+
+        viewFile: "View file →",
+        viewInvoice: "View invoice →",
+
+        statuses: {
+            "In progress": "In progress",
+            "Not started": "Not started",
+            "Completed": "Completed",
+            "On hold": "On hold",
+            "Pending": "Pending"
+        },
+
+        types: {
+            "Website Development": "Website Development"
+        },
+
+        content: {
+            "Project started": "Project started",
+            "Website structure completed": "Website structure completed",
+            "Design and development": "Design and development",
+            "Website structure": "Website structure",
+            "Final review": "Final review",
+            "Project delivery": "Project delivery",
+
+            "The initial project setup and planning have been completed.":
+                "The initial project setup and planning have been completed.",
+
+            "The main website structure and page layouts have been completed.":
+                "The main website structure and page layouts have been completed.",
+
+            "The website design and development are currently in progress.":
+                "The website design and development are currently in progress.",
+
+            "Initial project setup and planning.":
+                "Initial project setup and planning.",
+
+            "Creating the website layout and main sections.":
+                "Creating the website layout and main sections.",
+
+            "Building and refining the website.":
+                "Building and refining the website.",
+
+            "Testing, feedback and final adjustments.":
+                "Testing, feedback and final adjustments.",
+
+            "Final website delivery and handover.":
+                "Final website delivery and handover.",
+
+            "Design and development of the official DK VISUALS website.":
+                "Design and development of the official DK VISUALS website."
+        }
+    },
+
+    nl: {
+        loading: "Laden...",
+        signIn: "Inloggen",
+        unavailable: "Niet beschikbaar",
+
+        connectionError: "Kan geen verbinding maken met het klantenportaal. Probeer het later opnieuw.",
+        loadError: "Klantgegevens konden niet worden geladen. Vernieuw de pagina.",
+        invalidLogin: "Onjuist e-mailadres of wachtwoord.",
+
+        noProject: "Geen project",
+        notStarted: "Nog niet gestart",
+        notSpecified: "Niet opgegeven",
+        amountNotSpecified: "Bedrag niet opgegeven",
+
+        noUpdates: "Er zijn nog geen updates beschikbaar.",
+        noMilestones: "Er zijn nog geen projectfasen beschikbaar.",
+        noFiles: "Er zijn nog geen bestanden beschikbaar.",
+        noInvoices: "Er zijn nog geen facturen beschikbaar.",
+
+        projectUpdate: "Projectupdate",
+        projectMilestone: "Projectfase",
+        unnamedFile: "Naamloos bestand",
+        file: "Bestand",
+        invoice: "Factuur",
+
+        completed: "Voltooid",
+        upcoming: "Aankomend",
+        paid: "Betaald",
+        unpaid: "Onbetaald",
+
+        viewFile: "Bestand bekijken →",
+        viewInvoice: "Factuur bekijken →",
+
+        statuses: {
+            "In progress": "In uitvoering",
+            "Not started": "Nog niet gestart",
+            "Completed": "Voltooid",
+            "On hold": "Gepauzeerd",
+            "Pending": "In afwachting"
+        },
+
+        types: {
+            "Website Development": "Websiteontwikkeling"
+        },
+
+        content: {
+            "Project started": "Project gestart",
+            "Website structure completed": "Website structuur afgerond",
+            "Design and development": "Ontwerp en ontwikkeling",
+            "Website structure": "Website structuur",
+            "Final review": "Eindcontrole",
+            "Project delivery": "Projectoplevering",
+
+            "The initial project setup and planning have been completed.":
+                "De eerste projectopzet en planning zijn afgerond.",
+
+            "The main website structure and page layouts have been completed.":
+                "De hoofdstructuur en pagina-indelingen van de website zijn afgerond.",
+
+            "The website design and development are currently in progress.":
+                "Het ontwerp en de ontwikkeling van de website zijn momenteel in uitvoering.",
+
+            "Initial project setup and planning.":
+                "Eerste projectopzet en planning.",
+
+            "Creating the website layout and main sections.":
+                "Het maken van de website-indeling en de belangrijkste onderdelen.",
+
+            "Building and refining the website.":
+                "Het bouwen en verfijnen van de website.",
+
+            "Testing, feedback and final adjustments.":
+                "Testen, feedback en de laatste aanpassingen.",
+
+            "Final website delivery and handover.":
+                "Oplevering en overdracht van de definitieve website.",
+
+            "Design and development of the official DK VISUALS website.":
+                "Ontwerp en ontwikkeling van de officiële DK VISUALS-website."
+        }
+    },
+
+    tr: {
+        loading: "Yükleniyor...",
+        signIn: "Giriş yap",
+        unavailable: "Kullanılamıyor",
+
+        connectionError: "Müşteri portalına bağlanılamıyor. Lütfen daha sonra tekrar deneyin.",
+        loadError: "Müşteri bilgileri yüklenemedi. Lütfen sayfayı yenileyin.",
+        invalidLogin: "E-posta adresi veya şifre hatalı.",
+
+        noProject: "Proje yok",
+        notStarted: "Henüz başlamadı",
+        notSpecified: "Belirtilmedi",
+        amountNotSpecified: "Tutar belirtilmedi",
+
+        noUpdates: "Henüz güncelleme bulunmuyor.",
+        noMilestones: "Henüz proje aşaması bulunmuyor.",
+        noFiles: "Henüz dosya bulunmuyor.",
+        noInvoices: "Henüz fatura bulunmuyor.",
+
+        projectUpdate: "Proje güncellemesi",
+        projectMilestone: "Proje aşaması",
+        unnamedFile: "Adsız dosya",
+        file: "Dosya",
+        invoice: "Fatura",
+
+        completed: "Tamamlandı",
+        upcoming: "Yaklaşan",
+        paid: "Ödendi",
+        unpaid: "Ödenmedi",
+
+        viewFile: "Dosyayı görüntüle →",
+        viewInvoice: "Faturayı görüntüle →",
+
+        statuses: {
+            "In progress": "Devam ediyor",
+            "Not started": "Henüz başlamadı",
+            "Completed": "Tamamlandı",
+            "On hold": "Beklemede",
+            "Pending": "Bekliyor"
+        },
+
+        types: {
+            "Website Development": "Web Sitesi Geliştirme"
+        },
+
+        content: {
+            "Project started": "Proje başladı",
+            "Website structure completed": "Web sitesi yapısı tamamlandı",
+            "Design and development": "Tasarım ve geliştirme",
+            "Website structure": "Web sitesi yapısı",
+            "Final review": "Son kontrol",
+            "Project delivery": "Proje teslimi",
+
+            "The initial project setup and planning have been completed.":
+                "İlk proje kurulumu ve planlama tamamlandı.",
+
+            "The main website structure and page layouts have been completed.":
+                "Web sitesinin ana yapısı ve sayfa düzenleri tamamlandı.",
+
+            "The website design and development are currently in progress.":
+                "Web sitesinin tasarımı ve geliştirilmesi devam ediyor.",
+
+            "Initial project setup and planning.":
+                "İlk proje kurulumu ve planlama.",
+
+            "Creating the website layout and main sections.":
+                "Web sitesi düzeninin ve ana bölümlerinin oluşturulması.",
+
+            "Building and refining the website.":
+                "Web sitesinin oluşturulması ve geliştirilmesi.",
+
+            "Testing, feedback and final adjustments.":
+                "Testler, geri bildirimler ve son düzenlemeler.",
+
+            "Final website delivery and handover.":
+                "Web sitesinin son teslimi ve devri.",
+
+            "Design and development of the official DK VISUALS website.":
+                "DK VISUALS resmi web sitesinin tasarımı ve geliştirilmesi."
+        }
+    }
+};
+
+// ==========================================
+// LANGUAGE HELPERS
+// ==========================================
+
+function getLanguage() {
+    const language = document.documentElement.lang || "en";
+    const baseLanguage = language.toLowerCase().split("-")[0];
+
+    return dynamicTranslations[baseLanguage]
+        ? baseLanguage
+        : "en";
+}
+
+function translate(key) {
+    const translations = dynamicTranslations[getLanguage()];
+
+    return translations[key] ?? dynamicTranslations.en[key] ?? key;
+}
+
+function translateContent(value) {
+    if (!value) return "";
+
+    const translations = dynamicTranslations[getLanguage()];
+
+    return translations.content[value] ?? value;
+}
+
+function translateStatus(value) {
+    if (!value) return translate("notStarted");
+
+    const translations = dynamicTranslations[getLanguage()];
+
+    return translations.statuses[value] ?? value;
+}
+
+function translateType(value) {
+    if (!value) return "—";
+
+    const translations = dynamicTranslations[getLanguage()];
+
+    return translations.types[value] ?? value;
+}
+
+// ==========================================
 // DOM ELEMENTS
 // ==========================================
 
@@ -38,14 +333,11 @@ const navigationLinks = document.querySelectorAll("[data-section]");
 document.addEventListener("DOMContentLoaded", initializePortal);
 
 async function initializePortal() {
-    // Always start at the login screen.
     loginScreen.hidden = false;
     portalContent.hidden = true;
 
-    // Load client records.
     await loadClients();
 
-    // Attach event listeners.
     loginForm.addEventListener("submit", handleLogin);
     logoutButton.addEventListener("click", handleLogout);
 
@@ -60,7 +352,7 @@ async function initializePortal() {
 
 async function loadClients() {
     loginButton.disabled = true;
-    loginButton.querySelector("span").textContent = "Loading...";
+    loginButton.querySelector("span").textContent = translate("loading");
 
     try {
         const response = await fetch(CLIENTS_PATH, {
@@ -80,15 +372,14 @@ async function loadClients() {
         clients = data.clients;
 
         loginButton.disabled = false;
-        loginButton.querySelector("span").textContent = "Sign in";
+        loginButton.querySelector("span").textContent = translate("signIn");
 
     } catch (error) {
         console.error("Client portal loading error:", error);
 
-        loginError.textContent =
-            "Unable to connect to the client portal. Please try again later.";
+        loginError.textContent = translate("connectionError");
 
-        loginButton.querySelector("span").textContent = "Unavailable";
+        loginButton.querySelector("span").textContent = translate("unavailable");
     }
 }
 
@@ -102,8 +393,7 @@ function handleLogin(event) {
     loginError.textContent = "";
 
     if (clients.length === 0) {
-        loginError.textContent =
-            "Client information could not be loaded. Please refresh the page.";
+        loginError.textContent = translate("loadError");
         return;
     }
 
@@ -120,7 +410,7 @@ function handleLogin(event) {
     });
 
     if (!client) {
-        loginError.textContent = "Incorrect email or password.";
+        loginError.textContent = translate("invalidLogin");
         loginPassword.value = "";
         loginPassword.focus();
         return;
@@ -128,16 +418,12 @@ function handleLogin(event) {
 
     currentClient = client;
 
-    // Hide login and show portal.
     loginScreen.hidden = true;
     portalContent.hidden = false;
 
     loginForm.reset();
 
-    // Render all client information.
     renderPortal();
-
-    // Start at dashboard.
     showSection("dashboard");
 
     window.scrollTo(0, 0);
@@ -150,15 +436,12 @@ function handleLogin(event) {
 function handleLogout() {
     currentClient = null;
 
-    // Hide portal and show login.
     portalContent.hidden = true;
     loginScreen.hidden = false;
 
-    // Reset login form.
     loginForm.reset();
     loginError.textContent = "";
 
-    // Reset navigation.
     showSection("dashboard");
 
     window.scrollTo(0, 0);
@@ -205,8 +488,8 @@ function renderClientInfo() {
 function renderDashboard() {
     const project = currentClient.project || {};
 
-    setText("dashboardProjectName", project.name || "No project");
-    setText("dashboardProjectStatus", project.status || "Not started");
+    setText("dashboardProjectName", project.name || translate("noProject"));
+    setText("dashboardProjectStatus", translateStatus(project.status));
     setText("dashboardDeliveryDate", formatDate(project.deliveryDate));
 
     const progress = getProgress(project.progress);
@@ -234,7 +517,7 @@ function renderRecentUpdates() {
     });
 
     if (updates.length === 0) {
-        container.appendChild(createEmptyMessage("No updates available yet."));
+        container.appendChild(createEmptyMessage(translate("noUpdates")));
         return;
     }
 
@@ -249,10 +532,10 @@ function renderRecentUpdates() {
         content.className = "update-content";
 
         const title = document.createElement("h3");
-        title.textContent = update.title || "Project update";
+        title.textContent = translateContent(update.title || translate("projectUpdate"));
 
         const description = document.createElement("p");
-        description.textContent = update.description || "";
+        description.textContent = translateContent(update.description || "");
 
         const date = document.createElement("span");
         date.className = "update-date";
@@ -273,10 +556,10 @@ function renderProject() {
     const project = currentClient.project || {};
 
     setText("projectId", project.id || "—");
-    setText("projectName", project.name || "No project");
-    setText("projectDescription", project.description || "");
-    setText("projectType", project.type || "—");
-    setText("projectStatus", project.status || "Not started");
+    setText("projectName", project.name || translate("noProject"));
+    setText("projectDescription", translateContent(project.description || ""));
+    setText("projectType", translateType(project.type));
+    setText("projectStatus", translateStatus(project.status));
 
     setText("projectStartDate", formatDate(project.startDate));
     setText("projectDeliveryDate", formatDate(project.deliveryDate));
@@ -302,7 +585,7 @@ function renderTimeline() {
     const timeline = currentClient.timeline || [];
 
     if (timeline.length === 0) {
-        container.appendChild(createEmptyMessage("No milestones available yet."));
+        container.appendChild(createEmptyMessage(translate("noMilestones")));
         return;
     }
 
@@ -320,10 +603,10 @@ function renderTimeline() {
         content.className = "timeline-content";
 
         const title = document.createElement("h3");
-        title.textContent = step.title || "Project milestone";
+        title.textContent = translateContent(step.title || translate("projectMilestone"));
 
         const description = document.createElement("p");
-        description.textContent = step.description || "";
+        description.textContent = translateContent(step.description || "");
 
         const date = document.createElement("span");
         date.className = "timeline-date";
@@ -331,7 +614,9 @@ function renderTimeline() {
 
         const status = document.createElement("span");
         status.className = "timeline-status";
-        status.textContent = step.completed ? "Completed" : "Upcoming";
+        status.textContent = step.completed
+            ? translate("completed")
+            : translate("upcoming");
 
         content.append(title, description, date, status);
         item.append(marker, content);
@@ -353,7 +638,7 @@ function renderFiles() {
     const files = currentClient.files || [];
 
     if (files.length === 0) {
-        container.appendChild(createEmptyMessage("No files available yet."));
+        container.appendChild(createEmptyMessage(translate("noFiles")));
         return;
     }
 
@@ -369,11 +654,11 @@ function renderFiles() {
         info.className = "file-info";
 
         const name = document.createElement("h3");
-        name.textContent = file.name || "Unnamed file";
+        name.textContent = file.name || translate("unnamedFile");
 
         const details = document.createElement("span");
         details.textContent = [
-            file.type || "File",
+            file.type || translate("file"),
             formatDate(file.date)
         ].filter(Boolean).join(" · ");
 
@@ -386,7 +671,7 @@ function renderFiles() {
             link.href = file.url;
             link.target = "_blank";
             link.rel = "noopener noreferrer";
-            link.textContent = "View file →";
+            link.textContent = translate("viewFile");
 
             item.appendChild(link);
         }
@@ -408,7 +693,7 @@ function renderInvoices() {
     const invoices = currentClient.invoices || [];
 
     if (invoices.length === 0) {
-        container.appendChild(createEmptyMessage("No invoices available yet."));
+        container.appendChild(createEmptyMessage(translate("noInvoices")));
         return;
     }
 
@@ -420,7 +705,7 @@ function renderInvoices() {
         info.className = "invoice-info";
 
         const number = document.createElement("h3");
-        number.textContent = invoice.number || "Invoice";
+        number.textContent = invoice.number || translate("invoice");
 
         const date = document.createElement("span");
         date.textContent = formatDate(invoice.date);
@@ -437,7 +722,9 @@ function renderInvoices() {
             ? "invoice-status paid"
             : "invoice-status unpaid";
 
-        status.textContent = isPaid ? "Paid" : "Unpaid";
+        status.textContent = isPaid
+            ? translate("paid")
+            : translate("unpaid");
 
         item.append(info, status);
 
@@ -447,7 +734,7 @@ function renderInvoices() {
             link.href = invoice.url;
             link.target = "_blank";
             link.rel = "noopener noreferrer";
-            link.textContent = "View invoice →";
+            link.textContent = translate("viewInvoice");
 
             item.appendChild(link);
         }
@@ -496,7 +783,6 @@ function showSection(sectionName) {
         );
     });
 
-    // Update URL hash without reloading the page.
     history.replaceState(null, "", `#${sectionName}`);
 
     window.scrollTo({
@@ -534,7 +820,7 @@ function setProgressBar(id, progress) {
 }
 
 function formatDate(dateString) {
-    if (!dateString) return "Not specified";
+    if (!dateString) return translate("notSpecified");
 
     const date = new Date(`${dateString}T00:00:00`);
 
@@ -542,24 +828,42 @@ function formatDate(dateString) {
         return dateString;
     }
 
-    return new Intl.DateTimeFormat("en-GB", {
-        day: "2-digit",
-        month: "long",
-        year: "numeric"
-    }).format(date);
+    const locales = {
+        en: "en-GB",
+        nl: "nl-NL",
+        tr: "tr-TR"
+    };
+
+    return new Intl.DateTimeFormat(
+        locales[getLanguage()],
+        {
+            day: "2-digit",
+            month: "long",
+            year: "numeric"
+        }
+    ).format(date);
 }
 
 function formatCurrency(amount) {
     const number = Number(amount);
 
     if (!Number.isFinite(number)) {
-        return "Amount not specified";
+        return translate("amountNotSpecified");
     }
 
-    return new Intl.NumberFormat("en-GB", {
-        style: "currency",
-        currency: "EUR"
-    }).format(number);
+    const locales = {
+        en: "en-GB",
+        nl: "nl-NL",
+        tr: "tr-TR"
+    };
+
+    return new Intl.NumberFormat(
+        locales[getLanguage()],
+        {
+            style: "currency",
+            currency: "EUR"
+        }
+    ).format(number);
 }
 
 function createEmptyMessage(message) {
