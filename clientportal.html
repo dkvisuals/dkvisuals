@@ -28,32 +28,34 @@
             </a>
 
             <div class="login-heading">
-                <span class="eyebrow">CLIENT ACCESS</span>
-                <h1>Welcome back.</h1>
-                <p>Sign in to access your project dashboard.</p>
+                <span class="eyebrow" data-i18n="clientAccess">CLIENT ACCESS</span>
+                <h1 data-i18n="welcomeBack">Welcome back.</h1>
+                <p data-i18n="loginDescription">Sign in to access your project dashboard.</p>
             </div>
 
             <form id="loginForm" novalidate>
 
                 <div class="form-group">
-                    <label for="loginEmail">Email address</label>
+                    <label for="loginEmail" data-i18n="emailAddress">Email address</label>
                     <input
                         type="email"
                         id="loginEmail"
                         name="email"
                         placeholder="Enter your email"
+                        data-i18n-placeholder="emailPlaceholder"
                         autocomplete="username"
                         required
                     >
                 </div>
 
                 <div class="form-group">
-                    <label for="loginPassword">Password</label>
+                    <label for="loginPassword" data-i18n="password">Password</label>
                     <input
                         type="password"
                         id="loginPassword"
                         name="password"
                         placeholder="Enter your password"
+                        data-i18n-placeholder="passwordPlaceholder"
                         autocomplete="current-password"
                         required
                     >
@@ -62,14 +64,14 @@
                 <p id="loginError" class="login-error" role="alert" aria-live="polite"></p>
 
                 <button type="submit" id="loginButton" class="login-button">
-                    <span>Sign in</span>
+                    <span data-i18n="signIn">Sign in</span>
                     <span class="button-arrow">→</span>
                 </button>
 
             </form>
 
             <div class="login-bottom">
-                <span>© 2026 DK VISUALS. ALL RIGHTS RESERVED.</span>
+                <span data-i18n="copyright">© 2026 DK VISUALS. ALL RIGHTS RESERVED.</span>
             </div>
 
         </div>
@@ -91,26 +93,26 @@
 
             <nav class="sidebar-nav" aria-label="Main navigation">
 
-                <span class="nav-heading">WORKSPACE</span>
+                <span class="nav-heading" data-i18n="workspace">WORKSPACE</span>
 
                 <a href="#dashboard" class="nav-link active" data-section="dashboard">
                     <span class="nav-icon">⌂</span>
-                    <span>Dashboard</span>
+                    <span data-i18n="dashboard">Dashboard</span>
                 </a>
 
                 <a href="#project" class="nav-link" data-section="project">
                     <span class="nav-icon">◫</span>
-                    <span>My Project</span>
+                    <span data-i18n="myProject">My Project</span>
                 </a>
 
                 <a href="#files" class="nav-link" data-section="files">
                     <span class="nav-icon">▤</span>
-                    <span>Files</span>
+                    <span data-i18n="files">Files</span>
                 </a>
 
                 <a href="#invoices" class="nav-link" data-section="invoices">
                     <span class="nav-icon">▧</span>
-                    <span>Invoices</span>
+                    <span data-i18n="invoices">Invoices</span>
                 </a>
 
             </nav>
@@ -128,7 +130,7 @@
 
                 <button type="button" class="logout-button" id="logoutButton">
                     <span class="logout-icon">↪</span>
-                    <span>Log out</span>
+                    <span data-i18n="logOut">Log out</span>
                 </button>
 
             </div>
@@ -145,12 +147,12 @@
                 <div class="topbar-left">
                     <span class="topbar-label">DK VISUALS</span>
                     <span class="topbar-separator">/</span>
-                    <span class="topbar-current">Client Portal</span>
+                    <span class="topbar-current" data-i18n="clientPortal">Client Portal</span>
                 </div>
 
                 <div class="topbar-right">
                     <span class="online-indicator"></span>
-                    <span>Client access</span>
+                    <span data-i18n="clientAccess">Client access</span>
                 </div>
 
             </header>
@@ -161,9 +163,12 @@
 
                 <div class="page-heading">
                     <div>
-                        <span class="eyebrow">OVERVIEW</span>
-                        <h1>Dashboard</h1>
-                        <p>Welcome back, <span id="dashboardClientName">Client</span>.</p>
+                        <span class="eyebrow" data-i18n="overview">OVERVIEW</span>
+                        <h1 data-i18n="dashboard">Dashboard</h1>
+                        <p>
+                            <span data-i18n="welcomeBackComma">Welcome back,</span>
+                            <span id="dashboardClientName">Client</span>.
+                        </p>
                     </div>
                 </div>
 
@@ -174,7 +179,7 @@
                     <article class="dashboard-card project-card">
 
                         <div class="card-top">
-                            <span class="card-label">CURRENT PROJECT</span>
+                            <span class="card-label" data-i18n="currentProject">CURRENT PROJECT</span>
                             <span class="card-symbol">◫</span>
                         </div>
 
@@ -186,7 +191,7 @@
                         </div>
 
                         <div class="progress-header">
-                            <span>Project progress</span>
+                            <span data-i18n="projectProgress">Project progress</span>
                             <strong id="dashboardProgress">0%</strong>
                         </div>
 
@@ -201,13 +206,13 @@
                     <article class="dashboard-card delivery-card">
 
                         <div class="card-top">
-                            <span class="card-label">EXPECTED DELIVERY</span>
+                            <span class="card-label" data-i18n="expectedDelivery">EXPECTED DELIVERY</span>
                             <span class="card-symbol">◷</span>
                         </div>
 
-                        <h2 id="dashboardDeliveryDate">Not specified</h2>
+                        <h2 id="dashboardDeliveryDate" data-i18n="notSpecified">Not specified</h2>
 
-                        <p class="card-description">
+                        <p class="card-description" data-i18n="completionDate">
                             Estimated project completion date.
                         </p>
 
@@ -221,17 +226,17 @@
 
                     <div class="content-card-header">
                         <div>
-                            <span class="eyebrow">LATEST ACTIVITY</span>
-                            <h2>Recent updates</h2>
+                            <span class="eyebrow" data-i18n="latestActivity">LATEST ACTIVITY</span>
+                            <h2 data-i18n="recentUpdates">Recent updates</h2>
                         </div>
 
                         <a href="#project" class="text-link" data-section="project">
-                            View project →
+                            <span data-i18n="viewProject">View project</span> →
                         </a>
                     </div>
 
                     <div class="updates-list" id="recentUpdates">
-                        <p class="empty-message">No updates available yet.</p>
+                        <p class="empty-message" data-i18n="noUpdates">No updates available yet.</p>
                     </div>
 
                 </div>
@@ -244,9 +249,11 @@
 
                 <div class="page-heading">
                     <div>
-                        <span class="eyebrow">YOUR WORK</span>
-                        <h1>My Project</h1>
-                        <p>Follow the progress and development of your project.</p>
+                        <span class="eyebrow" data-i18n="yourWork">YOUR WORK</span>
+                        <h1 data-i18n="myProject">My Project</h1>
+                        <p data-i18n="projectDescription">
+                            Follow the progress and development of your project.
+                        </p>
                     </div>
                 </div>
 
@@ -256,7 +263,7 @@
 
                     <div class="content-card-header">
                         <div>
-                            <span class="eyebrow">PROJECT DETAILS</span>
+                            <span class="eyebrow" data-i18n="projectDetails">PROJECT DETAILS</span>
                             <h2 id="projectName">Project name</h2>
                         </div>
 
@@ -268,22 +275,22 @@
                     <div class="project-details-grid">
 
                         <div class="detail-item">
-                            <span>Project ID</span>
+                            <span data-i18n="projectId">Project ID</span>
                             <strong id="projectId">—</strong>
                         </div>
 
                         <div class="detail-item">
-                            <span>Project type</span>
+                            <span data-i18n="projectType">Project type</span>
                             <strong id="projectType">—</strong>
                         </div>
 
                         <div class="detail-item">
-                            <span>Start date</span>
+                            <span data-i18n="startDate">Start date</span>
                             <strong id="projectStartDate">—</strong>
                         </div>
 
                         <div class="detail-item">
-                            <span>Expected delivery</span>
+                            <span data-i18n="expectedDelivery">Expected delivery</span>
                             <strong id="projectDeliveryDate">—</strong>
                         </div>
 
@@ -292,7 +299,7 @@
                     <div class="project-progress">
 
                         <div class="progress-header">
-                            <span>Overall progress</span>
+                            <span data-i18n="overallProgress">Overall progress</span>
                             <strong id="projectProgress">0%</strong>
                         </div>
 
@@ -310,13 +317,13 @@
 
                     <div class="content-card-header">
                         <div>
-                            <span class="eyebrow">DEVELOPMENT</span>
-                            <h2>Project timeline</h2>
+                            <span class="eyebrow" data-i18n="development">DEVELOPMENT</span>
+                            <h2 data-i18n="projectTimeline">Project timeline</h2>
                         </div>
                     </div>
 
                     <div class="project-timeline" id="projectTimeline">
-                        <p class="empty-message">No milestones available yet.</p>
+                        <p class="empty-message" data-i18n="noMilestones">No milestones available yet.</p>
                     </div>
 
                 </div>
@@ -329,9 +336,9 @@
 
                 <div class="page-heading">
                     <div>
-                        <span class="eyebrow">DOCUMENTS</span>
-                        <h1>Files</h1>
-                        <p>Access your project files and documents.</p>
+                        <span class="eyebrow" data-i18n="documents">DOCUMENTS</span>
+                        <h1 data-i18n="files">Files</h1>
+                        <p data-i18n="filesDescription">Access your project files and documents.</p>
                     </div>
                 </div>
 
@@ -339,13 +346,13 @@
 
                     <div class="content-card-header">
                         <div>
-                            <span class="eyebrow">YOUR DOCUMENTS</span>
-                            <h2>Available files</h2>
+                            <span class="eyebrow" data-i18n="yourDocuments">YOUR DOCUMENTS</span>
+                            <h2 data-i18n="availableFiles">Available files</h2>
                         </div>
                     </div>
 
                     <div class="files-list" id="filesList">
-                        <p class="empty-message">No files available yet.</p>
+                        <p class="empty-message" data-i18n="noFiles">No files available yet.</p>
                     </div>
 
                 </div>
@@ -358,9 +365,9 @@
 
                 <div class="page-heading">
                     <div>
-                        <span class="eyebrow">PAYMENTS</span>
-                        <h1>Invoices</h1>
-                        <p>View your invoices and payment information.</p>
+                        <span class="eyebrow" data-i18n="payments">PAYMENTS</span>
+                        <h1 data-i18n="invoices">Invoices</h1>
+                        <p data-i18n="invoicesDescription">View your invoices and payment information.</p>
                     </div>
                 </div>
 
@@ -368,13 +375,13 @@
 
                     <div class="content-card-header">
                         <div>
-                            <span class="eyebrow">BILLING</span>
-                            <h2>Your invoices</h2>
+                            <span class="eyebrow" data-i18n="billing">BILLING</span>
+                            <h2 data-i18n="yourInvoices">Your invoices</h2>
                         </div>
                     </div>
 
                     <div class="invoices-list" id="invoicesList">
-                        <p class="empty-message">No invoices available yet.</p>
+                        <p class="empty-message" data-i18n="noInvoices">No invoices available yet.</p>
                     </div>
 
                 </div>
@@ -385,11 +392,11 @@
             <!-- FOOTER -->
             <footer class="portal-footer">
 
-                <span>© 2026 DK VISUALS. ALL RIGHTS RESERVED.</span>
+                <span data-i18n="copyright">© 2026 DK VISUALS. ALL RIGHTS RESERVED.</span>
 
-                <span>DESIGNED & DEVELOPED BY DK VISUALS</span>
+                <span data-i18n="footerCredit">DESIGNED & DEVELOPED BY DK VISUALS</span>
 
-                <a href="#dashboard" data-section="dashboard">
+                <a href="#dashboard" data-section="dashboard" data-i18n="backToTop">
                     BACK TO TOP ↑
                 </a>
 
@@ -398,6 +405,254 @@
         </main>
 
     </div>
+
+
+    <!-- AUTOMATIC LANGUAGE DETECTION -->
+    <script>
+
+        const portalTranslations = {
+
+            en: {
+                clientAccess: "CLIENT ACCESS",
+                welcomeBack: "Welcome back.",
+                loginDescription: "Sign in to access your project dashboard.",
+                emailAddress: "Email address",
+                emailPlaceholder: "Enter your email",
+                password: "Password",
+                passwordPlaceholder: "Enter your password",
+                signIn: "Sign in",
+                copyright: "© 2026 DK VISUALS. ALL RIGHTS RESERVED.",
+
+                workspace: "WORKSPACE",
+                dashboard: "Dashboard",
+                myProject: "My Project",
+                files: "Files",
+                invoices: "Invoices",
+                logOut: "Log out",
+                clientPortal: "Client Portal",
+
+                overview: "OVERVIEW",
+                welcomeBackComma: "Welcome back,",
+                currentProject: "CURRENT PROJECT",
+                projectProgress: "Project progress",
+                expectedDelivery: "EXPECTED DELIVERY",
+                notSpecified: "Not specified",
+                completionDate: "Estimated project completion date.",
+                latestActivity: "LATEST ACTIVITY",
+                recentUpdates: "Recent updates",
+                viewProject: "View project",
+                noUpdates: "No updates available yet.",
+
+                yourWork: "YOUR WORK",
+                projectDescription: "Follow the progress and development of your project.",
+                projectDetails: "PROJECT DETAILS",
+                projectId: "Project ID",
+                projectType: "Project type",
+                startDate: "Start date",
+                overallProgress: "Overall progress",
+                development: "DEVELOPMENT",
+                projectTimeline: "Project timeline",
+                noMilestones: "No milestones available yet.",
+
+                documents: "DOCUMENTS",
+                filesDescription: "Access your project files and documents.",
+                yourDocuments: "YOUR DOCUMENTS",
+                availableFiles: "Available files",
+                noFiles: "No files available yet.",
+
+                payments: "PAYMENTS",
+                invoicesDescription: "View your invoices and payment information.",
+                billing: "BILLING",
+                yourInvoices: "Your invoices",
+                noInvoices: "No invoices available yet.",
+
+                footerCredit: "DESIGNED & DEVELOPED BY DK VISUALS",
+                backToTop: "BACK TO TOP ↑"
+            },
+
+            nl: {
+                clientAccess: "KLANTTOEGANG",
+                welcomeBack: "Welkom terug.",
+                loginDescription: "Log in om toegang te krijgen tot je projectdashboard.",
+                emailAddress: "E-mailadres",
+                emailPlaceholder: "Vul je e-mailadres in",
+                password: "Wachtwoord",
+                passwordPlaceholder: "Vul je wachtwoord in",
+                signIn: "Inloggen",
+                copyright: "© 2026 DK VISUALS. ALLE RECHTEN VOORBEHOUDEN.",
+
+                workspace: "WERKOMGEVING",
+                dashboard: "Dashboard",
+                myProject: "Mijn project",
+                files: "Bestanden",
+                invoices: "Facturen",
+                logOut: "Uitloggen",
+                clientPortal: "Klantenportaal",
+
+                overview: "OVERZICHT",
+                welcomeBackComma: "Welkom terug,",
+                currentProject: "HUIDIG PROJECT",
+                projectProgress: "Projectvoortgang",
+                expectedDelivery: "VERWACHTE OPLEVERING",
+                notSpecified: "Niet opgegeven",
+                completionDate: "Verwachte datum waarop het project wordt afgerond.",
+                latestActivity: "LAATSTE ACTIVITEIT",
+                recentUpdates: "Recente updates",
+                viewProject: "Bekijk project",
+                noUpdates: "Er zijn nog geen updates beschikbaar.",
+
+                yourWork: "JOUW PROJECT",
+                projectDescription: "Volg de voortgang en ontwikkeling van je project.",
+                projectDetails: "PROJECTGEGEVENS",
+                projectId: "Project-ID",
+                projectType: "Projecttype",
+                startDate: "Startdatum",
+                overallProgress: "Totale voortgang",
+                development: "ONTWIKKELING",
+                projectTimeline: "Projectplanning",
+                noMilestones: "Er zijn nog geen mijlpalen beschikbaar.",
+
+                documents: "DOCUMENTEN",
+                filesDescription: "Bekijk je projectbestanden en documenten.",
+                yourDocuments: "JOUW DOCUMENTEN",
+                availableFiles: "Beschikbare bestanden",
+                noFiles: "Er zijn nog geen bestanden beschikbaar.",
+
+                payments: "BETALINGEN",
+                invoicesDescription: "Bekijk je facturen en betalingsinformatie.",
+                billing: "FACTURATIE",
+                yourInvoices: "Jouw facturen",
+                noInvoices: "Er zijn nog geen facturen beschikbaar.",
+
+                footerCredit: "ONTWORPEN & ONTWIKKELD DOOR DK VISUALS",
+                backToTop: "TERUG NAAR BOVEN ↑"
+            },
+
+            tr: {
+                clientAccess: "MÜŞTERİ ERİŞİMİ",
+                welcomeBack: "Tekrar hoş geldiniz.",
+                loginDescription: "Proje panelinize erişmek için giriş yapın.",
+                emailAddress: "E-posta adresi",
+                emailPlaceholder: "E-posta adresinizi girin",
+                password: "Şifre",
+                passwordPlaceholder: "Şifrenizi girin",
+                signIn: "Giriş yap",
+                copyright: "© 2026 DK VISUALS. TÜM HAKLARI SAKLIDIR.",
+
+                workspace: "ÇALIŞMA ALANI",
+                dashboard: "Kontrol Paneli",
+                myProject: "Projem",
+                files: "Dosyalar",
+                invoices: "Faturalar",
+                logOut: "Çıkış yap",
+                clientPortal: "Müşteri Portalı",
+
+                overview: "GENEL BAKIŞ",
+                welcomeBackComma: "Tekrar hoş geldiniz,",
+                currentProject: "MEVCUT PROJE",
+                projectProgress: "Proje ilerlemesi",
+                expectedDelivery: "TAHMİNİ TESLİM TARİHİ",
+                notSpecified: "Belirtilmedi",
+                completionDate: "Projenin tahmini tamamlanma tarihi.",
+                latestActivity: "SON AKTİVİTE",
+                recentUpdates: "Son güncellemeler",
+                viewProject: "Projeyi görüntüle",
+                noUpdates: "Henüz herhangi bir güncelleme yok.",
+
+                yourWork: "PROJENİZ",
+                projectDescription: "Projenizin ilerlemesini ve geliştirme sürecini takip edin.",
+                projectDetails: "PROJE DETAYLARI",
+                projectId: "Proje numarası",
+                projectType: "Proje türü",
+                startDate: "Başlangıç tarihi",
+                overallProgress: "Genel ilerleme",
+                development: "GELİŞTİRME",
+                projectTimeline: "Proje takvimi",
+                noMilestones: "Henüz herhangi bir aşama mevcut değil.",
+
+                documents: "BELGELER",
+                filesDescription: "Proje dosyalarınıza ve belgelerinize erişin.",
+                yourDocuments: "BELGELERİNİZ",
+                availableFiles: "Mevcut dosyalar",
+                noFiles: "Henüz herhangi bir dosya mevcut değil.",
+
+                payments: "ÖDEMELER",
+                invoicesDescription: "Faturalarınızı ve ödeme bilgilerinizi görüntüleyin.",
+                billing: "FATURALANDIRMA",
+                yourInvoices: "Faturalarınız",
+                noInvoices: "Henüz herhangi bir fatura mevcut değil.",
+
+                footerCredit: "DK VISUALS TARAFINDAN TASARLANDI VE GELİŞTİRİLDİ",
+                backToTop: "YUKARI ÇIK ↑"
+            }
+
+        };
+
+
+        /* =========================
+           LANGUAGE DETECTION
+        ========================= */
+
+        function detectPortalLanguage() {
+
+            const browserLanguages = navigator.languages || [
+                navigator.language || navigator.userLanguage || "en"
+            ];
+
+            for (const language of browserLanguages) {
+
+                const code = language.toLowerCase().split("-")[0];
+
+                if (portalTranslations[code]) {
+                    return code;
+                }
+
+            }
+
+            return "en";
+        }
+
+
+        /* =========================
+           APPLY TRANSLATIONS
+        ========================= */
+
+        function setPortalLanguage(language) {
+
+            const selectedTranslations = portalTranslations[language];
+
+            if (!selectedTranslations) return;
+
+            document.documentElement.lang = language;
+
+            document.querySelectorAll("[data-i18n]").forEach(element => {
+
+                const key = element.dataset.i18n;
+
+                if (selectedTranslations[key] !== undefined) {
+                    element.textContent = selectedTranslations[key];
+                }
+
+            });
+
+            document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+
+                const key = element.dataset.i18nPlaceholder;
+
+                if (selectedTranslations[key] !== undefined) {
+                    element.placeholder = selectedTranslations[key];
+                }
+
+            });
+
+        }
+
+
+        const detectedPortalLanguage = detectPortalLanguage();
+
+        setPortalLanguage(detectedPortalLanguage);
+
+    </script>
 
 </body>
 </html>
