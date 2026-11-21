@@ -1047,22 +1047,49 @@ button {
     background: #111111;
 }
 
-.project-dua iframe,
+/* DUA BEAUTY */
+
+.project-dua iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 720px;
+    border: none;
+    transform: scale(0.505);
+    transform-origin: top left;
+    pointer-events: none;
+}
+
+/* HIGH QUALITY TAXI */
+
 .project-taxi iframe {
     position: absolute;
     top: 0;
     left: 0;
-
     width: 1440px;
     height: 973px;
-
     border: none;
     transform: scale(var(--preview-scale, 0.3));
     transform-origin: top left;
-
     pointer-events: none;
 }
 
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .project-dua iframe {
+        width: 1440px;
+        height: 1067px;
+        transform: scale(0.27);
+    }
+
+    .project-taxi iframe {
+        width: 1440px;
+        height: 1075px;
+    }
+}
 /* ========================================
    PROCESS
 ======================================== */
