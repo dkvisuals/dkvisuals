@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,10 +26,12 @@
 
         body {
             min-height: 100vh;
+            min-height: 100svh;
             background: #050505;
             color: #fff;
             font-family: Arial, Helvetica, sans-serif;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         /* =========================
@@ -82,9 +85,10 @@
             position: relative;
             z-index: 1;
             min-height: 100vh;
+            min-height: 100svh;
             display: flex;
             flex-direction: column;
-            padding: 40px 7%;
+            padding: clamp(18px, 4vh, 40px) 7%;
         }
 
         /* =========================
@@ -95,6 +99,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-shrink: 0;
         }
 
         .logo {
@@ -126,10 +131,11 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 60px 20px;
+            padding: clamp(25px, 5vh, 60px) 20px;
         }
 
         .content {
+            width: 100%;
             max-width: 750px;
             animation: fadeUp 1s ease forwards;
         }
@@ -141,7 +147,7 @@
             align-items: center;
             gap: 10px;
             padding: 10px 16px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             border: 1px solid rgba(255,255,255,0.12);
             border-radius: 50px;
             background: rgba(255,255,255,0.035);
@@ -158,6 +164,7 @@
             background: #fff;
             box-shadow: 0 0 12px rgba(255,255,255,0.6);
             animation: pulse 2s infinite;
+            flex-shrink: 0;
         }
 
         /* ERROR CODE */
@@ -179,12 +186,14 @@
             line-height: 1.05;
             letter-spacing: -3px;
             font-weight: 600;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        h1 span {
+        h1 span:last-child {
             color: #777;
         }
+
+        /* DESCRIPTION */
 
         .description {
             max-width: 490px;
@@ -200,7 +209,7 @@
             display: inline-flex;
             align-items: center;
             gap: 15px;
-            margin-top: 35px;
+            margin-top: 30px;
             padding: 15px 24px;
             border: 1px solid rgba(255,255,255,0.2);
             border-radius: 3px;
@@ -224,7 +233,7 @@
             border-color: #fff;
         }
 
-        .home-button:hover span {
+        .home-button:hover span:last-child {
             transform: translate(3px, -3px);
         }
 
@@ -234,7 +243,7 @@
             width: 55px;
             height: 1px;
             background: rgba(255,255,255,0.35);
-            margin: 35px auto 25px;
+            margin: 30px auto 20px;
         }
 
         .small-text {
@@ -256,6 +265,7 @@
             color: #555;
             font-size: 11px;
             letter-spacing: 1px;
+            flex-shrink: 0;
         }
 
         footer span:last-child {
@@ -291,21 +301,70 @@
         }
 
         /* =========================
-           RESPONSIVE
+           SHORT SCREEN HEIGHTS
+        ========================= */
+
+        @media (max-height: 800px) and (min-width: 601px) {
+
+            .page {
+                padding-top: 18px;
+                padding-bottom: 18px;
+            }
+
+            .logo img {
+                width: 65px;
+            }
+
+            main {
+                padding: 15px 20px;
+            }
+
+            .status {
+                margin-bottom: 15px;
+                padding: 8px 14px;
+            }
+
+            .error-code {
+                font-size: clamp(85px, 15vh, 140px);
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                font-size: clamp(32px, 5.5vh, 52px);
+                margin-bottom: 12px;
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .home-button {
+                margin-top: 18px;
+                padding: 12px 22px;
+            }
+
+            .divider {
+                margin: 16px auto 12px;
+            }
+
+            .small-text {
+                font-size: 10px;
+            }
+        }
+
+        /* =========================
+           MOBILE
         ========================= */
 
         @media (max-width: 600px) {
 
-            body {
-                overflow-y: auto;
-            }
-
             .page {
-                padding: 28px 6%;
+                padding: 25px 6%;
             }
 
             .logo img {
-                width: 75px;
+                width: 65px;
             }
 
             .header-label {
@@ -317,17 +376,32 @@
                 padding: 45px 10px;
             }
 
+            .status {
+                margin-bottom: 25px;
+                font-size: 10px;
+            }
+
             .error-code {
                 font-size: clamp(100px, 30vw, 140px);
                 letter-spacing: -7px;
             }
 
             h1 {
+                font-size: clamp(34px, 9vw, 48px);
                 letter-spacing: -2px;
             }
 
             .description {
                 font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .home-button {
+                margin-top: 25px;
+            }
+
+            .divider {
+                margin: 25px auto 18px;
             }
 
             footer {
@@ -336,6 +410,61 @@
                 gap: 12px;
             }
         }
+
+        /* =========================
+           VERY SHORT MOBILE SCREENS
+        ========================= */
+
+        @media (max-height: 650px) and (max-width: 600px) {
+
+            .page {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            main {
+                padding: 25px 10px;
+            }
+
+            .status {
+                margin-bottom: 15px;
+            }
+
+            .error-code {
+                font-size: 95px;
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                font-size: 34px;
+                margin-bottom: 12px;
+            }
+
+            .home-button {
+                margin-top: 18px;
+            }
+
+            .divider {
+                margin: 18px auto 12px;
+            }
+        }
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -347,7 +476,10 @@
 
     <div class="page">
 
+        <!-- HEADER -->
+
         <header>
+
             <a href="index.html" class="logo">
                 <img src="assets/images/logo-white.png" alt="DK VISUALS">
             </a>
@@ -355,16 +487,23 @@
             <div class="header-label" data-i18n="header">
                 Digital Experiences
             </div>
+
         </header>
 
+        <!-- MAIN CONTENT -->
+
         <main>
+
             <div class="content">
 
                 <div class="status">
+
                     <span class="status-dot"></span>
+
                     <span data-i18n="status">
                         Page not found
                     </span>
+
                 </div>
 
                 <div class="error-code">
@@ -372,7 +511,8 @@
                 </div>
 
                 <h1>
-                    <span data-i18n="heading1">This page doesn't >exist.</span>
+                    <span data-i18n="heading1">This page doesn't</span>
+                    <span data-i18n="heading2">exist.</span>
                 </h1>
 
                 <p class="description" data-i18n="description">
@@ -381,8 +521,13 @@
                 </p>
 
                 <a href="index.html" class="home-button">
-                    <span data-i18n="button">Back to homepage</span>
+
+                    <span data-i18n="button">
+                        Back to homepage
+                    </span>
+
                     <span>↗</span>
+
                 </a>
 
                 <div class="divider"></div>
@@ -392,19 +537,26 @@
                 </p>
 
             </div>
+
         </main>
 
+        <!-- FOOTER -->
+
         <footer>
+
             <span>© 2026 DK VISUALS</span>
+
             <span>Design. Develop. Deliver.</span>
+
         </footer>
 
     </div>
 
+    <!-- =========================
+         LANGUAGE DETECTION
+    ========================= -->
+
     <script>
-        /* =========================
-           LANGUAGE DETECTION
-        ========================= */
 
         const translations = {
 
@@ -440,6 +592,7 @@
 
         };
 
+
         function detectLanguage() {
 
             const browserLanguages = navigator.languages?.length
@@ -461,7 +614,9 @@
             }
 
             return "en";
+
         }
+
 
         function setLanguage(language) {
 
@@ -482,6 +637,7 @@
             });
 
         }
+
 
         const detectedLanguage = detectLanguage();
 
