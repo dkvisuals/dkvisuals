@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+
+    <title>404 — Page Not Found | DK VISUALS</title>
+
+    <style>
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100svh;
+            background: #050505;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .background::before {
+            content: "";
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(
+                circle,
+                rgba(255,255,255,0.055) 0%,
+                rgba(255,255,255,0.015) 40%,
+                transparent 70%
+            );
+        }
+
+        .grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: linear-gradient(
+                to bottom,
+                transparent,
+                black 30%,
+                black 70%,
+                transparent
+            );
+        }
+
+        /* =========================
+           LAYOUT
+        ========================= */
+
+        .page {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            padding: clamp(18px, 4vh, 40px) 7%;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            display: block;
+            width: 75px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .header-label {
+            color: #777;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: clamp(25px, 5vh, 60px) 20px;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 750px;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        /* STATUS */
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.035);
+            color: #aaa;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 12px rgba(255,255,255,0.6);
+            animation: pulse 2s infinite;
+            flex-shrink: 0;
+        }
+
+        /* ERROR CODE */
+
+        .error-code {
+            font-size: clamp(100px, 20vw, 190px);
+            line-height: 0.9;
+            font-weight: 700;
+            letter-spacing: -12px;
+            color: rgba(255,255,255,0.09);
+            margin-bottom: 25px;
+            user-select: none;
+        }
+
+        /* HEADING */
+
+        h1 {
+            font-size: clamp(36px, 6vw, 65px);
+            line-height: 1.05;
+            letter-spacing: -3px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h1 span:last-child {
+            color: #777;
+        }
+
+        /* DESCRIPTION */
+
+        .description {
+            max-width: 490px;
+            margin: 0 auto;
+            color: #888;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* BUTTON */
+
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+            padding: 15px 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 3px;
+            background: rgba(255,255,255,0.06);
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .home-button span {
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .home-button:hover {
+            background: #fff;
+            color: #050505;
+            border-color: #fff;
+        }
+
+        .home-button:hover span:last-child {
+            transform: translate(3px, -3px);
+        }
+
+        /* DECORATIVE LINE */
+
+        .divider {
+            width: 55px;
+            height: 1px;
+            background: rgba(255,255,255,0.35);
+            margin: 30px auto 20px;
+        }
+
+        .small-text {
+            color: #666;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            color: #555;
+            font-size: 11px;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+
+        footer span:last-child {
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 0 12px rgba(255,255,255,0.6);
+            }
+
+            50% {
+                opacity: 0.35;
+                box-shadow: 0 0 3px rgba(255,255,255,0.2);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           SHORT SCREEN HEIGHTS
+        ========================= */
+
+        @media (max-height: 800px) and (min-width: 601px) {
+
+            .page {
+                padding-top: 18px;
+                padding-bottom: 18px;
+            }
+
+            .logo img {
+                width: 65px;
+            }
+
+            main {
+                padding: 15px 20px;
+            }
+
+            .status {
+                margin-bottom: 15px;
+                padding: 8px 14px;
+            }
+
+            .error-code {
+                font-size: clamp(85px, 15vh, 140px);
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                font-size: clamp(32px, 5.5vh, 52px);
+                margin-bottom: 12px;
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .home-button {
+                margin-top: 18px;
+                padding: 12px 22px;
+            }
+
+            .divider {
+                margin: 16px auto 12px;
+            }
+
+            .small-text {
+                font-size: 10px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .page {
+                padding: 25px 6%;
+            }
+
+            .logo img {
+                width: 65px;
+            }
+
+            .header-label {
+                font-size: 9px;
+                letter-spacing: 1px;
+            }
+
+            main {
+                padding: 45px 10px;
+            }
+
+            .status {
+                margin-bottom: 25px;
+                font-size: 10px;
+            }
+
+            .error-code {
+                font-size: clamp(100px, 30vw, 140px);
+                letter-spacing: -7px;
+            }
+
+            h1 {
+                font-size: clamp(34px, 9vw, 48px);
+                letter-spacing: -2px;
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .home-button {
+                margin-top: 25px;
+            }
+
+            .divider {
+                margin: 25px auto 18px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+        }
+
+        /* =========================
+           VERY SHORT MOBILE SCREENS
+        ========================= */
+
+        @media (max-height: 650px) and (max-width: 600px) {
+
+            .page {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            main {
+                padding: 25px 10px;
+            }
+
+            .status {
+                margin-bottom: 15px;
+            }
+
+            .error-code {
+                font-size: 95px;
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                font-size: 34px;
+                margin-bottom: 12px;
+            }
+
+            .home-button {
+                margin-top: 18px;
+            }
+
+            .divider {
+                margin: 18px auto 12px;
+            }
+        }
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="grid"></div>
+    </div>
+
+    <div class="page">
+
+        <!-- HEADER -->
+
+        <header>
+
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-white.png" alt="DK VISUALS">
+            </a>
+
+            <div class="header-label" data-i18n="header">
+                Digital Experiences
+            </div>
+
+        </header>
+
+        <!-- MAIN CONTENT -->
+
+        <main>
+
+            <div class="content">
+
+                <div class="status">
+
+                    <span class="status-dot"></span>
+
+                    <span data-i18n="status">
+                        Page not found
+                    </span>
+
+                </div>
+
+                <div class="error-code">
+                    404
+                </div>
+
+                <h1>
+                    <span data-i18n="heading1">This page doesn't</span>
+                    <span data-i18n="heading2">exist.</span>
+                </h1>
+
+                <p class="description" data-i18n="description">
+                    The page you're looking for may have been moved,
+                    deleted or never existed. Let's get you back on track.
+                </p>
+
+                <a href="index.html" class="home-button">
+
+                    <span data-i18n="button">
+                        Back to homepage
+                    </span>
+
+                    <span>↗&#xFE0E;</span>
+
+                </a>
+
+                <div class="divider"></div>
+
+                <p class="small-text" data-i18n="small">
+                    Lost in the digital space
+                </p>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>© 2026 DK VISUALS</span>
+
+            <span>Design. Develop. Deliver.</span>
+
+        </footer>
+
+    </div>
+
+    <!-- =========================
+         LANGUAGE DETECTION
+    ========================= -->
+
+    <script>
+
+        const translations = {
+
+            en: {
+                header: "Digital Experiences",
+                status: "Page not found",
+                heading1: "This page doesn't",
+                heading2: "exist.",
+                description: "The page you're looking for may have been moved, deleted or never existed. Let's get you back on track.",
+                button: "Back to homepage",
+                small: "Lost in the digital space"
+            },
+
+            nl: {
+                header: "Digitale ervaringen",
+                status: "Pagina niet gevonden",
+                heading1: "Deze pagina",
+                heading2: "bestaat niet.",
+                description: "De pagina die je zoekt is mogelijk verplaatst, verwijderd of heeft nooit bestaan. Laten we je terugbrengen naar de juiste plek.",
+                button: "Terug naar homepagina",
+                small: "Verdwaald in de digitale ruimte"
+            },
+
+            tr: {
+                header: "Dijital Deneyimler",
+                status: "Sayfa bulunamadı",
+                heading1: "Bu sayfa",
+                heading2: "mevcut değil.",
+                description: "Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir. Sizi doğru yere geri götürelim.",
+                button: "Ana sayfaya dön",
+                small: "Dijital dünyada kayboldunuz"
+            }
+
+        };
+
+
+        function detectLanguage() {
+
+            const browserLanguages = navigator.languages?.length
+                ? navigator.languages
+                : [
+                    navigator.language ||
+                    navigator.userLanguage ||
+                    "en"
+                ];
+
+            for (const language of browserLanguages) {
+
+                const code = language.toLowerCase().split("-")[0];
+
+                if (translations[code]) {
+                    return code;
+                }
+
+            }
+
+            return "en";
+
+        }
+
+
+        function setLanguage(language) {
+
+            const selectedTranslations = translations[language];
+
+            if (!selectedTranslations) return;
+
+            document.documentElement.lang = language;
+
+            document.querySelectorAll("[data-i18n]").forEach(element => {
+
+                const key = element.dataset.i18n;
+
+                if (selectedTranslations[key]) {
+                    element.textContent = selectedTranslations[key];
+                }
+
+            });
+
+        }
+
+
+        const detectedLanguage = detectLanguage();
+
+        setLanguage(detectedLanguage);
+
+    </script>
+
+</body>
+</html>
