@@ -1380,3 +1380,20 @@ h2 em {
     }
 }
 
+
+
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo img {
+    display: block;
+    width: 75px;
+    height: auto;
+}
+
+
+
