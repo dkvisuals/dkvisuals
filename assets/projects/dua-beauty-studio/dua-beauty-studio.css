@@ -1343,3 +1343,32 @@ h2 em {
     }
 
 }
+
+
+
+
+
+
+
+
+
+/* DUA — Beige mobile dropdown override */
+
+@media (max-width: 700px) {
+
+    .navbar .nav-links {
+        background: #f4eee6 !important;
+        border-bottom: 1px solid rgba(84, 69, 56, .18);
+    }
+
+    .navbar .nav-links a {
+        color: #887d72;
+    }
+
+    .navbar .nav-links a:hover,
+    .navbar .nav-links a.active {
+        color: #544538;
+    }
+
+}
+
