@@ -725,53 +725,189 @@ a {
 }
 
 
-/* ==========================================
-   FOOTER
-========================================== */
+/* ========================================
+   FOOTER — DK VISUALS
+   Matching index.css
+======================================== */
 
 .footer {
-    padding: 55px 8% 25px;
-    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 70px 6% 25px;
+    background: #080809;
+    border-top: 1px solid rgba(255, 255, 255, 0.075);
 }
 
-.footer .logo img {
+.footer-top {
+    max-width: 1240px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 0.9fr 1.3fr 0.8fr;
+    gap: 35px;
+
+    padding-bottom: 65px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand .logo img {
     display: block;
     width: 75px;
     height: auto;
     object-fit: contain;
 }
 
-.footer > p {
-    color: #777;
-    font-size: 12px;
-    margin-top: 10px;
+.footer-brand p {
+    margin-top: 17px;
+    color: #65656c;
+    font-size: 11px;
+    line-height: 1.9;
 }
 
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+}
+
+.footer-heading {
+    margin-bottom: 8px;
+    color: #65656c;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.footer-column > span:not(.footer-heading) {
+    color: #99999f;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.footer-column a {
+    color: #99999f;
+    font-size: 11px;
+    transition: 0.3s ease;
+    overflow-wrap: anywhere;
+}
+
+.footer-column a:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.footer-business {
+    overflow-wrap: anywhere;
+}
+
+
+/* FOOTER BOTTOM */
+
 .footer-bottom {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.075);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 
-    border-top: 1px solid rgba(255,255,255,.1);
-    margin-top: 45px;
-    padding-top: 20px;
-
-    color: #666;
-    font-size: 9px;
+    color: #65656c;
+    font-size: 8px;
     letter-spacing: 1px;
-}
 
-.footer-bottom div {
-    display: flex;
-    gap: 25px;
+    position: relative;
 }
 
 .footer-bottom a {
-    transition: color .3s;
+    color: inherit;
+    transition: 0.3s ease;
 }
 
 .footer-bottom a:hover {
-    color: #fff;
+    color: white;
+}
+
+.footer-bottom span:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* ========================================
+   FOOTER — TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-top {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px 30px;
+    }
+
+    .footer-brand {
+        grid-column: span 3;
+    }
+
+}
+
+
+/* ========================================
+   FOOTER — MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .footer {
+        padding: 55px 6% 25px;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 20px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+        font-size: 7px;
+    }
+
+    .footer-bottom span:nth-child(2) {
+        position: static;
+        transform: none;
+    }
+
+}
+
+
+/* ========================================
+   FOOTER — SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+    .footer-top {
+        gap: 35px 15px;
+    }
+
+    .footer-column a,
+    .footer-column > span:not(.footer-heading) {
+        font-size: 10px;
+    }
+
 }
 
 
@@ -971,20 +1107,6 @@ a {
     .cta-section h2 {
         font-size: 58px;
         letter-spacing: -4px;
-    }
-
-
-    /* Footer */
-
-    .footer-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-bottom div {
-        flex-wrap: wrap;
-        gap: 18px;
     }
 
 }
