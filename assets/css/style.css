@@ -1317,7 +1317,7 @@ button {
 /* ========================================
    FOOTER
 ======================================== */
-
+/*
 .footer {
     padding: 70px 6% 25px;
     background: #080809;
@@ -1398,6 +1398,184 @@ button {
     left: 50%;
     transform: translateX(-50%);
 }
+*/
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    padding: 70px 6% 25px;
+    background: #080809;
+    border-top: 1px solid var(--border);
+}
+
+.footer-top {
+    max-width: var(--container);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 0.9fr 1.3fr 0.8fr;
+    gap: 35px;
+
+    padding-bottom: 65px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand p {
+    margin-top: 17px;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+}
+
+.footer-heading {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.footer-column > span:not(.footer-heading) {
+    color: var(--text-secondary);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.footer-column a {
+    color: var(--text-secondary);
+    font-size: 11px;
+    transition: var(--transition);
+    overflow-wrap: anywhere;
+}
+
+.footer-column a:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.footer-business {
+    overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--text-muted);
+    font-size: 8px;
+    letter-spacing: 1px;
+
+    position: relative;
+}
+
+.footer-bottom a {
+    transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+.footer-bottom span:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* ========================================
+   FOOTER — TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-top {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px 30px;
+    }
+
+    .footer-brand {
+        grid-column: span 3;
+    }
+
+}
+
+
+/* ========================================
+   FOOTER — MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .footer {
+        padding: 55px 6% 25px;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 20px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+        font-size: 7px;
+    }
+
+    .footer-bottom span:nth-child(2) {
+        position: static;
+        transform: none;
+    }
+
+}
+
+
+/* ========================================
+   FOOTER — SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+    .footer-top {
+        gap: 35px 15px;
+    }
+
+    .footer-column a,
+    .footer-column > span:not(.footer-heading) {
+        font-size: 10px;
+    }
+
+}
+
+
+
 
 
 /* ========================================
