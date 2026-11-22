@@ -420,6 +420,7 @@
 
 
 <!-- FOOTER -->
+<!--
 <footer class="footer">
 
     <div class="footer-top">
@@ -461,6 +462,147 @@
     </div>
 
 </footer>
+    -->
+    
+<!-- ========================================
+     DK VISUALS — FOOTER
+======================================== -->
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="#home" class="logo" aria-label="DK VISUALS home">
+                <img src="assets/images/logo-white.png" alt="DK VISUALS">
+            </a>
+
+            <p data-i18n="footerDescription">
+                Building digital experiences<br>
+                with purpose and precision.
+            </p>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <div class="footer-column">
+
+            <span class="footer-heading" data-i18n="footerNavigation">
+                NAVIGATION
+            </span>
+
+            <a href="#home" data-i18n="navHome">Home</a>
+            <a href="#about" data-i18n="navAbout">About</a>
+            <a href="#services" data-i18n="navServices">Services</a>
+            <a href="portfolio.html" data-i18n="navPortfolio">Portfolio</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+
+        </div>
+
+
+        <!-- CONNECT -->
+        <div class="footer-column">
+
+            <span class="footer-heading" data-i18n="footerConnect">
+                CONNECT
+            </span>
+
+            <a href="mailto:devranhasankurt@gmail.com">
+                Email
+            </a>
+
+            <a href="https://instagram.com/dkvisuals.nl"
+               target="_blank"
+               rel="noopener noreferrer">
+                Instagram ↗
+            </a>
+
+            <a href="https://linkedin.com/in/devrankurt"
+               target="_blank"
+               rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
+
+            <a href="clientportal.html" data-i18n="clientPortalFooter">
+                Client Portal
+            </a>
+
+        </div>
+
+
+        <!-- BUSINESS INFORMATION -->
+        <div class="footer-column footer-business">
+
+            <span class="footer-heading" data-i18n="footerBusiness">
+                BUSINESS INFORMATION
+            </span>
+
+            <span>DK VISUALS</span>
+
+            <span>Amsterdam, The Netherlands</span>
+
+            <a href="mailto:devranhasankurt@gmail.com">
+                devranhasankurt@gmail.com
+            </a>
+
+            <!--
+            ========================================
+            BUSINESS REGISTRATION
+            Activate after official registration.
+            ========================================
+
+            <span>Legal Business Name: [BUSINESS NAME]</span>
+            <span>KVK Number: [KVK NUMBER]</span>
+            <span>VAT ID: [VAT IDENTIFICATION NUMBER]</span>
+            <span>Registered Address: [BUSINESS ADDRESS]</span>
+
+            -->
+
+        </div>
+
+
+        <!-- LEGAL -->
+        <div class="footer-column footer-legal">
+
+            <span class="footer-heading" data-i18n="footerLegal">
+                LEGAL
+            </span>
+
+            <a href="privacy.html" data-i18n="privacyPolicy">
+                Privacy Policy
+            </a>
+
+            <a href="terms.html" data-i18n="termsConditions">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <span data-i18n="copyright">
+            © 2026 DK VISUALS. ALL RIGHTS RESERVED.
+        </span>
+
+        <span data-i18n="footerCredit">
+            DESIGNED & DEVELOPED BY DK VISUALS
+        </span>
+
+        <a href="#home" data-i18n="backToTop">
+            BACK TO TOP ↑
+        </a>
+
+    </div>
+
+</footer>
+
 
 
 <script>
@@ -550,6 +692,10 @@ const translations = {
         footerNavigation: "NAVIGATION",
         footerConnect: "CONNECT",
         clientPortalFooter: "Client Portal",
+        footerBusiness: "BUSINESS INFORMATION",
+        footerLegal: "LEGAL",
+        privacyPolicy: "Privacy Policy",
+        termsConditions: "Terms & Conditions",
         copyright: "© 2026 DK VISUALS. ALL RIGHTS RESERVED.",
         footerCredit: "DESIGNED & DEVELOPED BY DK VISUALS",
         backToTop: "BACK TO TOP ↑"
@@ -635,99 +781,16 @@ const translations = {
         footerNavigation: "NAVIGATIE",
         footerConnect: "CONTACT",
         clientPortalFooter: "Klantenportaal",
+        footerBusiness: "BEDRIJFSINFORMATIE",
+        footerLegal: "JURIDISCH",
+        privacyPolicy: "Privacyverklaring",
+        termsConditions: "Algemene voorwaarden",
         copyright: "© 2026 DK VISUALS. ALLE RECHTEN VOORBEHOUDEN.",
         footerCredit: "ONTWORPEN & ONTWIKKELD DOOR DK VISUALS",
         backToTop: "TERUG NAAR BOVEN ↑"
     }
     };
 
-/*
-    tr: {
-        metaDescription: "DK VISUALS, iddialı işletmeler için modern web siteleri ve dijital deneyimler tasarlar.",
-
-        navHome: "Ana Sayfa",
-        navAbout: "Hakkımızda",
-        navServices: "Hizmetler",
-        navPortfolio: "Portfolyo",
-        navContact: "İletişim",
-        clientPortal: "Müşteri Portalı",
-        letsTalk: "Görüşelim",
-
-        availability: "Bağımsız dijital stüdyo",
-        heroEyebrow: "DİJİTAL DENEYİMLER TASARLIYORUZ",
-        heroHeading1: "Dijital deneyimler",
-        heroHeading2: "oluşturuyoruz ve",
-        heroHeading3: "fark yaratıyoruz.",
-        heroDescription: "İşletmelerin, özenli tasarım, modern web siteleri ve titizlikle hazırlanan dijital deneyimlerle öne çıkmasına yardımcı oluyoruz.",
-        exploreWork: "Çalışmalarımızı keşfet",
-        startConversation: "Bir görüşme başlat",
-        heroBottomLeft: "WEB GELİŞTİRME · DİJİTAL TASARIM",
-        heroBottomRight: "KEŞFETMEK İÇİN KAYDIR ↓",
-
-        aboutLabel: "01 / HAKKIMIZDA",
-        whoWeAre: "BİZ KİMİZ",
-        aboutHeading1: "Dijital varlık",
-        aboutHeading2: "bir amaçla.",
-        aboutParagraph1: "DK VISUALS, çevrimiçi görünümüne önem veren işletmeler için modern ve yüksek performanslı web siteleri oluşturmaya odaklanan bağımsız bir dijital stüdyodur.",
-        aboutParagraph2: "İlk konseptten son ayrıntıya kadar yaratıcılığı ve teknolojiyi bir araya getirerek özgün ve sorunsuz çalışan dijital deneyimler oluşturuyoruz.",
-        getToKnowUs: "Bizi tanıyın",
-
-        servicesLabel: "02 / HİZMETLER",
-        whatWeDo: "NE YAPIYORUZ",
-        servicesHeading1: "Sunduğumuz",
-        servicesHeading2: "çözümler.",
-        servicesDescription: "Dijital varlığını oluşturmak ve geliştirmek isteyen işletmeler için özenle hazırlanmış çözümler.",
-
-        webDevelopment: "Web Geliştirme",
-        webDevelopmentDescription: "Ziyaretçileri müşterilere dönüştürmek için tasarlanmış modern, duyarlı ve yüksek performanslı web siteleri.",
-        webDevelopmentFooter: "WEB SİTELERİ · GELİŞTİRME",
-
-        digitalDesign: "Dijital Tasarım",
-        digitalDesignDescription: "Markanızı net bir şekilde ifade eden özgün görsel kimlikler ve dijital materyaller.",
-        digitalDesignFooter: "GÖRSEL TASARIM · MARKA",
-
-        websiteRedesign: "Web Sitesi Yenileme",
-        websiteRedesignDescription: "Eski web sitelerini modern, şık ve etkili dijital deneyimlere dönüştürüyoruz.",
-        websiteRedesignFooter: "OPTİMİZASYON · YENİLEME",
-
-        portfolioLabel: "03 / SEÇİLMİŞ ÇALIŞMALAR",
-        ourProjects: "PROJELERİMİZ",
-        portfolioHeading: "Seçilmiş çalışmalar",
-        portfolioDescription: "Tasarım ve geliştirme yaklaşımımızı yansıtan dijital konsept ve projelerden bir seçki.",
-        projectMenu: "MENÜ · HAKKIMIZDA · İLETİŞİM",
-        beautyTagline: "GÜZELLİK · ÖZGÜVEN · SEN",
-        beautyHeading: "Güzellik<br>seninle başlar.",
-        discoverMore: "DAHA FAZLASINI KEŞFET ↗",
-        beautyProjectDescription: "Güzellik · Web Tasarımı ve Geliştirme",
-        taxiTagline: "PREMIUM ULAŞIM",
-        taxiHeading: "Konforlu<br>yolculuk.",
-        taxiFooter: "YÜKSEK KALİTELİ TAKSİ",
-        taxiProjectDescription: "Ulaşım · Web Geliştirme",
-        moreProjects: "YAKINDA DAHA FAZLA PROJE",
-        qualityOverQuantity: "NİTELİK, NİCELİKTEN ÖNCE GELİR.",
-
-        contactLabel: "04 / İLETİŞİM",
-        letsConnect: "BİZİMLE İLETİŞİME GEÇİN",
-        contactEyebrow: "AKLINIZDA BİR FİKİR VAR MI?",
-        contactHeading1: "Birlikte",
-        contactHeading2: "anlamlı",
-        contactHeading3: "bir şey yaratalım.",
-        contactDescription: "Bir sorunuz, bir fikriniz varsa veya sadece olasılıkları keşfetmek istiyorsanız, sizden haber almayı isteriz.",
-        getInTouch: "İletişime geçin",
-        openOpportunities: "YENİ PROJELERE AÇIĞIZ",
-        contactLocation: "AMSTERDAM · HOLLANDA",
-
-        footerDescription: "Amaç ve hassasiyetle<br>dijital deneyimler oluşturuyoruz.",
-        footerNavigation: "GEZİNME",
-        footerConnect: "İLETİŞİM",
-        clientPortalFooter: "Müşteri Portalı ↗",
-        copyright: "© 2026 DK VISUALS. TÜM HAKLARI SAKLIDIR.",
-        footerCredit: "DK VISUALS TARAFINDAN TASARLANDI VE GELİŞTİRİLDİ",
-        backToTop: "YUKARI ÇIK ↑"
-    }
-
-};
-    */
 
 /* =========================
    APPLY LANGUAGE
