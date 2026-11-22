@@ -1,3 +1,4 @@
+
 /* ==========================================
    DK VISUALS — PORTFOLIO STYLESHEET
    Dark Premium Digital Studio
@@ -40,22 +41,20 @@ a {
 
 
 /* ==========================================
-   HEADER — MATCH INDEX.CSS
+   NAVIGATION — MATCH INDEX.CSS
 ========================================== */
 
-.header {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-
     width: 100%;
     height: 82px;
     padding: 0 6%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
 
     background: rgba(9, 9, 11, 0.85);
     backdrop-filter: blur(20px);
@@ -67,6 +66,10 @@ a {
 /* Logo */
 
 .logo {
+    font-family: "Manrope", sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -2px;
     flex-shrink: 0;
 }
 
@@ -77,65 +80,90 @@ a {
     object-fit: contain;
 }
 
-/* Navigation */
+/* Navigation links */
 
-.navigation {
+.nav-links {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-.navigation a {
+.nav-links a {
     color: #99999f;
     font-size: 12px;
     transition: color .3s ease;
 }
 
-.navigation a:hover,
-.navigation a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: #f5f5f5;
 }
 
-.navigation a.active {
-    position: relative;
-}
+/* Navigation actions */
 
-.navigation a.active::after {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: #fff;
-    border-radius: 50%;
-    left: 50%;
-    bottom: -12px;
-    transform: translateX(-50%);
-}
-
-/* Header contact */
-
-.header-contact {
-    display: inline-flex;
+.nav-actions {
+    display: flex;
     align-items: center;
+    gap: 25px;
+}
+
+/* Client Portal */
+
+.portal-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
     font-size: 11px;
-    border: 1px solid rgba(255,255,255,.16);
-    padding: 11px 17px;
-    border-radius: 5px;
-    transition: background .3s, color .3s;
+    color: #99999f;
+    transition: color .3s ease;
+}
+
+.portal-link:hover {
+    color: white;
+}
+
+.navbar .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8da88b;
+    box-shadow: 0 0 10px rgba(141, 168, 139, 0.35);
     flex-shrink: 0;
 }
 
-.header-contact span:last-child {
+.arrow {
+    color: #65656c;
+}
+
+/* Let's Talk */
+
+.nav-cta {
+    padding: 11px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 5px;
+    font-size: 11px;
+    transition: background .3s ease, color .3s ease;
+}
+
+.nav-cta span {
     margin-left: 10px;
 }
 
-.header-contact:hover {
-    background: #fff;
+.nav-cta:hover {
+    background: white;
     color: #09090b;
+}
+
+/* Mobile menu button */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -186,11 +214,14 @@ a {
     gap: 10px;
 }
 
-.status-dot {
+/* Keep the SELECTED WORK dot white */
+
+.eyebrow .status-dot {
     width: 7px;
     height: 7px;
     background: #fff;
     border-radius: 50%;
+    box-shadow: none;
 }
 
 .hero-content {
@@ -746,16 +777,21 @@ a {
 
 /* ==========================================
    RESPONSIVE — TABLET
+   NAVBAR MATCHES INDEX.CSS
 ========================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
-    .header {
+    .navbar {
         padding: 0 4%;
     }
 
-    .navigation {
-        gap: 25px;
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-actions {
+        gap: 13px;
     }
 
     .hero,
@@ -779,55 +815,79 @@ a {
 
 /* ==========================================
    RESPONSIVE — MOBILE
+   NAVBAR MATCHES INDEX.CSS
 ========================================== */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
-    /* Header */
+    /* Navbar */
 
     body {
-        padding-top: 110px;
+        padding-top: 70px;
     }
 
-    .header {
-        position: fixed;
-        top: 0;
+    .navbar {
+        height: 70px;
+        padding: 0 6%;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .menu-toggle span {
+        width: 23px;
+        height: 1px;
+        background: white;
+        transition: .3s ease;
+    }
+
+    .menu-toggle.active span:first-child {
+        transform: translateY(3.5px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:last-child {
+        transform: translateY(-3.5px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 69px;
         left: 0;
-        z-index: 1000;
-
         width: 100%;
-        height: auto;
-        min-height: 70px;
+        padding: 25px 6% 30px;
 
-        flex-wrap: wrap;
-        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
 
-        padding: 18px 6%;
+        background: #0c0c0e;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.075);
 
-        background: rgba(9, 9, 11, 0.85);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: .3s ease;
     }
 
-    .navigation {
-        position: static;
-        order: 3;
-        transform: none;
-        width: 100%;
-
-        justify-content: center;
-        gap: 25px;
-        padding-top: 10px;
+    .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
-    .navigation a {
-        font-size: 11px;
+    .nav-links a {
+        font-size: 13px;
     }
 
-    .header-contact {
-        font-size: 10px;
-        padding: 9px 12px;
-    }
 
     /* Hero */
 
@@ -857,6 +917,7 @@ a {
         font-size: 8px;
     }
 
+
     /* Section heading */
 
     .section-heading {
@@ -869,6 +930,7 @@ a {
         font-size: 48px;
         letter-spacing: -3px;
     }
+
 
     /* Projects */
 
@@ -898,6 +960,7 @@ a {
         font-size: clamp(35px, 9vw, 55px);
     }
 
+
     /* CTA */
 
     .cta-section {
@@ -909,6 +972,7 @@ a {
         font-size: 58px;
         letter-spacing: -4px;
     }
+
 
     /* Footer */
 
@@ -931,14 +995,6 @@ a {
 ========================================== */
 
 @media (max-width: 380px) {
-
-    .navigation {
-        gap: 17px;
-    }
-
-    .navigation a {
-        font-size: 10px;
-    }
 
     .hero h1 {
         font-size: 55px;
@@ -998,7 +1054,3 @@ a {
 
     pointer-events: none;
 }
-
-
-
-
