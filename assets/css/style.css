@@ -63,11 +63,12 @@ button {
 }
 
 
-/* ========================================
-   NAVIGATION
-======================================== */
 
-.navbar {
+/* ==========================================
+   NAVBAR — MATCH INDEX PAGE
+========================================== */
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -77,41 +78,20 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
-
     background: rgba(9, 9, 11, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
-    border-bottom: 1px solid var(--border);
-}
-
-.logo {
-    font-family: var(--font-heading);
-    font-size: 27px;
-    font-weight: 800;
-    letter-spacing: -2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    z-index: 1000;
 }
 
 .logo img {
-    display: block;
     width: 75px;
     height: auto;
-    object-fit: contain;
+    display: block;
 }
 
-.logo span {
-    color: #aaa49a;
-}
-
-/*
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 34px;
-}
-    */
-.nav-links {
+.navigation {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -120,64 +100,42 @@ button {
     gap: 40px;
 }
 
-.nav-links a {
-    color: var(--text-secondary);
+.navigation a {
+    color: #99999f;
+    text-decoration: none;
     font-size: 12px;
-    transition: var(--transition);
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--text);
+.navigation a:hover,
+.navigation a.active {
+    color: #f5f5f5;
 }
 
-.nav-actions {
+.header-actions {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 }
 
-.portal-link {
-    display: flex;
+.header-contact {
+    display: inline-flex;
     align-items: center;
-    gap: 9px;
-    font-size: 11px;
-    color: var(--text-secondary);
-    transition: var(--transition);
+    gap: 12px;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-.portal-link:hover {
-    color: white;
-}
-
-.status-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #8da88b;
-    box-shadow: 0 0 10px rgba(141, 168, 139, 0.35);
-    flex-shrink: 0;
-}
-
-.arrow {
-    color: var(--text-muted);
-}
-
-.nav-cta {
-    padding: 11px 17px;
-    border: 1px solid var(--border-hover);
-    border-radius: 5px;
-    font-size: 11px;
-    transition: var(--transition);
-}
-
-.nav-cta span {
-    margin-left: 10px;
-}
-
-.nav-cta:hover {
-    background: white;
+.header-contact:hover {
+    background: #f5f5f5;
     color: #09090b;
+    border-color: #f5f5f5;
 }
 
 .menu-toggle {
@@ -185,6 +143,69 @@ button {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+/* MOBILE NAVBAR */
+
+@media (max-width: 700px) {
+    .header {
+        height: 70px;
+        padding: 0 6%;
+    }
+
+    .header-actions {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .menu-toggle span {
+        width: 23px;
+        height: 1px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle.active span:first-child {
+        transform: translateY(3.5px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:last-child {
+        transform: translateY(-3.5px) rotate(-45deg);
+    }
+
+    .navigation {
+        position: absolute;
+        top: 69px;
+        left: 0;
+        width: 100%;
+        padding: 25px 6% 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        background: #0c0c0e;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .navigation.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
 }
 
 
