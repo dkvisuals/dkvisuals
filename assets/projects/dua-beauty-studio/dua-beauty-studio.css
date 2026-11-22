@@ -1383,17 +1383,19 @@ h2 em {
 
 
 
-.navbar .logo {
-    display: flex;
+
+
+
+/* FOOTER LOGO */
+
+.footer-top .logo {
+    display: inline-flex;
     align-items: center;
-    text-decoration: none;
 }
 
-.navbar .logo img {
+.footer-top .logo img {
     display: block;
     width: 75px;
     height: auto;
+    object-fit: contain;
 }
-
-
-
