@@ -1350,25 +1350,33 @@ h2 em {
 
 
 
+/* ==========================================
+   DUA BEAUTY STUDIO — FORCE BEIGE DROPDOWN
+========================================== */
 
+@media screen and (max-width: 700px) {
 
-/* DUA — Beige mobile dropdown override */
-
-@media (max-width: 700px) {
-
-    .navbar .nav-links {
+    #navLinks,
+    #navLinks.open,
+    .navbar .nav-links,
+    .navbar .nav-links.open {
         background: #f4eee6 !important;
-        border-bottom: 1px solid rgba(84, 69, 56, .18);
+        background-color: #f4eee6 !important;
+        border-bottom: 1px solid rgba(84, 69, 56, 0.18) !important;
+        box-shadow: none !important;
     }
 
-    .navbar .nav-links a {
-        color: #887d72;
+    #navLinks a {
+        color: #887d72 !important;
     }
 
-    .navbar .nav-links a:hover,
-    .navbar .nav-links a.active {
-        color: #544538;
+    #navLinks a:hover,
+    #navLinks a.active {
+        color: #544538 !important;
     }
 
+    #menuToggle span {
+        background: #544538 !important;
+    }
 }
 
