@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Portal — DK VISUALS</title>
+    <meta name="description" content="Track your DK VISUALS project progress.">
+
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/clientportal.css">
+</head>
+
+<body data-page="clientportal">
+
+    <!-- LOGIN -->
+    <main class="portal-login" id="loginPage">
+
+        <div class="login-brand">
+            <a href="index.html" aria-label="DK VISUALS Home">
+                <img src="assets/images/logo-white.png" alt="DK VISUALS">
+            </a>
+        </div>
+
+        <div class="login-container">
+
+            <div class="login-heading">
+                <span class="section-label">DK VISUALS / CLIENT ACCESS</span>
+                <h1>Welcome <span>back.</span></h1>
+                <p>Enter your project number to view your project progress.</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+
+                <div class="form-group">
+                    <label for="projectNumber">Project number</label>
+
+                    <div class="project-number-input">
+                        <span class="project-prefix">DK-</span>
+                        <input
+                            type="text"
+                            id="projectNumber"
+                            name="projectNumber"
+                            placeholder="001"
+                            autocomplete="off"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <p class="login-error" id="loginError" aria-live="polite"></p>
+
+                <button type="submit" class="login-button">
+                    Continue <span>↗</span>
+                </button>
+
+            </form>
+
+            <div class="login-footer">
+                <span>PROJECT ACCESS</span>
+                <a href="index.html">Back to website ↗</a>
+            </div>
+
+        </div>
+
+        <div class="login-bottom">
+            <span>DK VISUALS — DIGITAL STUDIO</span>
+            <span>AMSTERDAM · NL</span>
+        </div>
+
+    </main>
+
+
+    <!-- PROJECT DASHBOARD -->
+    <main class="portal-dashboard" id="dashboardPage" hidden>
+
+        <!-- SIDEBAR -->
+        <aside class="portal-sidebar">
+
+            <a href="index.html" class="portal-logo">
+                <img src="assets/images/logo-white.png" alt="DK VISUALS">
+            </a>
+
+            <div class="sidebar-section">
+                <span class="sidebar-label">WORKSPACE</span>
+
+                <nav class="portal-navigation">
+
+                    <a href="#dashboard" class="portal-nav-link active" data-section="dashboard">
+                        <span class="nav-icon">⌂</span>
+                        Dashboard
+                    </a>
+
+                    <a href="#project" class="portal-nav-link" data-section="project">
+                        <span class="nav-icon">◈</span>
+                        My Project
+                    </a>
+
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-client">
+                    <div class="client-avatar" id="sidebarAvatar">C</div>
+
+                    <div class="client-details">
+                        <strong id="sidebarName">Client</strong>
+                        <span id="sidebarProjectNumber">DK-001</span>
+                    </div>
+                </div>
+
+                <button type="button" class="logout-button" id="logoutButton">
+                    <span>↗</span> Sign out
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <section class="portal-main">
+
+            <!-- TOPBAR -->
+            <header class="portal-topbar">
+
+                <div class="topbar-breadcrumb">
+                    <span>CLIENT PORTAL</span>
+                    <span>/</span>
+                    <strong id="currentPageTitle">Dashboard</strong>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="portal-status">
+                        <span class="status-dot"></span>
+                        Project tracking active
+                    </span>
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD VIEW -->
+            <section class="portal-view active" id="dashboardView">
+
+                <div class="portal-page-heading">
+                    <div>
+                        <span class="section-label">YOUR PROJECT / OVERVIEW</span>
+                        <h1>Welcome back, <span id="welcomeName">Client</span>.</h1>
+                        <p>Keep track of your project's latest progress.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <!-- PROJECT STATUS -->
+                    <article class="dashboard-card status-overview">
+
+                        <span class="card-label">PROJECT STATUS</span>
+
+                        <div class="status-indicator">
+                            <span class="status-dot"></span>
+                            <strong id="dashboardStatus">In progress</strong>
+                        </div>
+
+                        <p>Your project is currently being developed.</p>
+
+                        <!-- PROJECT PROGRESS -->
+                        <div class="overview-progress">
+
+                            <div class="overview-progress-heading">
+                                <span>Project progress</span>
+                                <strong id="dashboardProgress">0%</strong>
+                            </div>
+
+                            <div class="progress-track">
+                                <div class="progress-fill" id="dashboardProgressBar"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- EXPECTED DELIVERY -->
+                        <div class="overview-delivery">
+                            <span>EXPECTED DELIVERY</span>
+                            <strong id="dashboardExpectedDelivery">—</strong>
+                        </div>
+
+                        <div class="status-timeline-divider"></div>
+
+                        <!-- LATEST UPDATE -->
+                        <div class="status-latest-update">
+
+                            <span class="card-label">LATEST UPDATE</span>
+
+                            <div id="dashboardTimelinePreview" class="timeline-preview">
+                                <p class="timeline-empty">
+                                    Your latest project update will appear here.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <button class="text-link" type="button" data-navigate="project">
+                            View full timeline ↗
+                        </button>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- MY PROJECT VIEW -->
+            <section class="portal-view" id="projectView">
+
+                <div class="portal-page-heading">
+                    <div>
+                        <span class="section-label">YOUR WORKSPACE / PROJECT</span>
+                        <h1>My <span>Project.</span></h1>
+                        <p>Follow the progress of your project.</p>
+                    </div>
+                </div>
+
+
+                <!-- PROJECT DETAILS -->
+                <div class="dashboard-panel project-detail-panel">
+
+                    <span class="card-label">PROJECT OVERVIEW</span>
+
+                    <h2 id="projectPageName">Project Name</h2>
+
+                    <p id="projectPageDescription">Project description.</p>
+
+                    <div class="project-progress">
+
+                        <div class="progress-heading">
+                            <span>Project progress</span>
+                            <strong id="projectPageProgress">0%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" id="projectPageProgressBar"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="project-info-list">
+
+                        <div>
+                            <span>Project number</span>
+                            <strong id="projectPageNumber">—</strong>
+                        </div>
+
+                        <div>
+                            <span>Project status</span>
+                            <strong id="projectPageStatus">—</strong>
+                        </div>
+
+                        <div>
+                            <span>Start date</span>
+                            <strong id="projectPageStart">—</strong>
+                        </div>
+
+                        <div>
+                            <span>Expected completion</span>
+                            <strong id="projectPageEnd">—</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FULL PROJECT TIMELINE -->
+                <section class="project-timeline-section">
+
+                    <div class="timeline-section-heading">
+
+                        <div>
+                            <span class="section-label">PROJECT ROADMAP</span>
+                            <h2>Project <span>Timeline.</span></h2>
+                            <p>Follow each stage of your project from start to finish.</p>
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="project-timeline"
+                        id="projectTimeline"
+                        aria-live="polite"
+                    >
+
+                        <p class="timeline-empty">
+                            Project timeline will appear here.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="portal-footer">
+
+                <span>© <span id="currentYear"></span> DK VISUALS</span>
+
+                <span>DESIGN WITH PURPOSE · BUILT TO INSPIRE</span>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="assets/js/clientportal.js"></script>
+
+</body>
+</html>
