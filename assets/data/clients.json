@@ -1,0 +1,36 @@
+
+[
+    {
+        "projectNumber": "001",
+        "name": "Devran Kurt",
+        "project": {
+            "name": "DK VISUALS Website",
+            "description": "Design and development of the official DK VISUALS digital studio website.",
+            "status": "In progress",
+            "progress": 60,
+            "startDate": "01 November 2026",
+            "endDate": "15 December 2026",
+
+            "timeline": [
+                {
+                    "title": "Project briefing",
+                    "description": "Project requirements, goals and initial planning.",
+                    "date": "01 November 2026",
+                    "status": "completed"
+                },
+                {
+                    "title": "Design",
+                    "description": "Visual direction, website structure and design.",
+                    "date": "05 November 2026",
+                    "status": "completed"
+                },
+                {
+                    "title": "Development",
+                    "description": "Website development and implementation of all pages.",
+                    "date": "12 November 2026",
+                    "status": "current"
+                }
+            ]
+        }
+    }
+]
