@@ -25,6 +25,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
     font-family: "DM Sans", sans-serif;
     line-height: 1.7;
     overflow-x: hidden;
+    padding-top: 82px;
 }
 
 a {
@@ -53,72 +55,224 @@ iframe {
 }
 
 
+
 /* ==========================================
-   HEADER
+   DUA BEAUTY STUDIO — NAVIGATION
+   Original Beige Theme
 ========================================== */
 
-.header {
-    height: 88px;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 82px;
     padding: 0 8%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+
+    z-index: 1000;
+
     background: var(--cream);
     border-bottom: 1px solid var(--line);
-    z-index: 10;
 }
 
-.brand {
-    font-family: "DM Sans", sans-serif;
-    font-size: 19px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--brown);
-    white-space: nowrap;
+/* Logo */
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.brand span {
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-left: 4px;
+.navbar .logo img {
+    display: block;
+    width: 75px;
+    height: auto;
 }
 
-.navigation {
+/* Navigation links */
+
+.nav-links {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+
     display: flex;
-    gap: 38px;
     align-items: center;
+    gap: 38px;
 }
 
-.navigation a {
+.nav-links a {
     color: var(--muted);
+    font-family: "DM Sans", sans-serif;
     font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
     transition: color .3s ease;
 }
 
-.navigation a:hover,
-.navigation a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--brown);
 }
 
-.header-contact {
-    border: 1px solid var(--brown);
-    padding: 10px 17px;
+/* Right side */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.portal-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--muted);
     font-size: 11px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.portal-link:hover {
+    color: var(--brown);
+}
+
+.navbar .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8da88b;
+}
+
+.navbar .arrow {
+    color: var(--brown-light);
+}
+
+.nav-cta {
+    display: flex;
+    align-items: center;
+
+    padding: 10px 17px;
+
+    border: 1px solid var(--brown);
+    border-radius: 5px;
+
+    color: var(--brown);
+    font-size: 11px;
+    text-decoration: none;
+
     transition: .3s ease;
 }
 
-.header-contact span {
-    margin-left: 12px;
+.nav-cta span:last-child {
+    margin-left: 10px;
 }
 
-.header-contact:hover {
+.nav-cta:hover {
     background: var(--brown);
     color: var(--cream);
+}
+
+/* Mobile menu button */
+
+.menu-toggle {
+    display: none;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 23px;
+    height: 1px;
+    background: var(--brown);
+    transition: .3s ease;
+}
+
+.menu-toggle.active span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-actions {
+        gap: 13px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .navbar {
+        height: 70px;
+        padding: 0 6%;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 69px;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+
+        padding: 25px 6% 30px;
+
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition:
+            opacity .3s ease,
+            visibility .3s ease,
+            transform .3s ease;
+    }
+
+    .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
 }
 
 
@@ -235,9 +389,11 @@ h2 em {
     z-index: 2;
     height: 42px;
     padding: 0 18px;
+
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
+
     background: #f9f5ef;
     border-bottom: 1px solid var(--line);
 }
@@ -298,14 +454,15 @@ h2 em {
     left: 25px;
     right: 25px;
     bottom: 20px;
+
     display: flex;
     justify-content: space-between;
+
     color: white;
     font-size: 9px;
     letter-spacing: 2px;
     text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
 }
-
 
 
 /* ==========================================
@@ -397,6 +554,7 @@ h2 em {
 .detail-item {
     padding: 17px 0;
     border-bottom: 1px solid var(--line);
+
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -518,6 +676,7 @@ h2 em {
 .colour {
     height: 230px;
     padding: 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -649,6 +808,7 @@ h2 em {
 }
 
 /* Actual mobile viewport inside the phone frame */
+
 .mobile-frame iframe {
     position: absolute;
     top: 7px;
@@ -665,6 +825,7 @@ h2 em {
 }
 
 /* Keep phone preview centred and scaled */
+
 .mobile-frame {
     --phone-scale: .40;
 }
@@ -830,15 +991,23 @@ h2 em {
    RESPONSIVE — TABLET
 ========================================== */
 
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-actions {
+        gap: 13px;
+    }
+
+}
+
 @media (max-width: 900px) {
-
-    .header {
-        padding: 0 5%;
-    }
-
-    .navigation {
-        gap: 20px;
-    }
 
     .section-padding {
         padding: 90px 7%;
@@ -880,44 +1049,72 @@ h2 em {
 
 
 /* ==========================================
-   RESPONSIVE — MOBILE
+   RESPONSIVE — MOBILE NAVIGATION
+========================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding-top: 70px;
+    }
+
+    .navbar {
+        height: 70px;
+        padding: 0 6%;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 69px;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+
+        padding: 25px 6% 30px;
+
+        background: #0c0c0e;
+        border-bottom: 1px solid rgba(255, 255, 255, .075);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition:
+            opacity .3s ease,
+            visibility .3s ease,
+            transform .3s ease;
+    }
+
+    .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE — MOBILE CONTENT
 ========================================== */
 
 @media (max-width: 650px) {
-
-    .header {
-        height: auto;
-        min-height: 75px;
-        padding: 17px 5%;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .brand {
-        font-size: 17px;
-    }
-
-    .brand span {
-        font-size: 10px;
-    }
-
-    .navigation {
-        position: static;
-        transform: none;
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 22px;
-    }
-
-    .navigation a {
-        font-size: 10px;
-    }
-
-    .header-contact {
-        padding: 8px 12px;
-        font-size: 10px;
-    }
 
     .hero {
         padding: 25px 5% 60px;
@@ -1104,14 +1301,6 @@ h2 em {
 ========================================== */
 
 @media (max-width: 380px) {
-
-    .navigation {
-        gap: 15px;
-    }
-
-    .navigation a {
-        font-size: 9px;
-    }
 
     .hero-content h1 {
         font-size: 55px;
