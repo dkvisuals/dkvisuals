@@ -46,6 +46,7 @@
 
     
 
+
 <!-- NAVIGATION -->
 <header class="navbar">
 
@@ -76,12 +77,19 @@
 
     </div>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" type="button">
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        type="button"
+    >
         <span></span>
         <span></span>
     </button>
 
 </header>
+
 
 
 
@@ -539,11 +547,9 @@
 
     </script>
 
-    <script>
-        
-/* =========================
-   MOBILE NAVIGATION
-========================= */
+/* ==========================================
+   MOBILE NAVIGATION — DK VISUALS
+========================================== */
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -552,11 +558,9 @@ if (menuToggle && navLinks) {
 
     menuToggle.addEventListener('click', () => {
 
-        navLinks.classList.toggle('open');
-        menuToggle.classList.toggle('active');
+        const isOpen = navLinks.classList.toggle('open');
 
-        const isOpen = navLinks.classList.contains('open');
-
+        menuToggle.classList.toggle('active', isOpen);
         menuToggle.setAttribute('aria-expanded', isOpen);
 
     });
@@ -576,7 +580,6 @@ if (menuToggle && navLinks) {
 
 }
 
-    </script>
 
 </body>
 </html>
